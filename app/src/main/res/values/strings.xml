@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Guerreiro Games</string>
+    <string name="get_text_email">E-Mail</string>
+    <string name="get_text_password">Senha</string>
+    <string name="btn_login">Entrar.</string>
+    <string name="btn_cadastro">Cadastrar-se</string>
+    <string name="data_placeholder">12/08/2000</string>
+</resources>
