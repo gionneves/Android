@@ -19,33 +19,33 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="1167dp">
+                android:layout_height="1318dp">
 
                 <TextView
-                    android:id="@+id/textViewTelefoneAlt"
+                    android:id="@+id/textViewTelefone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Telefone alternativo:"
-                    app:layout_constraintBottom_toTopOf="@+id/textGetTelefone2"
+                    android:text="*Telefone Celular:"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetSmartphone"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
-                    android:id="@+id/textGetTelefone2"
+                    android:id="@+id/textGetSmartphone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
                     android:ems="10"
-                    android:hint="@string/text_telefoneAlt"
+                    android:hint="@string/text_telefone"
                     android:inputType="phone"
                     app:layout_constraintBottom_toTopOf="@+id/textGetEndereco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="*E-mail:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetEmail"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -56,8 +56,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
                     android:ems="10"
+                    android:hint="@string/text_CPF"
                     android:inputType="textPersonName"
-                    app:layout_constraintBottom_toTopOf="@+id/textGetPhone"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetRG"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
@@ -66,19 +69,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
                     android:ems="10"
+                    android:hint="@string/text_ruaEndereco"
                     android:inputType="textPersonName"
-                    app:layout_constraintBottom_toTopOf="@+id/textGetNumeroEnde"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetComplemento"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
-                    android:id="@+id/textGetPhone"
+                    android:id="@+id/textGetPhoneResidencia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
                     android:ems="10"
-                    android:hint="@string/text_telefone"
+                    android:hint="@string/text_telefoneAlt"
                     android:inputType="phone"
-                    app:layout_constraintBottom_toTopOf="@+id/textGetTelefone2"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetSmartphone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
@@ -90,6 +98,8 @@
                     android:hint="@string/get_text_password"
                     android:inputType="textPassword"
                     app:layout_constraintBottom_toTopOf="@+id/textGetAniver"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
@@ -101,13 +111,14 @@
                     android:hint="@string/data_placeholder"
                     android:inputType="date"
                     app:layout_constraintBottom_toTopOf="@+id/textGetCPF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewCPF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="*CPF:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetCPF"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -116,7 +127,6 @@
                     android:id="@+id/textViewSenha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="*Senha:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetPass"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -125,7 +135,6 @@
                     android:id="@+id/textViewDataNasc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="*Data de nascimento:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetAniver"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -139,43 +148,45 @@
                     android:hint="@string/get_text_email"
                     android:inputType="textEmailAddress"
                     app:layout_constraintBottom_toTopOf="@+id/textGetPass"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textViewTelefone"
+                    android:id="@+id/textViewTelefoneResidencial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="*Telefone"
-                    app:layout_constraintBottom_toTopOf="@+id/textGetPhone"
+                    android:text="Telefone Residencial"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetPhoneResidencia"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewEndereco"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="Endereço:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetEndereco"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
-                    android:id="@+id/textGetNumeroEnde"
+                    android:id="@+id/textGetComplemento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
                     android:ems="10"
+                    android:hint="@string/text_complemento"
                     android:inputType="number"
                     app:layout_constraintBottom_toTopOf="@+id/textGetCEP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/textViewNumeroEnde"
+                    android:id="@+id/textViewComplemento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Número:"
-                    app:layout_constraintBottom_toTopOf="@+id/textGetNumeroEnde"
+                    android:text="Complemento:"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetComplemento"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
@@ -184,49 +195,82 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="64dp"
                     android:ems="10"
+                    android:hint="@string/get_text_password"
                     android:inputType="textPersonName"
                     android:text=""
                     app:layout_constraintBottom_toTopOf="@+id/textGetMunicipio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewCEP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:text="CEP:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetCEP"
                     app:layout_constraintStart_toStartOf="parent" />
-
-                <TextView
-                    android:id="@+id/textViewCadastrese"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="start|right"
-                    android:text="Cadastre-se"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/textGetMunicipio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="64dp"
+                    android:layout_marginBottom="32dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewMunicipio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="TextView"
+                    android:text="Munícipio:"
                     app:layout_constraintBottom_toTopOf="@+id/textGetMunicipio"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/textGetNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="64dp"
+                    android:ems="10"
+                    android:hint="@string/text_nome"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetEmail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome:"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetNome"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/textGetRG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="64dp"
+                    android:ems="10"
+                    android:hint="@string/text_RG"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetPhoneResidencia"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewRG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RG:"
+                    app:layout_constraintBottom_toTopOf="@+id/textGetRG"
                     app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

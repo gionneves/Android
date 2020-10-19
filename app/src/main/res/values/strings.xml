@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Guerreiro Games</string>
     <string name="get_text_email">E-Mail</string>
+    <string name="text_nome">Nome completo</string>
     <string name="get_text_password">Senha</string>
     <string name="btn_login">Entrar.</string>
     <string name="btn_cadastro">Cadastrar-se</string>
     <string name="data_placeholder">12/08/2000</string>
     <string name="text_telefone">(00) 90000-0000</string>
     <string name="text_telefoneAlt">(00) 0000-0000</string>
+    <string name="text_CPF">123.456.789.00</string>
+    <string name="text_RG">01.234.567-89</string>
+    <string name="text_ruaEndereco">Rua Fernando Ivan, 99</string>
+    <string name="text_complemento">casa/ap. 02, box 3</string>
+    <string name="text_CEP">00000-000</string>
+    <string name="text_municipio">SP-Osasco</string>
 </resources>
