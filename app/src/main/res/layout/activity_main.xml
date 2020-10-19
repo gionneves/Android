@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="122dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gg_dez_oitenta" />
@@ -20,11 +21,11 @@
         android:id="@+id/loginGetEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/get_text_email"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -32,11 +33,11 @@
         android:id="@+id/loginGetPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/get_text_password"
         android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginGetEmail" />
 
@@ -44,10 +45,10 @@
         android:id="@+id/btn_login"
         android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:text="@string/btn_login"
         app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginGetPass" />
 
@@ -55,11 +56,11 @@
         android:id="@+id/btn_cadastro"
         android:layout_width="212dp"
         android:layout_height="47dp"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="48dp"
         android:onClick="goTelaCadastro"
         android:text="@string/btn_cadastro"
         app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
@@ -69,7 +70,7 @@
         android:layout_height="wrap_content"
         android:text="Esqueci a senha."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
