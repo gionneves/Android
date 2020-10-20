@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
-        <activity android:name=".TelaEsqueciSenha"></activity>
+        <activity
+            android:name=".TelaMain"
+            android:label="@string/title_activity_tela_main"></activity>
+        <activity android:name=".TelaEsqueciSenha" />
         <activity
             android:name=".TelaCadastro"
             android:parentActivityName=".MainActivity" />

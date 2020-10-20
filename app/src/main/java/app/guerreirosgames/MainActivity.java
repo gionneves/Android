@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.sql.SQLOutput;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,16 +16,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goTelaCadastro(View view) {
-        System.out.println("FOI CADASTRO");
+    /**
+     * Função de ir para a tela de cadastro já predefinido
+     */
+    public void goTelaCadastro(View v) {
+        EditText text = (EditText) findViewById(R.id.loginGetEmail);
+        String etEmail = text.getText().toString().toLowerCase();
+
+        String nud = "Nao use drogas";
+        System.out.println("PEGO " + etEmail);
+
+        if (etEmail.equals("1")) {
+            TextView txt = (TextView) findViewById(R.id.textViewNome);
+            String po = txt.getText().toString();
+            po = nud;
+            System.out.println(nud);
+            txt.setText(po);
+        } else {
+            System.out.println("Error");
+        }
+
         startActivity(new Intent(this, TelaCadastro.class));
     }
 
+    /***
+     * Função para ir a tela principal, após o login. onde ficará o aplicativo principal.
+     */
     public void goTelaMain(View view) {
         //startActivity(new Intent(this, TelaMain.class));
     }
 
-
+    /***
+     *  Onde foi definido função para o TextView para quando clicado ir para uma tela de
+     *  recuperação de senha que será via email onde o cliente podera torcar a senha atravez de um
+     *  link.
+     */
     public void esqueciSenha(View view) {
+        startActivity(new Intent(this, TelaEsqueciSenha.class));
     }
 }
