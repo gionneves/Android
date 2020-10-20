@@ -3,10 +3,11 @@ package app.guerreirosgames;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.lang.reflect.Type;
 
 public class TelaCadastro extends AppCompatActivity {
 
@@ -24,9 +25,16 @@ public class TelaCadastro extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.home){
+        if (id == R.id.home) {
             this.finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void fechar(View view) {
+        System.out.println("VOLTOU LOGIN");
+        this.finish();
+
+        //startActivity(new Intent(this, MainActivity.class));
     }
 }
