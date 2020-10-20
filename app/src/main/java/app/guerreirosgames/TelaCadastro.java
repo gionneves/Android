@@ -7,8 +7,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Type;
-
 public class TelaCadastro extends AppCompatActivity {
 
     @Override
