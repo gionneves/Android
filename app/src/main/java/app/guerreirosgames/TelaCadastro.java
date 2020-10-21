@@ -1,9 +1,12 @@
 package app.guerreirosgames;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,16 +22,6 @@ public class TelaCadastro extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
-    /***Context context;
-
-    public TelaCadastro(Context context) {
-        this.context = context;
-    }
-
-    public void update() {
-
-    }*/
 
     /***
      * Esse item serve para retornar a tela home, ou no caso a tela de login. Esta declarado como
