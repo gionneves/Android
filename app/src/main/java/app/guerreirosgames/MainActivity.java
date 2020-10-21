@@ -10,33 +10,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
     }
 
     /**
      * Função de ir para a tela de cadastro já predefinido
      */
+
+
     public void goTelaCadastro(View v) {
-        EditText text = (EditText) findViewById(R.id.loginGetEmail);
-        String etEmail = text.getText().toString().toLowerCase();
 
-        String nud = "Nao use drogas";
-        System.out.println("PEGO " + etEmail);
+        Intent intent = new Intent(MainActivity.this, TelaCadastro.class);
+        startActivity(intent);
+        //startActivity(new Intent(this, TelaCadastro.class));
 
-        if (etEmail.equals("1")) {
-            TextView txt = (TextView) findViewById(R.id.textViewNome);
-            String po = txt.getText().toString();
-            po = nud;
-            System.out.println(nud);
-            txt.setText(po);
-        } else {
-            System.out.println("Error");
-        }
-
-        startActivity(new Intent(this, TelaCadastro.class));
     }
 
     /***
