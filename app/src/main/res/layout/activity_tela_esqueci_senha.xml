@@ -9,9 +9,11 @@
 
     <Button
         android:id="@+id/btn_esqueci"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
         android:layout_height="wrap_content"
-        android:text="Esqueci a senha."
+        android:text="Esqueci a senha"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +21,9 @@
 
     <EditText
         android:id="@+id/textGetEmalEsqueciSenha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/get_text_email"
@@ -33,9 +37,12 @@
 
     <TextView
         android:id="@+id/textViewEsqueciSeinha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Coloque o E-Mail para recuperar a senha."
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Coloque o seu E-Mail para recuperar a senha."
         app:layout_constraintBottom_toTopOf="@+id/textGetEmalEsqueciSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

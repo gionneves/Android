@@ -31,8 +31,10 @@
 
                 <EditText
                     android:id="@+id/textGetSmartphone"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -53,8 +55,10 @@
 
                 <EditText
                     android:id="@+id/textGetCPF"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -67,8 +71,10 @@
 
                 <EditText
                     android:id="@+id/textGetEndereco"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -81,8 +87,10 @@
 
                 <EditText
                     android:id="@+id/textGetPhoneResidencia"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -95,8 +103,10 @@
 
                 <EditText
                     android:id="@+id/textGetPass"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -109,8 +119,10 @@
 
                 <EditText
                     android:id="@+id/textGetAniver"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -147,8 +159,10 @@
 
                 <EditText
                     android:id="@+id/textGetEmail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -177,8 +191,10 @@
 
                 <EditText
                     android:id="@+id/textGetComplemento"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -199,8 +215,10 @@
 
                 <EditText
                     android:id="@+id/textGetCEP"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -222,12 +240,13 @@
 
                 <EditText
                     android:id="@+id/textGetMunicipio"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="72dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
-                    android:hint="@string/text_municipio"
                     android:inputType="textPersonName"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -244,8 +263,10 @@
 
                 <EditText
                     android:id="@+id/textGetNome"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -267,8 +288,10 @@
 
                 <EditText
                     android:id="@+id/textGetRG"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
                     android:layout_marginBottom="64dp"
                     android:background="@android:drawable/editbox_background"
                     android:ems="10"
@@ -295,7 +318,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.95"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <Button
                     android:id="@+id/btn_cancelarCadastro"

@@ -18,9 +18,9 @@ public class TelaMain extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
     TextView textView;
 
-    String[] servicos = {"Ar-condicionado", "Vídeo-game", "Edição de vídeo", "Adaptadores",
-            "Ventiladores", "Home-Office", "Reparo", "Assistencia", "Aterramento", "Boliche", "Ballgato",
-    "Help-Desk"};
+    String[] servicos = {"Ar-condicionado", "Vídeo-game", "Tablet", "GPS", "Celular", "Computador",
+            "Notebook", "CFTV", "IPTV", "Câmera", "Drone", "Canecas", "Camisetas", "Aquecedor",
+            "Bolinho-de-chuva"};
     ArrayAdapter<String> adapter;
 
     @Override
@@ -42,11 +42,34 @@ public class TelaMain extends AppCompatActivity {
         // Setar adapter
         autoCompleteTextView.setAdapter(adapter);
 
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /**autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                textView.setText(adapter.getItem(i));
+                //textView.setText(adapter.getItem(i));
             }
-        });
+        });*/
+    }
+
+    /**
+     * @param view
+     */
+    public void btn_confirmar(View view) {
+        String cfm = autoCompleteTextView.getText().toString();
+        cfm = cfm.toLowerCase().replace("-", "");
+
+        switch (cfm) {
+            case "arcondicionado":
+                System.out.println("TOP");
+                break;
+            case "vídeogame":
+                System.out.println("toop");
+        }
+    }
+
+    /**
+     * @param view
+     */
+    public void btn_suporte(View view) {
+
     }
 }
