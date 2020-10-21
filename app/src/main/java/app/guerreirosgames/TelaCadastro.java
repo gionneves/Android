@@ -43,10 +43,7 @@ public class TelaCadastro extends AppCompatActivity {
      */
 
     public void fechar(View view) {
-        System.out.println("VOLTOU LOGIN");
         this.finish();
-
-        //startActivity(new Intent(this, MainActivity.class));
     }
 
     /**
