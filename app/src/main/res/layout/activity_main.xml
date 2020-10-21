@@ -25,9 +25,12 @@
         android:ems="10"
         android:hint="@string/get_text_email"
         android:inputType="textPersonName"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/loginGetPass"
@@ -37,6 +40,7 @@
         android:ems="10"
         android:hint="@string/get_text_password"
         android:inputType="textPassword"
+        android:background="@android:drawable/editbox_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginGetEmail" />
@@ -66,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <TextView
-        android:id="@+id/textViewEsqueciSenha"
+        android:id="@+id/textLoginViewEsqueciSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
