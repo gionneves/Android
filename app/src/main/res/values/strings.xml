@@ -3,7 +3,7 @@
     <string name="get_text_email">E-Mail</string>
     <string name="text_nome">Nome completo</string>
     <string name="get_text_password">Senha</string>
-    <string name="btn_login">Entrar.</string>
+    <string name="btn_login">Entrar</string>
     <string name="btn_cadastro">Cadastrar-se</string>
     <string name="data_placeholder">12/08/2000</string>
     <string name="text_telefone">(00) 90000-0000</string>
