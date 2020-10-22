@@ -1,17 +1,18 @@
 package app.guerreirosgames;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import app.guerreirosgames.cadastro.Usuario;
+import app.guerreirosgames.servicos.TelaMain;
+
 public class MainActivity extends AppCompatActivity {
 
+    Usuario user = new Usuario();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,13 @@ public class MainActivity extends AppCompatActivity {
         EditText password = (EditText) findViewById(R.id.loginGetPass);
         String pass = password.getText().toString();
 
-        if (log.equals("admin") && pass.equals("admin")) {
+        if (log.equals("admin@admin.com") && pass.equals("admin")) {
             //setContentView(R.layout.activity_tela_main);
             startActivity(new Intent (this, TelaMain.class));
+        }
+
+        if(log.equals(user.getEmail()) && pass.equals(user.getSenha())) {
+            startActivity(new Intent(this, TelaMain.class));
         }
     }
 

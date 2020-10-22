@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
         <activity
-            android:name=".TelaMain"
+            android:name=".servicos.TelaMain"
             android:label="@string/title_activity_tela_main"
             android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".TelaEsqueciSenha"
