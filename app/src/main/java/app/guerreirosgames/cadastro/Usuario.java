@@ -2,6 +2,12 @@ package app.guerreirosgames.cadastro;
 
 public class Usuario {
 
+    /**
+     * Classe criada para poder salvar no banco de dados pós for capturada, bem provavel que seja
+     * descartada após utlizar-se. Entretanto está sendo feito experimento e salvar direto aqui para
+     * apos mandar parao banco de dados.*
+     */
+
     private String nome, endereco, rg, cpf, cnpj, inscricao_estadual, data_nascimento, email,
             telefone_fixo, telefone_celular, cep, bairro, municipio, estado, senha;
 
@@ -32,7 +38,7 @@ public class Usuario {
     public String getCpf() {
         return cpf;
     }
-
+;
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".servicos.TelaMain">
+    tools:context=".servicos.TelaMain"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/textViewPrecisa"
@@ -13,6 +14,7 @@
         android:text="Do que você precisa?"
         android:textAlignment="center"
         android:textSize="25dp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

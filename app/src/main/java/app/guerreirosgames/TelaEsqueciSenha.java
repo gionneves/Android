@@ -21,7 +21,7 @@ public class TelaEsqueciSenha extends AppCompatActivity {
         /**
          * Sera adicionado futuramente linhas que mandará um email com campo para preencher a senha
          * nisso alterando para a nova. Ainda tem muito o que fazer, principalmente em parte de
-         * bando de dados e alterações.
+         * bando de dados e alterações.*
          */
     }
 }

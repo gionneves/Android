@@ -9,12 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
+        <activity android:name=".servicos.arcondicionado.ArDois"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name=".servicos.arcondicionado.ArUm" />
         <activity
             android:name=".servicos.TelaMain"
             android:label="@string/title_activity_tela_main"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".TelaEsqueciSenha"
-            android:label="Esqueci a senha"/>
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TelaEsqueciSenha"
+            android:label="Esqueci a senha" />
         <activity
             android:name=".TelaCadastro"
             android:label="Cadastre-se"

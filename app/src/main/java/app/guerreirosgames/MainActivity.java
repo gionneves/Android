@@ -21,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Função de ir para a tela de cadastro já predefinido
+     * Função de ir para a tela de cadastro já predefinido.*
      */
     public void goTelaCadastro(View view) {
         startActivity(new Intent(this, TelaCadastro.class));
     }
 
-    /***
-     * Função para ir a tela principal, após o login. onde ficará o aplicativo principal
+    /**
+     * Função para ir a tela principal, após o login. onde ficará o aplicativo principal.*
      */
     public void goTelaMain(View view) {
         EditText login = (EditText) findViewById(R.id.loginGetEmail);
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         String pass = password.getText().toString();
 
         if (log.equals("admin@admin.com") && pass.equals("admin")) {
-            //setContentView(R.layout.activity_tela_main);
+            //setContentView(R.layout.activity_tela_main);;
             startActivity(new Intent (this, TelaMain.class));
         }
 
@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /***
+    /**
      *  Onde foi definido função para o TextView para quando clicado ir para uma tela de
      *  recuperação de senha que será via email onde o cliente podera torcar a senha atravez de um
-     *  link.
+     *  link.*
      */
     public void esqueciSenha(View view) {
         startActivity(new Intent(this, TelaEsqueciSenha.class));

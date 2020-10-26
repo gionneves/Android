@@ -1,21 +1,22 @@
 package app.guerreirosgames.servicos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import app.guerreirosgames.R;
+import app.guerreirosgames.servicos.arcondicionado.ArUm;
 
 public class TelaMain extends AppCompatActivity {
 
     /**
      * Essas linhas, principalmente a String, Serve para lista de serviços que irá aparecer dentro
-     * da box de pesquisa.
+     * da box de pesquisa.*
      */
     AutoCompleteTextView autoCompleteTextView;
     TextView textView;
@@ -38,21 +39,18 @@ public class TelaMain extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line
                 , servicos);
 
-        //Pegar sugestão apos ecrever algumas letras
+        //Pegar sugestão apos ecrever algumas letras;
         autoCompleteTextView.setThreshold(1);
 
         // Setar adapter
         autoCompleteTextView.setAdapter(adapter);
-
-        /**autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        @Override public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        //textView.setText(adapter.getItem(i));
-        }
-        });*/
     }
 
     /**
+     * Esse metodo serve para verificar o que está escrito no EditText para enviar o usuario para a
+     * tela de serviço desejado e suas opções.
      * @param view
+     * O parametro de "view" serve para poder mostrar a janela após selecionado.*
      */
     public void btn_confirmar(View view) {
         String cfm = autoCompleteTextView.getText().toString();
@@ -60,7 +58,7 @@ public class TelaMain extends AppCompatActivity {
 
         switch (cfm) {
             case "arcondicionado":
-                System.out.println("TOP");
+                startActivity(new Intent(this, ArUm.class));
                 break;
             case "vídeogame":
                 System.out.println("toop");
@@ -68,7 +66,10 @@ public class TelaMain extends AppCompatActivity {
     }
 
     /**
+     * Botão será acionado e levará o usuario ate a parte de suporte onde tudo poderá ser mostrado
+     * tanto erros comums quando a possibilidade de falar com atendente.
      * @param view
+     * O parametro de "view" serve para poder mostrar a janela após selecionado.*
      */
     public void btn_suporte(View view) {
 

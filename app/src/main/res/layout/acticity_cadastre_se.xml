@@ -355,11 +355,14 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingHorizontal="16dp">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
+                    android:layout_alignParentLeft="true"
                     android:layout_margin="4dp"
                     android:onClick="fechar"
                     android:text="Cancelar" />
@@ -368,10 +371,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
                     android:layout_margin="4dp"
                     android:onClick="cadastrar"
                     android:text="Cadastrar-se" />
-
+</RelativeLayout>
 
             </LinearLayout>
 
