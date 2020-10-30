@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.guerreirosgames">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppGuerreirosGames">
+        <activity android:name=".servicos.Final_OS"></activity>
+        <activity android:name=".servicos.arcondicionado.ArTres" />
+        <activity android:name=".servicos.videogames.VideoUm" />
+        <activity android:name=".servicos.Pagamento" />
+        <activity android:name=".servicos.arcondicionado.ArQuatro" />
+        <activity
+            android:name=".servicos.arcondicionado.ArDois"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".servicos.arcondicionado.ArUm" />
+        <activity
+            android:name=".servicos.TelaMain"
+            android:label="@string/title_activity_tela_main"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TelaEsqueciSenha"
+            android:label="Esqueci a senha" />
+        <activity
+            android:name=".TelaCadastro"
+            android:label="Cadastre-se"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
