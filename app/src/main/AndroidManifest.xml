@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
-        <activity android:name=".servicos.Final_OS"></activity>
+        <activity android:name=".servicos.arcondicionado.ArBTUS"></activity>
+        <activity android:name=".servicos.videogames.VideoDois" />
+        <activity android:name=".servicos.Final_OS" />
         <activity android:name=".servicos.arcondicionado.ArTres" />
         <activity android:name=".servicos.videogames.VideoUm" />
         <activity android:name=".servicos.Pagamento" />
-        <activity android:name=".servicos.arcondicionado.ArQuatro" />
+        <activity android:name=".servicos.Agendamento" />
         <activity
             android:name=".servicos.arcondicionado.ArDois"
             android:windowSoftInputMode="adjustResize" />

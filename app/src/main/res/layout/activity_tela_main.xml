@@ -23,11 +23,11 @@
         app:layout_constraintVertical_bias="0.100000024" />
 
     <Button
-        android:id="@+id/btn_confirmar"
+        android:id="@+id/bConfirmar_servicos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirmar"
-        android:onClick="btn_confirmar"
+        android:onClick="servicos_btnConfirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
@@ -36,10 +36,11 @@
         app:layout_constraintVertical_bias="0.98" />
 
     <Button
-        android:id="@+id/btn_suporte"
+        android:id="@+id/bSuporte_servicos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Suporte"
+        android:onClick="servicos_btnSuporte"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
@@ -48,7 +49,7 @@
         app:layout_constraintVertical_bias="0.98" />
 
     <AutoCompleteTextView
-        android:id="@+id/textGetServico"
+        android:id="@+id/actvPesquisa_servicos"
         android:layout_width="240dp"
         android:layout_height="42dp"
         android:background="@drawable/background_shadow"

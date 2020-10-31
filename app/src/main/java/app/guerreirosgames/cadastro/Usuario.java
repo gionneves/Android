@@ -1,15 +1,8 @@
 package app.guerreirosgames.cadastro;
 
-import android.content.Intent;
-
 import app.guerreirosgames.TelaCadastro;
 
 public class Usuario extends TelaCadastro {
-
-    public final static String chave = "guerreirosgames";
-
-    //Intent intent = getIntent();*
-    //String mensagem = intent.getStringExtra(chave);*
 
     /**
      * Classe criada para poder salvar no banco de dados pós for capturada, bem provavel que seja
@@ -47,7 +40,7 @@ public class Usuario extends TelaCadastro {
     public String getCpf() {
         return cpf;
     }
-;
+
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }

@@ -1,15 +1,14 @@
 package app.guerreirosgames.servicos.arcondicionado;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import app.guerreirosgames.R;
-import app.guerreirosgames.cadastro.Usuario;
-
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import app.guerreirosgames.R;
 
 public class ArUm extends AppCompatActivity {
     CheckBox checkBox01, checkBox02, checkBox03, checkBox04;
@@ -26,10 +25,10 @@ public class ArUm extends AppCompatActivity {
          * mais visual para o usuario final que é exatamente aquilo que está pedindo e selecionado.*
          */
 
-        checkBox01 = (CheckBox) findViewById(R.id.checkboxUm);
-        checkBox02 = (CheckBox) findViewById(R.id.checkboxDois);
-        checkBox03 = (CheckBox) findViewById(R.id.checkboxTres);
-        checkBox04 = (CheckBox) findViewById(R.id.checkboxOutros);
+        checkBox01 = (CheckBox) findViewById(R.id.arCB_um); /** Higienização.* */
+        checkBox02 = (CheckBox) findViewById(R.id.arCB_dois); /** Manutenção.* */
+        checkBox03 = (CheckBox) findViewById(R.id.arCB_tres); /** Instalação.* */
+        checkBox04 = (CheckBox) findViewById(R.id.arCB_outros);/** Outros.* */
 
         checkBox01.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,12 +99,16 @@ public class ArUm extends AppCompatActivity {
 
     }
 
-    public void arUmProximo(View view) {
+    /**
+     * Essa função serve para poder verificar se há alguma CheckBox marcada, caso nenhuma estiver o
+     * programa não vai deixar o usuario progredir, caso alguma esteja ele vai poder progredir normalmente
+     * nisso também será colocado um sistema que quando um estiver marcado, a opção dele será lembrada
+     * para poder ir para O.S..*
+     *
+     * @param view
+     */
 
-        /**
-         * Esses "if" serve para poder verificar se alguma CheckBox está marcada para progredir
-         * no serviço de ar-condicionado.*
-         */
+    public void arUm_btnProximo(View view) {
 
         byte i = 0;
 
@@ -129,11 +132,9 @@ public class ArUm extends AppCompatActivity {
             startActivity(new Intent(this, ArDois.class));
         }
 
-        Usuario user = new Usuario();
-        System.out.println(user.getNome());
     }
 
-    public void arUmVoltar(View view) {
+    public void arUm_btnVoltar(View view) {
         finish();
     }
 }

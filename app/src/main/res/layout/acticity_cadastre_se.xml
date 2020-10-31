@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:onClick="nascimento"
+                    android:onClick="cadastro_btnNascimento"
                     android:text="Calendario" />
 
                 <EditText
@@ -396,7 +396,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="4dp"
-                        android:onClick="fechar"
+                        android:onClick="cadastro_btnFechar"
                         android:text="Cancelar" />
 
                     <Button
@@ -404,7 +404,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="4dp"
-                        android:onClick="cadastrar"
+                        android:onClick="cadastro_btnCadastrar"
                         android:text="Cadastrar!" />
                 </RelativeLayout>
 

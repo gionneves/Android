@@ -84,6 +84,7 @@
                     android:textSize="20dp"/>
 
                 <CheckBox
+                    android:id="@+id/arCB_qfOrcamento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quente, frio"
@@ -127,15 +128,15 @@
                     android:layout_marginHorizontal="8dp"
                     android:layout_alignParentLeft="true"
                     android:text="Voltar"
-                    android:onClick="arTresVoltar"/>
+                    android:onClick="arTres_btnVoltar" />
 
                 <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_alignParentRight="true"
-                android:text="Confirmar"
-                android:onClick="arTresConfirmar"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="8dp"
+                    android:onClick="arTres_btnConfirmar"
+                    android:text="Confirmar" />
 
             </RelativeLayout>
 

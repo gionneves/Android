@@ -14,14 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
 
-import app.guerreirosgames.cadastro.Usuario;
-
 public class TelaCadastro extends AppCompatActivity {
     ToggleButton aSwitch;
     EditText editText, nascimento;
     private int dia, mes, ano;
-
-    public final static String chave = "guerreirosgames";
 
 
     @Override
@@ -29,14 +25,19 @@ public class TelaCadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acticity_cadastre_se);
 
-        // Adiciona botão de volta.*
+        /**
+         * Essas duas linhas após o comentario servem para criar uma seta de volta quando clicado.
+         *
+         * As linhas debaixo servem para o calendario e a função de trocar o CPF para CNPJ funcionarem
+         * assim sempre fazendo verificação delas e atualizando em tempo real.*
+         */
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //Define a data de nascimento em uma variavel.*
+        /** Serve para definir a variavel "nascimento" ligada ao layout com id "cadastro_nascimento".* */
         nascimento = (EditText) findViewById(R.id.cadastro_nascimento);
 
-        // Faz mudar de CPF para CNPJ.*
+        /** Esses itens abaixo são o que faz mudar de CPF para CNPJ quando clicado no botão.* */
         aSwitch = findViewById(R.id.switch_pessoa);
         editText = findViewById(R.id.cadastro_CPF_CNPJ);
         editText.setHint("132.456.789-09");
@@ -50,7 +51,7 @@ public class TelaCadastro extends AppCompatActivity {
                     editText.setHint("123.456.789-09");
                 }
             }
-        });;
+        });
     }
 
     /**
@@ -71,198 +72,237 @@ public class TelaCadastro extends AppCompatActivity {
      * Função que vai em um botão que simplismente fecha a tela de cadastro.*
      */
 
-    public void fechar(View view) {
+    public void cadastro_btnFechar(View view) {
         this.finish();
     }
 
     /**
-     * Função que tem um DB que cadastra e salva os dados do usuarios quando cadastrados. Faz
-     * ligação via SQL (Não se sabe ao certo se será MySQL ou MongoDB [NoSQL]). onde ficará falvo
-     * todas as informações presentes em um só db.*
+     * Função abaixo serve para coletar e armazenar cada campo em um banco de dados MySQL onde terá
+     * uma conexão via PHP ou ate mesmo direta se possivel, ainda estou estudando isso, mas pretendo
+     * bolar para frente.*
      */
 
-    public void cadastrar(View view) {
+    public void cadastro_btnCadastrar(View view) {
+
+        Intent intent = new Intent(this, MainActivity.class);
+        byte cadastroContador = 0;
+
+        /**
+         * Coleta e armazena o nome.*
+         */
         EditText nome = (EditText) findViewById(R.id.cadastro_nome);
-        EditText CPF_CNPJ = (EditText) findViewById(R.id.cadastro_CPF_CNPJ);
-        EditText RG = (EditText) findViewById(R.id.cadastro_RG);
-        EditText data_nascimento = (EditText) findViewById(R.id.cadastro_nascimento);
-        EditText CEP = (EditText) findViewById(R.id.cadastro_CEP);
-        EditText endereco = (EditText) findViewById(R.id.cadastro_endereco);
-        EditText bairro = (EditText) findViewById(R.id.cadastro_bairro);
-        EditText municipio = (EditText) findViewById(R.id.cadastro_municipio);
-        EditText estado = (EditText) findViewById(R.id.cadastro_estado);
-        EditText complemento = (EditText) findViewById(R.id.cadastro_complemento);
-        EditText telefone_residencial = (EditText) findViewById(R.id.cadastro_telefone_residencial);
-        EditText telefone_celular = (EditText) findViewById(R.id.cadastro_telefone_celular);
-        EditText email = (EditText) findViewById(R.id.cadastro_email);
-        EditText confirmar_email = (EditText) findViewById(R.id.cadastro_confirmar_email);
-        EditText senha = (EditText) findViewById(R.id.cadastro_senha);
-        EditText confirmar_senha = (EditText) findViewById(R.id.cadastro_confirmar_senha);
-
-        /**
-         * Após definir as funções estou utilizando metodos para poder trandormar em string e pegar
-         * o texto e entregara para uma variavel String.
-         * Entretnato, estou vendo que pode ser mudado para utilzar uma string talvez.*
-         */
-
         String sNome = nome.getText().toString();
-        String sCPF_CNPJ = CPF_CNPJ.getText().toString();
-        String sRG = RG.getText().toString();
-        String sData_nascimento = data_nascimento.getText().toString();
-        String sCEP = CEP.getText().toString();
-        String sEndereco = endereco.getText().toString();
-        String sBairro = bairro.getText().toString();
-        String sMunicipio = municipio.getText().toString();
-        String sEstado = estado.getText().toString();
-        String sComplemento = complemento.getText().toString();
-        String sTelefone_residencial = telefone_residencial.getText().toString();
-        String sTelefone_celular = telefone_celular.getText().toString();
-        String sEmail = email.getText().toString();
-        String sConfirmar_email = confirmar_email.getText().toString();
-        String sSenha = senha.getText().toString();
-        String sConfrimar_senha = confirmar_senha.getText().toString();
 
-        Usuario user = new Usuario();
-        /**
-         *
-         */
-        Intent intent = new Intent(this, Usuario.class);
-        intent.putExtra(chave, sNome);
-
-
-        /**
-         * Após Armazenar tudo em variavéis, tem um verificador para trocar as bordas e depois
-         * enviar para o banco de dados as informações obrigatorias e não obrigatorias, agora nisso
-         * será feita a conexão com o banco de dados.*
-         */
-
-        // nome
         if (sNome.equals("")) {
             nome.setBackgroundResource(R.drawable.background_error);
 
 
         } else {
             nome.setBackgroundResource(R.drawable.background_normal);
-            user.setNome(sNome);
+
+            cadastroContador++;
         }
 
-        // CPF_CNPJ
+        /**
+         * Coleta e armazena o CPF ou o CNPJ da pessoa.*
+         */
+        EditText CPF_CNPJ = (EditText) findViewById(R.id.cadastro_CPF_CNPJ);
+        String sCPF_CNPJ = CPF_CNPJ.getText().toString();
+
         if (sCPF_CNPJ.equals("")) {
             CPF_CNPJ.setBackgroundResource(R.drawable.background_error);
 
         } else {
             CPF_CNPJ.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // RG
+        /**
+         * Coleta e armazena o RG.*
+         */
+        EditText RG = (EditText) findViewById(R.id.cadastro_RG);
+        String sRG = RG.getText().toString();
+
         if (sRG.equals("")) {
             RG.setBackgroundResource(R.drawable.background_error);
 
         } else {
             RG.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // data nascimentp
+        /**
+         * Coleta e armazena a data de nascimento da pessoa.*
+         */
+        EditText data_nascimento = (EditText) findViewById(R.id.cadastro_nascimento);
+        String sData_nascimento = data_nascimento.getText().toString();
+
         if (sData_nascimento.equals("")) {
             data_nascimento.setBackgroundResource(R.drawable.background_error);
 
         } else {
             data_nascimento.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // CEP
-        if (sCEP.equals("")){
+        /**
+         * Coleta e armazena o CEP.*
+         */
+        EditText CEP = (EditText) findViewById(R.id.cadastro_CEP);
+        String sCEP = CEP.getText().toString();
+
+        if (sCEP.equals("")) {
             CEP.setBackgroundResource(R.drawable.background_error);
 
         } else {
             CEP.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // endereco
-        if (sEndereco.equals("")){
+        /**
+         * Coleta e armazena o endereço.*
+         */
+        EditText endereco = (EditText) findViewById(R.id.cadastro_endereco);
+        String sEndereco = endereco.getText().toString();
+
+        if (sEndereco.equals("")) {
             endereco.setBackgroundResource(R.drawable.background_error);
 
         } else {
             endereco.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // bairro
-        if (sBairro.equals("")){
+        /**
+         * Coleta e armazena o Bairro.*
+         */
+        EditText bairro = (EditText) findViewById(R.id.cadastro_bairro);
+        String sBairro = bairro.getText().toString();
+
+        if (sBairro.equals("")) {
             bairro.setBackgroundResource(R.drawable.background_error);
 
         } else {
             bairro.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // municipio
-        if (sMunicipio.equals("")){
+        /**
+         * Coleta e armazena o Municipio.*
+         */
+        EditText municipio = (EditText) findViewById(R.id.cadastro_municipio);
+        String sMunicipio = municipio.getText().toString();
+
+        if (sMunicipio.equals("")) {
             municipio.setBackgroundResource(R.drawable.background_error);
 
         } else {
             municipio.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // estado
-        if (sEstado.equals("")){
+        /**
+         * Coleta e armazena o Estado.*
+         */
+        EditText estado = (EditText) findViewById(R.id.cadastro_estado);
+        String sEstado = estado.getText().toString();
+
+        if (sEstado.equals("")) {
             estado.setBackgroundResource(R.drawable.background_error);
 
         } else {
             estado.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // complemento
-        if (sComplemento.equals("")){
+        /**
+         * Coleta e armazena o Complemento de onde a pessoa mora.*
+         */
+        EditText complemento = (EditText) findViewById(R.id.cadastro_complemento);
+        String sComplemento = complemento.getText().toString();
+
+        if (sComplemento.equals("")) {
             complemento.setBackgroundResource(R.drawable.background_error);
 
         } else {
             complemento.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // Telefone residencial
-        if (sTelefone_residencial.equals("")){
+        /**
+         * Coleta e armazena o Telefone residencial informado.*
+         */
+        EditText telefone_residencial = (EditText) findViewById(R.id.cadastro_telefone_residencial);
+        String sTelefone_residencial = telefone_residencial.getText().toString();
+
+        if (sTelefone_residencial.equals("")) {
 
         } else {
             telefone_residencial.setBackgroundResource(R.drawable.background_normal);
 
         }
 
-        // Telefone celular
-        if (sTelefone_celular.equals("")){
+        /**
+         * Coleta e armazena o Telefone celular informado.*
+         */
+        EditText telefone_celular = (EditText) findViewById(R.id.cadastro_telefone_celular);
+        String sTelefone_celular = telefone_celular.getText().toString();
+
+        if (sTelefone_celular.equals("")) {
             telefone_celular.setBackgroundResource(R.drawable.background_error);
 
         } else {
             telefone_celular.setBackgroundResource(R.drawable.background_normal);
 
+            cadastroContador++;
         }
 
-        // email
+        /**
+         * Coleta e armazena o Email, junto abaixo tem outro estado de comparação para saber se o
+         * que está escrito no campo "Email" é o mesmo do que está escrito no campo "Verificar Email".*
+         */
+        EditText email = (EditText) findViewById(R.id.cadastro_email);
+        String sEmail = email.getText().toString();
+
+        EditText confirmar_email = (EditText) findViewById(R.id.cadastro_confirmar_email);
+        String sConfirmar_email = confirmar_email.getText().toString();
+
+
         if (sEmail.equals("")) {
             email.setBackgroundResource(R.drawable.background_error);
 
         } else {
             email.setBackgroundResource(R.drawable.background_normal);
-
         }
 
-        // confirmar email
-        if (sConfirmar_email.equals(sEmail)){
+        if (sConfirmar_email.equals(sEmail)) {
             confirmar_email.setBackgroundResource(R.drawable.background_normal);
-
+            intent.putExtra("EMAIL_CADASTRO", sEmail);
+            cadastroContador++;
         } else {
             confirmar_email.setBackgroundResource(R.drawable.background_error);
 
         }
 
-        // senha
+        /**
+         * Coleta e armazena a Senha, junto abaixo tem outro estado de comparação para saber se a
+         * senha escrita no campo "Senha" é a mesma do campo "Verificar a Senha".*
+         */
+        EditText senha = (EditText) findViewById(R.id.cadastro_senha);
+        EditText confirmar_senha = (EditText) findViewById(R.id.cadastro_confirmar_senha);
+
+        String sSenha = senha.getText().toString();
+        String sConfrimar_senha = confirmar_senha.getText().toString();
+
         if (sSenha.equals("")) {
             senha.setBackgroundResource(R.drawable.background_error);
 
@@ -271,13 +311,18 @@ public class TelaCadastro extends AppCompatActivity {
 
         }
 
-        // confirmar senha
-        if (sConfrimar_senha.equals(sSenha)){
+        if (sConfrimar_senha.equals(sSenha)) {
             confirmar_senha.setBackgroundResource(R.drawable.background_normal);
+            intent.putExtra("SENHA_CADASTRO", sSenha);
 
+            cadastroContador++;
         } else {
             confirmar_senha.setBackgroundResource(R.drawable.background_error);
 
+        }
+
+        if (cadastroContador >= 2) {
+            startActivity(intent);
         }
 
     }
@@ -287,7 +332,7 @@ public class TelaCadastro extends AppCompatActivity {
      * sem precisar digitar, mas caso queira é possivel.*
      */
 
-    public void nascimento(View view) {
+    public void cadastro_btnNascimento(View view) {
         final Calendar cale = Calendar.getInstance();
         dia = cale.get(Calendar.DAY_OF_MONTH);
         mes = cale.get(Calendar.MONTH);

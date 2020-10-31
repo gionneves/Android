@@ -33,28 +33,29 @@ public class TelaMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_main);
 
-        //Atribuir variavel
-        autoCompleteTextView = findViewById(R.id.textGetServico);
+        /**
+         * O código nas proximas linhas (antes de fechar o "onCreate") servem para que funcione o
+         * corretor da caixa de texto apresentada no layout.*
+         */
+
+        autoCompleteTextView = findViewById(R.id.actvPesquisa_servicos);
         textView = findViewById(R.id.textViewPrecisa);
 
-        //Iniciar adapter
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line
                 , servicos);
 
-        //Pegar sugestão apos ecrever algumas letras;
         autoCompleteTextView.setThreshold(1);
 
-        // Setar adapter
         autoCompleteTextView.setAdapter(adapter);
     }
 
     /**
      * Esse metodo serve para verificar o que está escrito no EditText para enviar o usuario para a
      * tela de serviço desejado e suas opções.
-     * @param view
-     * O parametro de "view" serve para poder mostrar a janela após selecionado.*
+     *
+     * @param view O parametro de "view" serve para poder mostrar a janela após selecionado.*
      */
-    public void btn_confirmar(View view) {
+    public void servicos_btnConfirmar(View view) {
         String cfm = autoCompleteTextView.getText().toString();
         cfm = cfm.toLowerCase().replace("-", "");
         switch (cfm) {
@@ -73,14 +74,19 @@ public class TelaMain extends AppCompatActivity {
     /**
      * Botão será acionado e levará o usuario ate a parte de suporte onde tudo poderá ser mostrado
      * tanto erros comums quando a possibilidade de falar com atendente.
-     * @param view
-     * O parametro de "view" serve para poder mostrar a janela após selecionado.*
+     *
+     * @param view O parametro de "view" serve para poder mostrar a janela após selecionado.*
      */
-    public void btn_suporte(View view) {
+    public void servicos_btnSuporte(View view) {
 
     }
 
-    public void btn_voltaMain(View view) {
+    /**
+     * Este botão serve para volta a tela de serviços, porem ele está sendo usando em um Easter egg
+     * dentro do programa, se não fosse algo extremamente IMPORTANTE não teria nada disso escrito no
+     * código do aplicativo, porem já que está aqui... pense um pouco e vá tirar umas "ferias".*
+     */
+    public void servicos_btnVoltar(View view) {
         //startActivity(new Intent(this, TelaMain.class));
         finish();
     }

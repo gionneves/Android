@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,113 +11,91 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="122dp"
-        android:layout_marginTop="8dp"
-        android:onClick="actMain_unlockDebug"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gg_dez_oitenta" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:onClick="login_btnUnlockDebug"
+                app:srcCompat="@drawable/gg_dez_oitenta" />
 
-    <EditText
-        android:id="@+id/loginGetEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/background_shadow"
-        android:ems="10"
-        android:hint="@string/get_text_email"
-        android:inputType="textPersonName"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0" />
+            <EditText
+                android:id="@+id/loginGetEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_shadow"
+                android:hint="@string/get_text_email"
+                android:inputType="textPersonName"
+                android:textSize="24dp" />
 
-    <EditText
-        android:id="@+id/loginGetPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/background_shadow"
-        android:ems="10"
-        android:hint="@string/get_text_password"
-        android:inputType="textPassword"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginGetEmail" />
+            <EditText
+                android:id="@+id/loginGetPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_shadow"
+                android:hint="@string/get_text_password"
+                android:inputType="textPassword"
+                android:textSize="24dp" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="48dp"
-        android:onClick="goTelaMain"
-        android:text="@string/btn_login"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginGetPass" />
 
-    <Button
-        android:id="@+id/btn_cadastro"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="48dp"
-        android:onClick="goTelaCadastro"
-        android:text="@string/btn_cadastro"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+            <Button
+                android:id="@+id/login_btnEntrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginTop="32dp"
+                android:onClick="login_btnTelaMain"
+                android:text="Entrar"
+                android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/textLoginViewEsqueciSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:onClick="esqueciSenha"
-        android:shadowColor="@android:color/darker_gray"
-        android:shadowDx="0.7"
-        android:shadowDy="0.7"
-        android:shadowRadius="0.5"
-        android:text="Esqueci a senha."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_debug"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:visibility="invisible"
-        android:text="Debug"
-        android:onClick="actMain_goDebug"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cadastro" />
+                <TextView
+                    android:id="@+id/textLoginViewEsqueciSenha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="64dp"
+                    android:clickable="true"
+                    android:onClick="login_esqueciSenha"
+                    android:text="Esqueci a senha."
+                    android:textSize="16dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/login_btnCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginTop="48dp"
+                android:onClick="login_btnTelaCadastro"
+                android:text="Cadastre-se"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn_debug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:onClick="login_btnGoDebug"
+                android:text="Debug"
+                android:visibility="invisible" />
+
+        </LinearLayout>
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -102,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
-                    android:onClick="arUmVoltar"
+                    android:onClick="videoUm_btnVoltar"
                     android:text="Voltar" />
 
                 <Button
@@ -110,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
-                    android:onClick="arUmProximo"
+                    android:onClick="videoUm_btnProximo"
                     android:text="Confrimar" />
 
             </RelativeLayout>
