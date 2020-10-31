@@ -36,7 +36,7 @@
                 android:textSize="20dp" />
 
             <CheckBox
-                android:id="@+id/checkboxUm"
+                android:id="@+id/arCB_um"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
@@ -46,7 +46,7 @@
                 android:textSize="20dp" />
 
             <CheckBox
-                android:id="@+id/checkboxDois"
+                android:id="@+id/arCB_dois"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
@@ -56,7 +56,7 @@
                 android:textSize="20dp" />
 
             <CheckBox
-                android:id="@+id/checkboxTres"
+                android:id="@+id/arCB_tres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content">
 
                 <CheckBox
-                    android:id="@+id/checkboxOutros"
+                    android:id="@+id/arCB_outros"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
-                    android:onClick="arUmVoltar"
+                    android:onClick="arUm_btnVoltar"
                     android:text="Voltar" />
 
                 <Button
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
-                    android:onClick="arUmProximo"
+                    android:onClick="arUm_btnProximo"
                     android:text="Confrimar" />
 
             </RelativeLayout>

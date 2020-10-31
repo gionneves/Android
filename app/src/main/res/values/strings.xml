@@ -42,5 +42,28 @@
     </string>
     <string name="pagRB_debito">Selecionado o <b>Débito</b></string>
     <string name="pagRB_credito">Selecionado o <b>Crédito</b></string>
+    <string name="or_amento">Orçamento</string>
+    <string name="video_games">Video-games</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="de_qual_marcar">De qual marcar?</string>
+    <string name="nintendo">Nintendo</string>
+    <string name="sony">Sony</string>
+    <string name="microsoft">Microsoft</string>
+    <string name="outros_t_t">Outros:\t\t</string>
+    <string name="voltar">Voltar</string>
+    <string name="nos_conte_mais">Nos conte mais...</string>
+    <string name="modelo">Modelo:\t\t</string>
+    <string name="defeitos_comuns">defeitos comuns:</string>
+    <string name="n_o_liga">Não liga.</string>
+    <string name="liga_porem_n_o_da_tela">Liga, porem não da tela.</string>
+    <string name="outrosOp">Outros</string>
+    <string name="adicional">Adicional:\t\t</string>
+    <string name="proximo">Proximo</string>
+    <string name="nome">*Nome:</string>
+    <string name="hint_nome_completo">Nome completo</string>
+    <string name="cpf_cnpj">*CPF/CNPJ:</string>
+    <string name="btnT_fisica">Fisica</string>
+    <string name="btnT_juridica">Juridica</string>
 
 </resources>

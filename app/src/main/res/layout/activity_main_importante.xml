@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="voltar"
-                android:onClick="btn_voltaMain"/>
+                android:onClick="servicos_btnVoltar" />
 
         </LinearLayout>
 

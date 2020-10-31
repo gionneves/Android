@@ -18,9 +18,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="*Nome:"
+                android:text="@string/nome"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -29,18 +29,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="Nome completo"
+                android:hint="@string/hint_nome_completo"
                 android:inputType="textPersonName"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*CPF/CNPJ:"
+                android:text="@string/cpf_cnpj"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -53,9 +53,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Pessoa  "
-                    android:textOff="Fisica"
-                    android:textOn="Juridica"
+                    android:text="Pessoa"
+                    android:textOff="@string/btnT_fisica"
+                    android:textOn="@string/btnT_juridica"
                     android:textStyle="bold" />
 
                 <EditText
@@ -66,7 +66,7 @@
                     android:background="@drawable/background_shadow"
                     android:inputType="number"
                     android:maxLines="1"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:onClick="nascimento"
+                    android:onClick="cadastro_btnNascimento"
                     android:text="Calendario" />
 
                 <EditText
@@ -396,7 +396,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="4dp"
-                        android:onClick="fechar"
+                        android:onClick="cadastro_btnFechar"
                         android:text="Cancelar" />
 
                     <Button
@@ -404,7 +404,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="4dp"
-                        android:onClick="cadastrar"
+                        android:onClick="cadastro_btnCadastrar"
                         android:text="Cadastrar!" />
                 </RelativeLayout>
 

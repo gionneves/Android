@@ -9,19 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
-        <activity android:name=".servicos.Final_OS"></activity>
+        <activity android:name=".servicos.videogames.VideoTres"></activity>
+        <activity android:name=".servicos.arcondicionado.ArBTUS" />
+        <activity android:name=".servicos.videogames.VideoDois" />
+        <activity android:name=".servicos.Final_OS" />
         <activity android:name=".servicos.arcondicionado.ArTres" />
         <activity android:name=".servicos.videogames.VideoUm" />
         <activity android:name=".servicos.Pagamento" />
-        <activity android:name=".servicos.arcondicionado.ArQuatro" />
+        <activity android:name=".servicos.Agendamento" />
         <activity
             android:name=".servicos.arcondicionado.ArDois"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".servicos.arcondicionado.ArUm" />
         <activity
             android:name=".servicos.TelaMain"
-            android:label="@string/title_activity_tela_main"
-            android:windowSoftInputMode="adjustResize" />
+            android:label="@string/title_activity_tela_main" />
         <activity
             android:name=".TelaEsqueciSenha"
             android:label="Esqueci a senha" />
