@@ -81,17 +81,16 @@
                     android:layout_marginRight="16dp"
                     android:text="##### #####"
                     android:textColor="#ff999999"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quente, frio"
+                    android:clickable="false"
+                    android:checked="true"/>
 
             </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/arCB_qfOrcamento"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:clickable="false"
-                android:text="Quente, frio" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,16 +126,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="8dp"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/voltar"
-                    android:onClick="arTres_btnVoltar" />
+                    android:text="Voltar"
+                    android:onClick="arTresVoltar"/>
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginHorizontal="8dp"
-                    android:onClick="arTres_btnConfirmar"
-                    android:text="@string/confirmar" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_alignParentRight="true"
+                android:text="Confirmar"
+                android:onClick="arTresConfirmar"/>
 
             </RelativeLayout>
 
