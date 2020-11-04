@@ -20,21 +20,19 @@ public class ArTres extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ar_tres);
 
-        marcaO = (TextView) findViewById(R.id.arTV_marcaOrcamento);
-        modeloO = (TextView) findViewById(R.id.arTV_modeloOrcamento);
-        btusO = (TextView) findViewById(R.id.arTV_BTUsOrcamento);
-
-
         Intent intent = getIntent();
-
         marca = intent.getStringExtra("MARCA_ARDOIS");
         modelo = intent.getStringExtra("MODELO_ARDOIS");
         btu = intent.getStringExtra("BTU_ARDOIS");
 
+        marcaO = (TextView) findViewById(R.id.arTV_marcaOrcamento);
+        marcaO.setText(getString(R.string.marca_orcamento, marca));
 
-        marcaO.setText(marca);
-        modeloO.setText(modelo);
-        btusO.setText(btu);
+        modeloO = (TextView) findViewById(R.id.arTV_modeloOrcamento);
+        modeloO.setText(getString(R.string.modelo_orcamento, modelo));
+
+        btusO = (TextView) findViewById(R.id.arTV_BTUsOrcamento);
+        btusO.setText(getString(R.string.btus_orcamento, btu));
 
 
     }

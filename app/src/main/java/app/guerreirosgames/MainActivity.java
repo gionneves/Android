@@ -8,8 +8,9 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import app.guerreirosgames.servicos.Final_OS;
 import app.guerreirosgames.servicos.TelaMain;
-import app.guerreirosgames.servicos.videogames.VideoUm;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login_btnGoDebug(View view) {
         btn_debug = findViewById(R.id.btn_debug);
-        startActivity(new Intent(this, VideoUm.class));
+        startActivity(new Intent(this, Final_OS.class));
         btn_debug.setVisibility(View.INVISIBLE);
     }
 }

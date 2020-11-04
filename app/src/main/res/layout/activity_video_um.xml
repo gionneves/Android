@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:layout_marginLeft="32dp"
-                    android:text="@string/outros_t_t"
+                    android:text="@string/outros"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 

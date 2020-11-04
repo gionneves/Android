@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Do que você precisa?"
+                android:text="@string/do_que_voce_precisa_ar_um"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="25dp"
@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="24dp"
-                android:text="Ar-condicionado"
+                android:text="@string/ar_condicionado_ar_um"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:text="Higienização"
+                android:text="@string/higienizacao_ar_um"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:text="Manutenção"
+                android:text="@string/manutencao_ar_um"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:text="Instalação"
+                android:text="@string/instalacao_ar_um"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:layout_marginLeft="32dp"
-                    android:text="Outros: "
+                    android:text="@string/outros"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -85,7 +85,7 @@
                     android:layout_marginVertical="16dp"
                     android:layout_marginRight="32dp"
                     android:background="@drawable/background_shadow"
-                    android:hint="Mudar o cómodo"
+                    android:hint="@string/hint_outros_ar_um"
                     android:lines="1"
                     android:maxLines="1"
                     android:outlineAmbientShadowColor="@color/black"
@@ -103,7 +103,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
                     android:onClick="arUm_btnVoltar"
-                    android:text="Voltar" />
+                    android:text="@string/voltar" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
                     android:onClick="arUm_btnProximo"
-                    android:text="Confrimar" />
+                    android:text="@string/confirmar" />
 
             </RelativeLayout>
 

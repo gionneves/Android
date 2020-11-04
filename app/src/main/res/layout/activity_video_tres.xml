@@ -35,6 +35,52 @@
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/videoTres_tvMarca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="24dp"
+                android:text="@string/marca_orcamento"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/videoTres_tvModelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="24dp"
+                android:text="@string/modelo_orcamento"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/videoTres_tvComum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="12dp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/videoTres_tvAdicional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="24dp"
+                android:text="@string/adicional"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvAdiconal_OrcamentoVideoGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,6 +92,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
                     android:text="@string/cancelar"
+                    android:onClick="videoTres_btnCancelar"
                     android:textSize="18sp" />
 
                 <Button
@@ -54,6 +101,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
                     android:text="@string/confirmar"
+                    android:onClick="videoTres_btnProximo"
                     android:textSize="18sp" />
 
             </RelativeLayout>

@@ -31,91 +31,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="24dp"
-                android:text="Ar-condicionado"
+                android:text="@string/ar_condicionado_ar_um"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:text="Marca:\t"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"/>
-
-                <TextView
-                    android:id="@+id/arTV_marcaOrcamento"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:text="##### #####"
-                    android:textColor="#ff999999"
-                    android:textSize="20dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:text="Modelo:\t"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"/>
-
-                <TextView
-                    android:id="@+id/arTV_modeloOrcamento"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="##### #####"
-                    android:textColor="#ff999999"
-                    android:textSize="20dp" />
-
-            </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/arCB_qfOrcamento"
+            <TextView
+                android:id="@+id/arTV_marcaOrcamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/marca"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/arTV_modeloOrcamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/modelo"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
                 android:checked="true"
                 android:clickable="false"
                 android:text="Quente, frio" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/arTV_BTUsOrcamento"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:text="BTUs:\t"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"/>
-
-                <TextView
-                    android:id="@+id/arTV_BTUsOrcamento"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:text="######"
-                    android:textColor="#ff999999"
-                    android:textSize="20dp"/>
-
-            </LinearLayout>
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/btus_orcamento"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -125,10 +82,10 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="8dp"
                     android:layout_alignParentLeft="true"
-                    android:text="@string/voltar"
-                    android:onClick="arTres_btnVoltar" />
+                    android:layout_marginHorizontal="8dp"
+                    android:onClick="arTres_btnVoltar"
+                    android:text="@string/voltar" />
 
                 <Button
                     android:layout_width="wrap_content"

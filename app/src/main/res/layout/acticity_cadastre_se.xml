@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*RG:"
+                android:text="@string/rg"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="12.345.678-9"
+                android:hint="@string/hint_rg"
                 android:inputType="number"
                 android:maxLength="9"
                 android:padding="5dp"
@@ -95,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Data de nascimento:"
+                android:text="@string/data_de_nascimento"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
                     android:onClick="cadastro_btnNascimento"
-                    android:text="Calendario" />
+                    android:text="@string/calendario" />
 
                 <EditText
                     android:id="@+id/cadastro_nascimento"
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/background_shadow"
-                    android:hint="20/06/2005"
+                    android:hint="@string/hint_data_de_nascimento"
                     android:inputType="datetime"
                     android:maxLength="10"
                     android:padding="5dp"
@@ -129,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*CEP:"
+                android:text="@string/cep"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="00000-000"
+                android:hint="@string/hint_cep"
                 android:inputType="numberSigned"
                 android:maxLength="8"
                 android:padding="5dp"
@@ -150,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Endereço:"
+                android:text="@string/endereco"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="Rua Fernando Ivan, 99"
+                android:hint="@string/hint_endereco"
                 android:inputType="textPostalAddress"
                 android:padding="5dp"
                 android:textSize="20dp" />
@@ -170,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Bairro:"
+                android:text="@string/bairro"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="Jd. Dolores"
+                android:hint="@string/hint_bairro"
                 android:inputType="text"
                 android:padding="5dp"
                 android:textSize="20dp" />
@@ -195,7 +195,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="*Município:"
+                    android:text="@string/municipio"
                     android:textAlignment="textStart"
                     android:textSize="17dp"
                     android:textStyle="bold" />
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/background_shadow"
-                    android:hint="Osasco"
+                    android:hint="@string/hint_municipio"
                     android:inputType="text"
                     android:padding="5dp"
                     android:textSize="20dp" />
@@ -214,7 +214,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="*Estado:"
+                    android:text="@string/estado"
                     android:textAlignment="textStart"
                     android:textSize="17dp"
                     android:textStyle="bold" />
@@ -226,7 +226,7 @@
                     android:layout_gravity="right"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/background_shadow"
-                    android:hint="SP"
+                    android:hint="@string/hint_estado"
                     android:inputType="text"
                     android:maxLength="2"
                     android:padding="5dp"
@@ -238,7 +238,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Complemento:"
+                android:text="@string/complemento"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -249,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="Casa/Ap. 02; 11º andar"
+                android:hint="@string/hint_complemento"
                 android:inputType="text"
                 android:padding="5dp"
                 android:textSize="20dp" />
@@ -258,7 +258,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Telefone Residencial:"
+                android:text="@string/telefone_residencial"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -269,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="(00) 1234-5678"
+                android:hint="@string/hint_telefone_residencial"
                 android:inputType="phone"
                 android:maxLength="10"
                 android:padding="5dp"
@@ -279,7 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Telefone Celular:"
+                android:text="@string/telefone_celular"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -290,7 +290,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="(00) 91234-5678"
+                android:hint="@string/hint_telefone_celular"
                 android:inputType="phone"
                 android:maxLength="11"
                 android:padding="5dp"
@@ -300,7 +300,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Email:"
+                android:text="@string/email"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -311,7 +311,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="seuEmail@seuEmail.com"
+                android:hint="@string/hint_exemplo_email"
                 android:inputType="textEmailAddress"
                 android:padding="5dp"
                 android:textSize="20dp" />
@@ -320,7 +320,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Confirmar email:"
+                android:text="@string/confirmar_email"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -331,7 +331,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="seuEmail@seuEmail.com"
+                android:hint="@string/hint_exemplo_email"
                 android:inputType="textEmailAddress"
                 android:padding="5dp"
                 android:textIsSelectable="false"
@@ -341,7 +341,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Senha:"
+                android:text="@string/senha"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -352,7 +352,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="Senha"
+                android:hint="@string/hint_senha"
                 android:inputType="textPassword"
                 android:maxLength="12"
                 android:padding="5dp"
@@ -363,7 +363,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="*Confirmar senha:"
+                android:text="@string/confirmar_senha"
                 android:textAlignment="textStart"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -374,7 +374,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/background_shadow"
-                android:hint="Senha"
+                android:hint="@string/hint_senha"
                 android:inputType="textPassword"
                 android:maxLength="12"
                 android:padding="5dp"
@@ -397,7 +397,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="4dp"
                         android:onClick="cadastro_btnFechar"
-                        android:text="Cancelar" />
+                        android:text="@string/cancelar" />
 
                     <Button
                         android:layout_width="wrap_content"
@@ -405,7 +405,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="4dp"
                         android:onClick="cadastro_btnCadastrar"
-                        android:text="Cadastrar!" />
+                        android:text="@string/cadastre_se_login" />
                 </RelativeLayout>
 
             </LinearLayout>

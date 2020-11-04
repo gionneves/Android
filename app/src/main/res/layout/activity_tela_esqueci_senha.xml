@@ -19,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Coloque o seu E-Mail para recuperar a senha."
+        android:text="@string/text_forget_password"
         android:textAlignment="center"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
@@ -31,9 +31,10 @@
         android:layout_marginHorizontal="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/background_shadow"
-        android:hint="seu_email@email.com"
+        android:autofillHints=""
         android:inputType="textEmailAddress"
-        android:textSize="20dp" />
+        android:hint="@string/hint_exemplo_email"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_esqueciSenha"
@@ -41,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
         android:layout_marginTop="32dp"
-        android:text="Esqueci a senha" />
+        android:text="@string/esqueci_a_senha_btn_esqueci" />
 
 
 </LinearLayout>

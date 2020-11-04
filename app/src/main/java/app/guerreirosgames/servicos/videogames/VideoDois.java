@@ -21,6 +21,10 @@ public class VideoDois extends AppCompatActivity {
     TextView tvMarca;
     CheckBox nLiga, lNaoDaTela, pOutros;
 
+    /**
+     * Lista de modelos de cada marca de video-games disponiveis aqui na Guerreiros para reparo.*
+     */
+
     String[] nintendo = {"Nintendo Wii", "Nintendo 3DS", "Nintendo New 3DS", "Nintendo 2DS",
             "Nintendo New 2DS", "Nintendo WiiU", "Nintendo DS", "Nintendo DSi", "Nintendo DSi-Lite",
             "Nintendo Switch"};
@@ -55,6 +59,11 @@ public class VideoDois extends AppCompatActivity {
         tvMarca.setText(marca);
 
         modelos = findViewById(R.id.videoDois_actvModelo);
+
+        /**
+         * Esse switch é responsavel por compara a String "marca" e ver qual marca foi selecionada
+         * na tela passada e fazer aparecer somente os modelos de determinada marca no autocorretor.*
+         */
 
         switch (marca) {
             case "Nintendo":
@@ -155,7 +164,7 @@ public class VideoDois extends AppCompatActivity {
 
     }
 
-    private void isNSF() {
+    private void isNSF() { /**Esse é um segredo, não conte a ninguem.* */
         modelos = findViewById(R.id.videoDois_actvModelo);
         String is64 = modelos.getText().toString();
 
@@ -171,6 +180,11 @@ public class VideoDois extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * Esses botões são auto explicativos, um adendo no primeiro "videoDois_btnProximo" que ele salva
+     * as informações e depois envia para proxima activity.*
+     */
 
     public void videoDois_btnProximo(View view) {
         isNSF();

@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="48dp"
-                android:text="Quando precisa?"
+                android:text="@string/quando_precisa"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="25dp"
@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="32dp"
-                android:text="Agendar dia:"
+                android:text="@string/agendar_dia"
                 android:textSize="15dp"
                 android:layout_marginBottom="32dp"
                 android:textStyle="bold" />
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="agendamento_btnCalendario"
                     android:layout_marginRight="24dp"
-                    android:text="Calendario" />
+                    android:text="@string/calendario" />
 
                 <EditText
                     android:id="@+id/tAgendamentoCalendario"
@@ -73,7 +73,7 @@
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="54dp"
                     android:onClick="agendamento_btnHorario"
-                    android:text="Horario" />
+                    android:text="@string/horario" />
 
                 <EditText
                     android:id="@+id/tArQuatroHora"
@@ -98,7 +98,7 @@
                     android:layout_marginHorizontal="24dp"
                     android:layout_alignParentLeft="true"
                     android:onClick="agendamento_btnVolta"
-                    android:text="Voltar" />
+                    android:text="@string/voltar" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
                     android:layout_marginHorizontal="24dp"
                     android:onClick="agendamento_btnAgendamento"
                     android:layout_alignParentRight="true"
-                    android:text="Agendar" />
+                    android:text="@string/agendar" />
             </RelativeLayout>
 
         </LinearLayout>

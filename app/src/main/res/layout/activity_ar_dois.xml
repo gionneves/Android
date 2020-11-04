@@ -21,20 +21,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Nos conte mais."
+                android:text="@string/nos_conte_mais"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="24dp"
-                android:text="Ar-condicionado"
+                android:text="@string/ar_condicionado_ar_um"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,9 +45,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="Marca: "
+                    android:text="@string/marca"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <AutoCompleteTextView
                     android:id="@+id/actvMarca_ArDois"
@@ -57,7 +57,7 @@
                     android:background="@drawable/background_shadow"
                     android:hint="LG, Consul, Panasonic"
                     android:maxLines="1"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -70,9 +70,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="Modelo: "
+                    android:text="@string/modelo"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <AutoCompleteTextView
                     android:id="@+id/actvModelo_ArDois"
@@ -81,7 +81,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:background="@drawable/background_shadow"
                     android:maxLines="1"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -90,8 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:text="Frio e quente?"
-                android:textSize="20dp" />
+                android:text="@string/frio_e_quente"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -102,9 +102,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="BTUs: "
+                    android:text="@string/btus"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <AutoCompleteTextView
                     android:id="@+id/actvBTUs_ArDois"
@@ -114,14 +114,14 @@
                     android:layout_marginHorizontal="16dp"
                     android:background="@drawable/background_shadow"
                     android:hint="9000        "
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:onClick="arDois_calcular"
-                    android:text="Calcular BTU"
+                    android:text="@string/calcular_btu"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Adicional: "
+                android:text="@string/adicional"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -167,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:onClick="arDois_btnVoltar"
-                    android:text="Voltar" />
+                    android:text="@string/voltar" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -175,7 +175,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
                     android:onClick="arDois_btnConfirmar"
-                    android:text="Confirmar" />
+                    android:text="@string/confirmar" />
 
             </RelativeLayout>
 

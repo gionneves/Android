@@ -1,13 +1,12 @@
 <resources>
-    <string name="app_name">Guerreiro Games</string>
-    <string name="get_text_email">E-Mail</string>
-    <string name="text_nome">Nome completo</string>
+    <string name="app_name" translatable="false">Guerreiro Games</string>
+    <string name="get_text_email" translatable="false">E-Mail</string>
     <string name="get_text_password">Senha</string>
     <string name="btn_login">Entrar</string>
     <string name="btn_cadastro">Cadastrar-se</string>
     <string name="data_placeholder">12/08/2000</string>
-    <string name="text_telefone">(00) 90000-0000</string>
-    <string name="text_telefoneAlt">(00) 0000-0000</string>
+    <string name="text_telefone" translatable="false">(00) 90000-0000</string>
+    <string name="text_telefoneAlt" translatable="false">(00) 0000-0000</string>
     <string name="text_CPF">123.456.789.00</string>
     <string name="text_RG">01.234.567-89</string>
     <string name="text_ruaEndereco">Rua Fernando Ivan, 99</string>
@@ -47,10 +46,10 @@
     <string name="cancelar">Cancelar</string>
     <string name="confirmar">Confirmar</string>
     <string name="de_qual_marcar">De qual marcar?</string>
-    <string name="nintendo">Nintendo</string>
-    <string name="sony">Sony</string>
-    <string name="microsoft">Microsoft</string>
-    <string name="outros_t_t">Outros:\t\t</string>
+    <string name="nintendo" translatable="false">Nintendo</string>
+    <string name="sony" translatable="false">Sony</string>
+    <string name="microsoft" translatable="false">Microsoft</string>
+    <string name="outros">Outros:\t\t</string>
     <string name="voltar">Voltar</string>
     <string name="nos_conte_mais">Nos conte mais...</string>
     <string name="modelo">Modelo:\t\t</string>
@@ -65,5 +64,76 @@
     <string name="cpf_cnpj">*CPF/CNPJ:</string>
     <string name="btnT_fisica">Fisica</string>
     <string name="btnT_juridica">Juridica</string>
+    <string name="marca">Marca:\t\t</string>
+    <string name="adicional_orcamento">Adicional:\t\t\n%s</string>
+    <string name="modelo_orcamento">Modelo:\t\t %s</string>
+    <string name="marca_orcamento">Marca:\t\t %s</string>
+    <string name="entrar_login">Entrar</string>
+    <string name="esqueci_a_senha_login">Esqueci a senha.</string>
+    <string name="cadastre_se_login">Cadastre-se</string>
+    <string name="debug">Debug</string>
+    <string name="do_que_voce_precisa_servicos">Do que você precisa?</string>
+    <string name="confirmar_btn_servicos">Confirmar</string>
+    <string name="suporte_btn_servicos">Suporte</string>
+    <string name="hint_pesquisar_servicos">Pesquisar...</string>
+    <string name="text_forget_password">Coloque o seu E-Mail para recuperar a senha.</string>
+    <string name="hint_exemplo_email">seu_email@email.com</string>
+    <string name="esqueci_a_senha_btn_esqueci">Esqueci a senha</string>
+    <string name="do_que_voce_precisa_ar_um">Do que você precisa?</string>
+    <string name="ar_condicionado_ar_um">Ar-condicionado</string>
+    <string name="higienizacao_ar_um">Higienização</string>
+    <string name="manutencao_ar_um">Manutenção</string>
+    <string name="instalacao_ar_um">Instalação</string>
+    <string name="hint_outros_ar_um">Mudar o cómodo</string>
+    <string name="frio_e_quente">Frio e quente?</string>
+    <string name="btus">BTUs:\t\t</string>
+    <string name="calcular_btu">Calcular BTU</string>
+    <string name="quando_precisa">Quando precisa?</string>
+    <string name="agendar_dia">Agendar dia:</string>
+    <string name="calendario">Calendario</string>
+    <string name="horario">Horario</string>
+    <string name="agendar">Agendar</string>
+    <string name="rg">*RG:</string>
+    <string name="hint_rg">12.345.678-9</string>
+    <string name="data_de_nascimento">*Data de nascimento:</string>
+    <string name="hint_data_de_nascimento">20/06/2005</string>
+    <string name="cep">*CEP:</string>
+    <string name="hint_cep">00000-000</string>
+    <string name="endereco">*Endereço:</string>
+    <string name="hint_endereco">Rua Fernando Ivan, 99</string>
+    <string name="bairro">*Bairro:</string>
+    <string name="hint_bairro">Jd. Dolores</string>
+    <string name="municipio">*Município:</string>
+    <string name="hint_municipio">Osasco</string>
+    <string name="estado">*Estado:</string>
+    <string name="hint_estado">SP</string>
+    <string name="complemento">*Complemento:</string>
+    <string name="hint_complemento">Casa/Ap. 02; 11º andar</string>
+    <string name="telefone_residencial">Telefone Residencial:</string>
+    <string name="hint_telefone_residencial">(00) 1234-5678</string>
+    <string name="telefone_celular">*Telefone Celular:</string>
+    <string name="hint_telefone_celular">(00) 91234-5678</string>
+    <string name="email">*Email:</string>
+    <string name="confirmar_email">*Confirmar email:</string>
+    <string name="senha">*Senha:</string>
+    <string name="hint_senha">Senha</string>
+    <string name="confirmar_senha">*Confirmar senha:</string>
+    <string name="btus_orcamento">BTUs:\t\t %s</string>
+    <string name="cartao">Cartão</string>
+    <string name="total_pagamento">Total:t\\tR$ %f</string>
+    <string name="debito">Débito</string>
+    <string name="credito">Crédito</string>
+    <string name="dinheiro">Dinheiro</string>
+    <string name="troco">Troco?\t\t</string>
+    <string name="nao">Não</string>
+    <string name="sim">Sim</string>
+    <string name="dinheiro_cartao_pagamento_text">Vai de dinheiro\nou no cartão?</string>
+    <string name="nota_prestador_final_os">%f</string>
+    <string name="nome_prestador_final_os">%s, %d\n%s</string>
+    <string name="concluido_final_os">Concluído</string>
+    <string name="data_agendada_final_os">Data agendada:\t\t%s</string>
+    <string name="hora_agendada_final_os">Hora agendada:\t\t%s</string>
+    <string name="pagamento_agendado_final_os">Pagar com:\t\t</string>
+    <string name="text_nome">Nome completo</string>
 
 </resources>
