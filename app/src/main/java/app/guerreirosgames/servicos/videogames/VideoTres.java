@@ -27,23 +27,25 @@ public class VideoTres extends AppCompatActivity {
         modelo = intent.getStringExtra("VIDEODOIS_MODELO");
         adicional = intent.getStringExtra("VIDEODOIS_ADICIONAL");
 
-        tvMarca = (TextView) findViewById(R.id.videoTres_tvMarca);
+        tvMarca = findViewById(R.id.videoTres_tvMarca);
         tvMarca.setText(getString(R.string.marca_orcamento, marca));
 
-        tvModelo = (TextView) findViewById(R.id.videoTres_tvModelo);
+        tvModelo = findViewById(R.id.videoTres_tvModelo);
         tvModelo.setText(getString(R.string.modelo_orcamento, modelo));
 
-        tvAdicional = (TextView) findViewById(R.id.videoTres_tvAdicional);
+        tvAdicional = findViewById(R.id.videoTres_tvAdicional);
         tvAdicional.setText(getString(R.string.adicional_orcamento, adicional));
 
-        /**tvComum = (TextView) findViewById(R.id.videoTres_tvComum);
+        /** tvComum = (TextView) findViewById(R.id.videoTres_tvComum);
          tvComum.setText(getString(R.string.comum_orcamento, comum));.* */
     }
 
     public void videoTres_btnProximo(View view) {
         Intent intent = new Intent(this, Agendamento.class);
 
-        /** Adicionar depois opções de salvar a OS para o DB.* */
+        intent.putExtra("UNI_MARCA", marca);
+        intent.putExtra("UNI_MODELO", modelo);
+        intent.putExtra("UNI_ADICIONAL", adicional);
 
         startActivity(intent);
 

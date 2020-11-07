@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="32dp"
-                android:text="Serviço agendado!"
+                android:text="@string/servico_agendado"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="26sp"
@@ -139,7 +139,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-
+                    android:onClick="finalOS_btnConcluido"
                     android:layout_marginHorizontal="52dp"
                     android:gravity="center"
                     android:text="@string/concluido_final_os" />

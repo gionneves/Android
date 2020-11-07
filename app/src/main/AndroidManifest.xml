@@ -9,29 +9,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
-        <activity android:name=".servicos.videogames.VideoTres"></activity>
-        <activity android:name=".servicos.arcondicionado.ArBTUS" />
-        <activity android:name=".servicos.videogames.VideoDois" />
+
+
+        <activity
+            android:name=".servicos.videogames.VideoUm"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".servicos.videogames.VideoDois"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".servicos.videogames.VideoTres"
+            android:windowSoftInputMode="stateHidden" />
+
+
         <activity android:name=".servicos.Final_OS" />
-        <activity android:name=".servicos.arcondicionado.ArTres" />
-        <activity android:name=".servicos.videogames.VideoUm" />
         <activity android:name=".servicos.Pagamento" />
         <activity android:name=".servicos.Agendamento" />
+
+
+        <activity
+            android:name=".servicos.arcondicionado.ArUm"
+            android:label="@string/ar_condicionado_ar_um"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".servicos.arcondicionado.ArDois"
-            android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".servicos.arcondicionado.ArUm" />
+            android:label="@string/ar_condicionado_ar_um"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".servicos.arcondicionado.ArTres"
+            android:label="@string/ar_condicionado_ar_um"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".servicos.arcondicionado.ArBTUS"
+            android:label="@string/ar_condicionado_ar_um"
+            android:windowSoftInputMode="stateHidden" />
+
+
         <activity
             android:name=".servicos.TelaMain"
-            android:label="@string/title_activity_tela_main" />
+            android:label="@string/title_activity_tela_main"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".TelaEsqueciSenha"
             android:label="Esqueci a senha" />
         <activity
             android:name=".TelaCadastro"
-            android:label="Cadastre-se"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:label="@string/cadastre_se_login"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

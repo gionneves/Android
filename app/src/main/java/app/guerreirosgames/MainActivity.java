@@ -11,8 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import app.guerreirosgames.servicos.Final_OS;
 import app.guerreirosgames.servicos.TelaMain;
 
-
-
 public class MainActivity extends AppCompatActivity {
 
     private int unlock_debug = 0;
@@ -57,10 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (log.equals(userName) && pass.equals(userPass)) {
             startActivity(new Intent(this, TelaMain.class));
-        } else {
-            login.setBackgroundResource(R.drawable.background_error);
-            password.setBackgroundResource(R.drawable.background_error);
         }
+
+        login.setBackgroundResource(R.drawable.background_error);
+        password.setBackgroundResource(R.drawable.background_error);
+
     }
 
     /**
