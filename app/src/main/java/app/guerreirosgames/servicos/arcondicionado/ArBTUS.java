@@ -28,30 +28,31 @@ public class ArBTUS extends AppCompatActivity {
      * Define as funções que adiciona e remove pessoas e eletronicos do comodo.*
      */
     public void addPessoas_arBTUs(View view) {
-        pessoa = (EditText) findViewById(R.id.etPessoas_arBTUs);
-        pessoa.setText(String.valueOf(pessoas++));
+        pessoa = findViewById(R.id.etPessoas_arBTUs);
+        pessoa.setText(String.valueOf(++pessoas));
     }
 
     public void remPessoas_arBTUs(View view) {
-        pessoa = (EditText) findViewById(R.id.etPessoas_arBTUs);
-        if (pessoas < 0) {
+        pessoa = findViewById(R.id.etPessoas_arBTUs);
+        if (pessoas <= 0) {
 
         } else {
-            pessoa.setText(String.valueOf(pessoas--));
+            pessoa.setText(String.valueOf(--pessoas));
         }
     }
 
     public void addEletros_arBTUs(View view) {
-        eletro = (EditText) findViewById(R.id.etEletronicos_arBTUs);
-        eletro.setText(String.valueOf(eletronicos++));
+        eletro = findViewById(R.id.etEletronicos_arBTUs);
+        eletro.setText(String.valueOf(++eletronicos));
     }
 
     public void remEletros_arBTUs(View view) {
-        eletro = (EditText) findViewById(R.id.etEletronicos_arBTUs);
-        if (eletronicos < 0) {
+        eletro = findViewById(R.id.etEletronicos_arBTUs);
+        if (eletronicos <= 0) {
 
         } else {
-            eletro.setText(String.valueOf(eletronicos--));
+            eletro.setText(String.valueOf(--eletronicos));
+
         }
     }
 
@@ -77,8 +78,8 @@ public class ArBTUS extends AppCompatActivity {
      * Aqui onde fica os calculos para os BTUs, nisso.*
      */
     private void calcularBTU() {
-        largura = (EditText) findViewById(R.id.largura_arBTUs);
-        comprimento = (EditText) findViewById(R.id.comprimento_arBTUs);
+        largura = findViewById(R.id.largura_arBTUs);
+        comprimento = findViewById(R.id.comprimento_arBTUs);
 
         lar = Float.parseFloat(largura.getText().toString());
         com = Float.parseFloat(comprimento.getText().toString());
@@ -92,6 +93,13 @@ public class ArBTUS extends AppCompatActivity {
         if (eletronicos != 0) {
             btuFinal += (btuBase * eletronicos);
         }
-        System.out.println(btuFinal);
+
+        if (btuFinal < 7000) {
+            btuFinal = 7000;
+        } else if (btuFinal < 9000 && btuFinal > 7000) {
+            btuFinal = 9000;
+        } else if (btuFinal < 12000 && btuFinal > 9000) {
+            btuFinal = 12000;
+        }
     }
 }

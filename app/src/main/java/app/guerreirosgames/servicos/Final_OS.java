@@ -1,5 +1,6 @@
 package app.guerreirosgames.servicos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -46,6 +47,7 @@ public class Final_OS extends AppCompatActivity {
 
         while (idade < 17) {
             idade = rng.nextInt(30);
+            System.out.println(idade);
         }
 
         if (n == 4) {
@@ -63,6 +65,11 @@ public class Final_OS extends AppCompatActivity {
 
         prestadorInfo.setText(getString(R.string.nome_prestador_final_os, nome[n], idade, sobre[m]));
 
+    }
+
+    public void finalOS_btnConcluido(View view) {
+        Intent intent = new Intent(this, TelaMain.class);
+        startActivity(intent);
     }
 
 }

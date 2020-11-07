@@ -7,15 +7,15 @@
     <string name="data_placeholder">12/08/2000</string>
     <string name="text_telefone" translatable="false">(00) 90000-0000</string>
     <string name="text_telefoneAlt" translatable="false">(00) 0000-0000</string>
-    <string name="text_CPF">123.456.789.00</string>
-    <string name="text_RG">01.234.567-89</string>
+    <string name="text_CPF" translatable="false">123.456.789.00</string>
+    <string name="text_RG" translatable="false">01.234.567-89</string>
     <string name="text_ruaEndereco">Rua Fernando Ivan, 99</string>
     <string name="text_complemento">casa/ap. 02, box 3</string>
-    <string name="text_CEP">00000-000</string>
-    <string name="text_municipio">SP-Osasco</string>
-    <string name="title_activity_tela_main">MainActivity</string>
+    <string name="text_CEP" translatable="false">00000-000</string>
+    <string name="text_municipio" translatable="false">SP-Osasco</string>
+    <string name="title_activity_tela_main">Principal</string>
     <string name="title_activity_ar_um">Ar Condicionado</string>
-    <string name="fernando">
+    <string name="fernando" translatable="false">
         <b>FERIAS!</b>\n\n
         Se tu pesquisou isso é porque realmente necessita...\nagora relaxe...\n\n\n\n
 
@@ -42,7 +42,7 @@
     <string name="pagRB_debito">Selecionado o <b>Débito</b></string>
     <string name="pagRB_credito">Selecionado o <b>Crédito</b></string>
     <string name="or_amento">Orçamento</string>
-    <string name="video_games">Video-games</string>
+    <string name="video_games" translatable="false">Video-games</string>
     <string name="cancelar">Cancelar</string>
     <string name="confirmar">Confirmar</string>
     <string name="de_qual_marcar">De qual marcar?</string>
@@ -94,33 +94,33 @@
     <string name="horario">Horario</string>
     <string name="agendar">Agendar</string>
     <string name="rg">*RG:</string>
-    <string name="hint_rg">12.345.678-9</string>
+    <string name="hint_rg" translatable="false">12.345.678-9</string>
     <string name="data_de_nascimento">*Data de nascimento:</string>
     <string name="hint_data_de_nascimento">20/06/2005</string>
     <string name="cep">*CEP:</string>
-    <string name="hint_cep">00000-000</string>
+    <string name="hint_cep" translatable="false">00000-000</string>
     <string name="endereco">*Endereço:</string>
     <string name="hint_endereco">Rua Fernando Ivan, 99</string>
     <string name="bairro">*Bairro:</string>
-    <string name="hint_bairro">Jd. Dolores</string>
+    <string name="hint_bairro" translatable="false">Jd. Dolores</string>
     <string name="municipio">*Município:</string>
-    <string name="hint_municipio">Osasco</string>
+    <string name="hint_municipio" translatable="false">Osasco</string>
     <string name="estado">*Estado:</string>
-    <string name="hint_estado">SP</string>
+    <string name="hint_estado" translatable="false">SP</string>
     <string name="complemento">*Complemento:</string>
     <string name="hint_complemento">Casa/Ap. 02; 11º andar</string>
     <string name="telefone_residencial">Telefone Residencial:</string>
-    <string name="hint_telefone_residencial">(00) 1234-5678</string>
+    <string name="hint_telefone_residencial" translatable="false">(00) 1234-5678</string>
     <string name="telefone_celular">*Telefone Celular:</string>
-    <string name="hint_telefone_celular">(00) 91234-5678</string>
-    <string name="email">*Email:</string>
+    <string name="hint_telefone_celular" translatable="false">(00) 91234-5678</string>
+    <string name="email" translatable="false">*Email:</string>
     <string name="confirmar_email">*Confirmar email:</string>
     <string name="senha">*Senha:</string>
     <string name="hint_senha">Senha</string>
     <string name="confirmar_senha">*Confirmar senha:</string>
     <string name="btus_orcamento">BTUs:\t\t %s</string>
     <string name="cartao">Cartão</string>
-    <string name="total_pagamento">Total:t\\tR$ %f</string>
+    <string name="total_pagamento" translatable="false">Total:t\\tR$ %f</string>
     <string name="debito">Débito</string>
     <string name="credito">Crédito</string>
     <string name="dinheiro">Dinheiro</string>
@@ -128,12 +128,19 @@
     <string name="nao">Não</string>
     <string name="sim">Sim</string>
     <string name="dinheiro_cartao_pagamento_text">Vai de dinheiro\nou no cartão?</string>
-    <string name="nota_prestador_final_os">%f</string>
-    <string name="nome_prestador_final_os">%s, %d\n%s</string>
+    <string name="nota_prestador_final_os" translatable="false">%f</string>
+    <string name="nome_prestador_final_os" translatable="false">%s, %d\n%s</string>
     <string name="concluido_final_os">Concluído</string>
     <string name="data_agendada_final_os">Data agendada:\t\t%s</string>
     <string name="hora_agendada_final_os">Hora agendada:\t\t%s</string>
     <string name="pagamento_agendado_final_os">Pagar com:\t\t</string>
     <string name="text_nome">Nome completo</string>
+    <string name="servico_agendado">Serviço agendado!</string>
+    <string name="menu_servicos_op1_minha_conta">Minha conta</string>
+    <string name="menu_servicos_op2_minhas_os">Minhas O.S.</string>
+    <string name="menu_servicos_op_settings">Configurações</string>
+    <string name="menu_menu_nova_os">Nova O.S.</string>
+    <string name="menu_menu_op1_casa">Para minha casa</string>
+    <string name="menu_menu_op2_empresa">Para minha empresa</string>
 
 </resources>

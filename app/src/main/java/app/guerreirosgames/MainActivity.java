@@ -8,10 +8,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import app.guerreirosgames.servicos.Final_OS;
 import app.guerreirosgames.servicos.TelaMain;
-
-
+import app.guerreirosgames.servicos.arcondicionado.ArBTUS;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,14 +51,22 @@ public class MainActivity extends AppCompatActivity {
         if (log.equals("admin") && pass.equals("admin")) {
             //setContentView(R.layout.activity_tela_main);
             startActivity(new Intent(this, TelaMain.class));
-        }
 
-        if (log.equals(userName) && pass.equals(userPass)) {
+            login.setBackgroundResource(R.drawable.background_normal);
+            password.setBackgroundResource(R.drawable.background_normal);
+
+        } else if (log.equals(userName) && pass.equals(userPass)) {
             startActivity(new Intent(this, TelaMain.class));
+
+            login.setBackgroundResource(R.drawable.background_normal);
+            password.setBackgroundResource(R.drawable.background_normal);
+
         } else {
             login.setBackgroundResource(R.drawable.background_error);
             password.setBackgroundResource(R.drawable.background_error);
         }
+
+
     }
 
     /**
@@ -90,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login_btnGoDebug(View view) {
         btn_debug = findViewById(R.id.btn_debug);
-        startActivity(new Intent(this, Final_OS.class));
+        startActivity(new Intent(this, ArBTUS.class));
         btn_debug.setVisibility(View.INVISIBLE);
     }
 }

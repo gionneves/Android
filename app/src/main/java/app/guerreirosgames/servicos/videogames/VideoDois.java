@@ -162,6 +162,11 @@ public class VideoDois extends AppCompatActivity {
         });
 
 
+        if (defeito == "defeitro") {
+
+        }
+
+
     }
 
     private void isNSF() { /**Esse é um segredo, não conte a ninguem.* */

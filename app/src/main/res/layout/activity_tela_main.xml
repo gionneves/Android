@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".servicos.TelaMain"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".servicos.TelaMain">
 
     <TextView
         android:id="@+id/textViewPrecisa"
@@ -13,53 +13,59 @@
         android:layout_height="wrap_content"
         android:text="@string/do_que_voce_precisa_servicos"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:layout_marginVertical="64dp"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.100000024" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/bConfirmar_servicos"
-        android:layout_width="wrap_content"
+    <TableRow
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/confirmar_btn_servicos"
-        android:onClick="servicos_btnConfirmar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        android:layout_marginTop="32dp"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/bSuporte_servicos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/suporte_btn_servicos"
-        android:onClick="servicos_btnSuporte"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        <AutoCompleteTextView
+            android:id="@+id/actvPesquisa_servicos"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/background_shadow"
+            android:ems="10"
+            android:hint="@string/hint_pesquisar_servicos"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="20dp"
+            android:windowSoftInputMode="adjustResize" />
 
-    <AutoCompleteTextView
-        android:id="@+id/actvPesquisa_servicos"
-        android:layout_width="240dp"
-        android:layout_height="42dp"
-        android:background="@drawable/background_shadow"
-        android:ems="10"
-        android:hint="@string/hint_pesquisar_servicos"
-        android:windowSoftInputMode="adjustResize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrecisa"
-        app:layout_constraintVertical_bias="0.14999998" />
+    </TableRow>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RelativeLayout>
+
+
+            <Button
+                android:id="@+id/bSuporte_servicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginHorizontal="32dp"
+                android:onClick="servicos_btnSuporte"
+                android:text="@string/suporte_btn_servicos" />
+
+            <Button
+                android:id="@+id/bConfirmar_servicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="32dp"
+                android:onClick="servicos_btnConfirmar"
+                android:text="@string/confirmar_btn_servicos" />
+
+        </RelativeLayout>
+    </TableRow>
+
+</LinearLayout>

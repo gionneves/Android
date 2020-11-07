@@ -35,6 +35,12 @@ public class ArUm extends AppCompatActivity {
             public void onClick(View v) {
                 if (higienizacao.isChecked()) {
                     higienizacao.setTypeface(null, Typeface.BOLD);
+
+                    manutencao.setChecked(false);
+                    manutencao.setTypeface(null, Typeface.NORMAL);
+
+                    instalacao.setChecked(false);
+                    instalacao.setTypeface(null, Typeface.NORMAL);
                 } else {
                     higienizacao.setTypeface(null, Typeface.NORMAL);
                 }
@@ -46,6 +52,12 @@ public class ArUm extends AppCompatActivity {
             public void onClick(View v) {
                 if (manutencao.isChecked()) {
                     manutencao.setTypeface(null, Typeface.BOLD);
+
+                    higienizacao.setChecked(false);
+                    higienizacao.setTypeface(null, Typeface.NORMAL);
+
+                    instalacao.setChecked(false);
+                    instalacao.setTypeface(null, Typeface.NORMAL);
                 } else {
                     manutencao.setTypeface(null, Typeface.NORMAL);
                 }
@@ -57,6 +69,12 @@ public class ArUm extends AppCompatActivity {
             public void onClick(View v) {
                 if (instalacao.isChecked()) {
                     instalacao.setTypeface(null, Typeface.BOLD);
+
+                    manutencao.setChecked(false);
+                    manutencao.setTypeface(null, Typeface.NORMAL);
+
+                    higienizacao.setChecked(false);
+                    higienizacao.setTypeface(null, Typeface.NORMAL);
                 } else {
                     instalacao.setTypeface(null, Typeface.NORMAL);
                 }

@@ -21,6 +21,7 @@ public class Agendamento extends AppCompatActivity {
     Button bCalendario, bHora;
     EditText tCalendario, tHora;
     private int dia, mes, ano, hora, minuto;
+    private String marca, modelo, tipo, info_extra;
     ArDois ad = new ArDois();
 
     @Override
@@ -28,13 +29,26 @@ public class Agendamento extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendamento);
 
+        /** Recebe as informações da ativity anterior para essa de agendamento
+         *  Serve principalmente para poder levar as informações para o arquivo "Final_OS.java"
+         *  Temporariamente estara bloqueada para não causar erros durante a fase de testes, nisso.*
+         */
+
+        /**
+         Intent intent = getIntent();
+         marca = intent.getStringExtra("");
+         modelo = intent.getStringExtra("");
+         tipo = intent.getStringExtra("");
+         info_extra = intent.getStringExtra("");.*
+         */
+
         /** Define os Buttons no layout em uma variavel.* */
-        bCalendario = (Button) findViewById(R.id.bAgendamentoCalendario);
-        bHora = (Button) findViewById(R.id.bArQuatroHora);
+        bCalendario = findViewById(R.id.bAgendamentoCalendario);
+        bHora = findViewById(R.id.bArQuatroHora);
 
         /** Define os EditText no layout em uma variavel.* */
-        tCalendario = (EditText) findViewById(R.id.tAgendamentoCalendario);
-        tHora = (EditText) findViewById(R.id.tArQuatroHora);
+        tCalendario = findViewById(R.id.tAgendamentoCalendario);
+        tHora = findViewById(R.id.tArQuatroHora);
 
     }
 
@@ -91,6 +105,13 @@ public class Agendamento extends AppCompatActivity {
     }
 
     public void agendamento_btnAgendamento(View view) {
-        startActivity(new Intent(this, Pagamento.class));
+        Intent intent = new Intent(this, Pagamento.class);
+
+        intent.putExtra("MARCA_AGENDAMENTO", marca);
+        intent.putExtra("MODELO_AGENDAMENTO", modelo);
+        intent.putExtra("TIPO_AGENDAMENTO", tipo);
+        intent.putExtra("INFOEXTRA_AGENDAMENTO", info_extra);
+
+        startActivity(intent);
     }
 }
