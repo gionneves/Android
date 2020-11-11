@@ -107,6 +107,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/borda_redonda"
                     android:layout_marginRight="8dp"
                     android:onClick="cadastro_btnNascimento"
                     android:text="@string/calendario" />
@@ -396,6 +397,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="4dp"
+                        android:background="@drawable/borda_redonda"
                         android:onClick="cadastro_btnFechar"
                         android:text="@string/cancelar" />
 
@@ -404,6 +406,7 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="4dp"
+                        android:background="@drawable/borda_redonda"
                         android:onClick="cadastro_btnCadastrar"
                         android:text="@string/cadastre_se_login" />
                 </RelativeLayout>

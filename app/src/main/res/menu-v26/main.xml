@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_servico_op1"
+        android:icon="@drawable/user"
+        android:iconTint="@color/black"
+        android:title="@string/menu_servicos_op1_minha_conta" />
+
+    <item
+        android:id="@+id/menu_servico_op2"
+        android:title="@string/menu_servicos_op2_minhas_os" />
+
+    <item android:title="@string/menu_menu_nova_os">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_menu_op1"
+                android:title="@string/menu_menu_op1_casa" />
+
+            <item
+                android:id="@+id/menu_menu_op2"
+                android:title="@string/menu_menu_op2_empresa" />
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/menu_servico_op"
+        android:title="@string/menu_servicos_op_settings" />
+
+</menu>

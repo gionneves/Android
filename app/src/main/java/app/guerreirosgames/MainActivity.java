@@ -9,7 +9,6 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import app.guerreirosgames.servicos.TelaMain;
-import app.guerreirosgames.servicos.arcondicionado.ArBTUS;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login_btnGoDebug(View view) {
         btn_debug = findViewById(R.id.btn_debug);
-        startActivity(new Intent(this, ArBTUS.class));
+        startActivity(new Intent(this, TelaPrincipal.class));
         btn_debug.setVisibility(View.INVISIBLE);
     }
 }

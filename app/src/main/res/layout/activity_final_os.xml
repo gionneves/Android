@@ -138,6 +138,7 @@
                     android:id="@+id/concluido_finalOS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/borda_redonda"
                     android:layout_gravity="bottom"
                     android:onClick="finalOS_btnConcluido"
                     android:layout_marginHorizontal="52dp"

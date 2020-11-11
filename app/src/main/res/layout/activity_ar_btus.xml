@@ -80,6 +80,7 @@
                 <Button
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="remPessoas_arBTUs"
                     android:text="-"
                     android:textSize="22dp" />
@@ -99,6 +100,7 @@
                 <Button
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:background="@drawable/borda_redonda"
                     android:layout_marginRight="16dp"
                     android:onClick="addPessoas_arBTUs"
                     android:text="+"
@@ -123,6 +125,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:onClick="remEletros_arBTUs"
+                    android:background="@drawable/borda_redonda"
                     android:text="-"
                     android:textSize="22dp" />
 
@@ -142,6 +145,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginRight="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="addEletros_arBTUs"
                     android:text="+"
                     android:textSize="22dp" />
@@ -153,6 +157,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="64dp"
+                android:background="@drawable/borda_redonda"
                 android:layout_marginTop="16dp"
                 android:onClick="Calcular_arBTUs"
                 android:text="Calcular"

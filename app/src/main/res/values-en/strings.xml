@@ -96,4 +96,7 @@
     <string name="menu_servicos_op_settings">Settings</string>
     <string name="menu_servicos_op2_minhas_os">My S.O.</string>
     <string name="menu_servicos_op1_minha_conta">My Account</string>
+    <string name="celular_manifest">Smartphone</string>
+    <string name="computador_manifest">Personal computer</string>
+    <string name="montar_computador_manifest">Build your computer</string>
 </resources>

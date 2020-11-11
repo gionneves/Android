@@ -142,5 +142,8 @@
     <string name="menu_menu_nova_os">Nova O.S.</string>
     <string name="menu_menu_op1_casa">Para minha casa</string>
     <string name="menu_menu_op2_empresa">Para minha empresa</string>
+    <string name="celular_manifest">Celular</string>
+    <string name="computador_manifest">Computador</string>
+    <string name="montar_computador_manifest">Computador</string>
 
 </resources>

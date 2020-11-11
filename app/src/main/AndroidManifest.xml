@@ -9,24 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
-
-
+        <activity
+            android:name=".servicos.computador.montar.MontarComputadorUm"
+            android:label="@string/montar_computador_manifest"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".servicos.computador.ComputerUm"
+            android:label="@string/computador_manifest"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".servicos.celular.CelUm"
+            android:label="@string/celular_manifest"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TelaPrincipal"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".servicos.videogames.VideoUm"
+            android:label="@string/video_games"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".servicos.videogames.VideoDois"
+            android:label="@string/video_games"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".servicos.videogames.VideoTres"
+            android:label="@string/video_games"
             android:windowSoftInputMode="stateHidden" />
-
 
         <activity android:name=".servicos.Final_OS" />
         <activity android:name=".servicos.Pagamento" />
         <activity android:name=".servicos.Agendamento" />
-
-
         <activity
             android:name=".servicos.arcondicionado.ArUm"
             android:label="@string/ar_condicionado_ar_um"
@@ -43,15 +56,13 @@
             android:name=".servicos.arcondicionado.ArBTUS"
             android:label="@string/ar_condicionado_ar_um"
             android:windowSoftInputMode="stateHidden" />
-
-
         <activity
             android:name=".servicos.TelaMain"
             android:label="@string/title_activity_tela_main"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".TelaEsqueciSenha"
-            android:label="Esqueci a senha" />
+            android:label="@string/esqueci_a_senha_btn_esqueci" />
         <activity
             android:name=".TelaCadastro"
             android:label="@string/cadastre_se_login"

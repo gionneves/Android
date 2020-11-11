@@ -39,6 +39,7 @@
     <Button
         android:id="@+id/btn_esqueciSenha"
         android:layout_width="match_parent"
+        android:background="@drawable/borda_redonda"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
         android:layout_marginTop="32dp"

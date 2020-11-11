@@ -38,6 +38,28 @@
 
     </TableRow>
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="28dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fisica"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juridica"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -54,6 +76,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginHorizontal="32dp"
                 android:onClick="servicos_btnSuporte"
+                android:background="@drawable/borda_redonda"
                 android:text="@string/suporte_btn_servicos" />
 
             <Button
@@ -63,6 +86,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginHorizontal="32dp"
                 android:onClick="servicos_btnConfirmar"
+                android:background="@drawable/borda_redonda"
                 android:text="@string/confirmar_btn_servicos" />
 
         </RelativeLayout>
