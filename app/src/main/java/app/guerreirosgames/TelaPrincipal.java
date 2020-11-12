@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import app.guerreirosgames.servicos.arcondicionado.ArUm;
 import app.guerreirosgames.servicos.celular.CelUm;
-import app.guerreirosgames.servicos.computador.ComputerUm;
+import app.guerreirosgames.servicos.computador.ComputadorUm;
 import app.guerreirosgames.servicos.computador.montar.MontarComputadorUm;
 import app.guerreirosgames.servicos.videogames.VideoUm;
 
@@ -43,7 +43,7 @@ public class TelaPrincipal extends AppCompatActivity {
     }
 
     public void telaPrincipal_irComputador(View view) {
-        startActivity(new Intent(this, ComputerUm.class));
+        startActivity(new Intent(this, ComputadorUm.class));
     }
 
     public void telaPrincipal_irMontarComputador(View view) {

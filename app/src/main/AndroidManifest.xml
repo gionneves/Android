@@ -14,7 +14,7 @@
             android:label="@string/montar_computador_manifest"
             android:windowSoftInputMode="stateHidden"></activity>
         <activity
-            android:name=".servicos.computador.ComputerUm"
+            android:name=".servicos.computador.ComputadorUm"
             android:label="@string/computador_manifest"
             android:windowSoftInputMode="stateHidden" />
         <activity

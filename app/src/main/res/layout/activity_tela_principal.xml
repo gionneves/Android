@@ -3,15 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/blue_fernando"
     tools:context=".TelaPrincipal">
 
 
     <ScrollView
+        android:id="@+id/telaPrincipal_scrollOS"
+        android:background="@drawable/modelo_tela_principal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/telaPrincipal_relativeOS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp">
@@ -26,16 +29,18 @@
 
 
             <LinearLayout
+                android:id="@+id/telaPrincipal_gradeOS"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:layout_marginVertical="150dp">
+                android:layout_marginVertical="80dp">
 
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="120dp"
                     android:orientation="horizontal">
 
                     <!-- Primeira Coluna.* -->
@@ -48,27 +53,27 @@
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irCelular"
-                            android:src="@drawable/borda_redonda" />
+                            android:src="@drawable/btn_principal_1" />
 
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irArCondicionado"
-                            android:src="@drawable/borda_redonda" />
+                            android:src="@drawable/btn_principal_3" />
 
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/borda_redonda" />
+                            android:layout_margin="16dp"
+                            android:src="@drawable/btn_principal_5" />
 
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:src="@drawable/borda_redonda" />
 
                     </LinearLayout>
@@ -82,39 +87,65 @@
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irVideoGames"
-                            android:src="@drawable/borda_redonda" />
+                            android:src="@drawable/btn_principal_2" />
 
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irComputador"
-                            android:src="@drawable/borda_redonda" />
+                            android:src="@drawable/btn_principal_4" />
 
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
-                            android:src="@drawable/borda_redonda" />
+                            android:layout_margin="16dp"
+                            android:src="@drawable/btn_principal_6" />
 
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="75dp"
-                            android:layout_margin="8dp"
+                            android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irMontarComputador"
-                            android:src="@drawable/borda_redonda" />
+                            android:src="@drawable/btn_principal_7" />
 
 
                     </LinearLayout>
 
                 </LinearLayout>
 
+
             </LinearLayout>
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/telaPrincipal_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/telaPrincipal_gradeOS"
+                android:layout_marginHorizontal="32dp"
+                android:backgroundTint="@color/yellow" />
 
+            <Button
+                android:id="@+id/telaPrincipal_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/telaPrincipal_btn1"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="64dp"
+                android:backgroundTint="@color/yellow" />
+
+            <Button
+                android:id="@+id/telaPrincipal_btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/telaPrincipal_btn2"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="64dp"
+                android:backgroundTint="@color/yellow" />
+
+        </RelativeLayout>
 
     </ScrollView>
 

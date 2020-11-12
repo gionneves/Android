@@ -144,6 +144,6 @@
     <string name="menu_menu_op2_empresa">Para minha empresa</string>
     <string name="celular_manifest">Celular</string>
     <string name="computador_manifest">Computador</string>
-    <string name="montar_computador_manifest">Computador</string>
+    <string name="montar_computador_manifest">Montar o seu computador</string>
 
 </resources>

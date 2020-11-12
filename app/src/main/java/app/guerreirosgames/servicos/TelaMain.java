@@ -27,7 +27,7 @@ public class TelaMain extends AppCompatActivity {
     TextView textView;
 
     String[] servicos = {"Ar-condicionado", "Vídeo-game", "Tablet", "GPS", "Celular", "Computador",
-            "Notebook", "CFTV", "IPTV", "Câmera", "Drone", "Canecas", "Camisetas", "Aquecedor",
+            "Notebook", "CFTV", "Câmera", "Drone", "Canecas", "Camisetas", "Aquecedor",
             "Bolinho-de-chuva"};
     ArrayAdapter<String> adapter;
 
