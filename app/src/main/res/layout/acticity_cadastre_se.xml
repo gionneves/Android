@@ -9,7 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,8 +109,8 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/borda_redonda"
                     android:layout_marginRight="8dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="cadastro_btnNascimento"
                     android:text="@string/calendario" />
 

@@ -9,6 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="#66000000"
         android:background="@drawable/modelo_tela_principal">
 
         <LinearLayout
@@ -41,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
+                android:buttonTint="@color/white"
                 android:text="@string/nintendo"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -51,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
+                android:buttonTint="@color/white"
                 android:text="@string/sony"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -61,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
+                android:buttonTint="@color/white"
                 android:text="@string/microsoft"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -76,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:layout_marginLeft="32dp"
+                    android:buttonTint="@color/white"
                     android:text="@string/outros"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -105,8 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:background="@drawable/borda_redonda"
                     android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="videoUm_btnVoltar"
                     android:text="@string/voltar" />
 

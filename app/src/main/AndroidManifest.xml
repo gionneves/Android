@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
+        <activity android:name=".servicos.celular.tablet.TabletUm"></activity>
         <activity
             android:name=".servicos.computador.montar.MontarComputadorUm"
             android:label="@string/montar_computador_manifest"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".servicos.computador.ComputadorUm"
             android:label="@string/computador_manifest"
@@ -36,7 +37,6 @@
             android:name=".servicos.videogames.VideoTres"
             android:label="@string/video_games"
             android:windowSoftInputMode="stateHidden" />
-
         <activity android:name=".servicos.Final_OS" />
         <activity android:name=".servicos.Pagamento" />
         <activity android:name=".servicos.Agendamento" />

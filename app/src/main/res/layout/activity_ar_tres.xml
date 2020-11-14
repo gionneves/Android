@@ -9,13 +9,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="#66000000"
         android:background="@drawable/modelo_tela_principal"
         android:layout_margin="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_shadow"
             android:orientation="vertical">
 
             <TextView

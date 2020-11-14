@@ -7,9 +7,10 @@
     tools:context=".servicos.Pagamento">
 
     <ScrollView
-        android:background="@drawable/modelo_tela_principal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,6 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
+                    android:buttonTint="@color/white"
                     android:onClick="pagRBcheck"
                     android:text="@string/cartao"
                     android:textSize="24dp" />
@@ -82,6 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
+                    android:buttonTint="@color/white"
                     android:onClick="pagRBcheck"
                     android:text="@string/dinheiro"
                     android:textSize="24sp" />
@@ -140,10 +143,10 @@
                 <Button
                     android:id="@+id/pagB_confirmar"
                     android:layout_width="wrap_content"
-                    android:background="@drawable/borda_redonda"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:text="@string/confirmar" />
 
             </RelativeLayout>

@@ -31,11 +31,9 @@ public class TelaCadastro extends AppCompatActivity {
          * As linhas debaixo servem para o calendario e a função de trocar o CPF para CNPJ funcionarem
          * assim sempre fazendo verificação delas e atualizando em tempo real.*
          */
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /** Serve para definir a variavel "nascimento" ligada ao layout com id "cadastro_nascimento".* */
-        nascimento = (EditText) findViewById(R.id.cadastro_nascimento);
+        nascimento = findViewById(R.id.cadastro_nascimento);
 
         /** Esses itens abaixo são o que faz mudar de CPF para CNPJ quando clicado no botão.* */
         aSwitch = findViewById(R.id.switch_pessoa);
@@ -90,7 +88,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o nome.*
          */
-        EditText nome = (EditText) findViewById(R.id.cadastro_nome);
+        EditText nome = findViewById(R.id.cadastro_nome);
         String sNome = nome.getText().toString();
 
         if (sNome.equals("")) {
@@ -106,7 +104,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o CPF ou o CNPJ da pessoa.*
          */
-        EditText CPF_CNPJ = (EditText) findViewById(R.id.cadastro_CPF_CNPJ);
+        EditText CPF_CNPJ = findViewById(R.id.cadastro_CPF_CNPJ);
         String sCPF_CNPJ = CPF_CNPJ.getText().toString();
 
         if (sCPF_CNPJ.equals("")) {
@@ -121,7 +119,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o RG.*
          */
-        EditText RG = (EditText) findViewById(R.id.cadastro_RG);
+        EditText RG = findViewById(R.id.cadastro_RG);
         String sRG = RG.getText().toString();
 
         if (sRG.equals("")) {
@@ -136,7 +134,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena a data de nascimento da pessoa.*
          */
-        EditText data_nascimento = (EditText) findViewById(R.id.cadastro_nascimento);
+        EditText data_nascimento = findViewById(R.id.cadastro_nascimento);
         String sData_nascimento = data_nascimento.getText().toString();
 
         if (sData_nascimento.equals("")) {
@@ -151,7 +149,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o CEP.*
          */
-        EditText CEP = (EditText) findViewById(R.id.cadastro_CEP);
+        EditText CEP = findViewById(R.id.cadastro_CEP);
         String sCEP = CEP.getText().toString();
 
         if (sCEP.equals("")) {
@@ -166,7 +164,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o endereço.*
          */
-        EditText endereco = (EditText) findViewById(R.id.cadastro_endereco);
+        EditText endereco = findViewById(R.id.cadastro_endereco);
         String sEndereco = endereco.getText().toString();
 
         if (sEndereco.equals("")) {
@@ -181,7 +179,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o Bairro.*
          */
-        EditText bairro = (EditText) findViewById(R.id.cadastro_bairro);
+        EditText bairro = findViewById(R.id.cadastro_bairro);
         String sBairro = bairro.getText().toString();
 
         if (sBairro.equals("")) {
@@ -196,7 +194,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o Municipio.*
          */
-        EditText municipio = (EditText) findViewById(R.id.cadastro_municipio);
+        EditText municipio = findViewById(R.id.cadastro_municipio);
         String sMunicipio = municipio.getText().toString();
 
         if (sMunicipio.equals("")) {
@@ -211,7 +209,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o Estado.*
          */
-        EditText estado = (EditText) findViewById(R.id.cadastro_estado);
+        EditText estado = findViewById(R.id.cadastro_estado);
         String sEstado = estado.getText().toString();
 
         if (sEstado.equals("")) {
@@ -226,7 +224,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o Complemento de onde a pessoa mora.*
          */
-        EditText complemento = (EditText) findViewById(R.id.cadastro_complemento);
+        EditText complemento = findViewById(R.id.cadastro_complemento);
         String sComplemento = complemento.getText().toString();
 
         if (sComplemento.equals("")) {
@@ -241,7 +239,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o Telefone residencial informado.*
          */
-        EditText telefone_residencial = (EditText) findViewById(R.id.cadastro_telefone_residencial);
+        EditText telefone_residencial = findViewById(R.id.cadastro_telefone_residencial);
         String sTelefone_residencial = telefone_residencial.getText().toString();
 
         if (sTelefone_residencial.equals("")) {
@@ -254,7 +252,7 @@ public class TelaCadastro extends AppCompatActivity {
         /**
          * Coleta e armazena o Telefone celular informado.*
          */
-        EditText telefone_celular = (EditText) findViewById(R.id.cadastro_telefone_celular);
+        EditText telefone_celular = findViewById(R.id.cadastro_telefone_celular);
         String sTelefone_celular = telefone_celular.getText().toString();
 
         if (sTelefone_celular.equals("")) {
@@ -270,10 +268,10 @@ public class TelaCadastro extends AppCompatActivity {
          * Coleta e armazena o Email, junto abaixo tem outro estado de comparação para saber se o
          * que está escrito no campo "Email" é o mesmo do que está escrito no campo "Verificar Email".*
          */
-        EditText email = (EditText) findViewById(R.id.cadastro_email);
+        EditText email = findViewById(R.id.cadastro_email);
         String sEmail = email.getText().toString();
 
-        EditText confirmar_email = (EditText) findViewById(R.id.cadastro_confirmar_email);
+        EditText confirmar_email = findViewById(R.id.cadastro_confirmar_email);
         String sConfirmar_email = confirmar_email.getText().toString();
 
 
@@ -297,8 +295,8 @@ public class TelaCadastro extends AppCompatActivity {
          * Coleta e armazena a Senha, junto abaixo tem outro estado de comparação para saber se a
          * senha escrita no campo "Senha" é a mesma do campo "Verificar a Senha".*
          */
-        EditText senha = (EditText) findViewById(R.id.cadastro_senha);
-        EditText confirmar_senha = (EditText) findViewById(R.id.cadastro_confirmar_senha);
+        EditText senha = findViewById(R.id.cadastro_senha);
+        EditText confirmar_senha = findViewById(R.id.cadastro_confirmar_senha);
 
         String sSenha = senha.getText().toString();
         String sConfrimar_senha = confirmar_senha.getText().toString();
