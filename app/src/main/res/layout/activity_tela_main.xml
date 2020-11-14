@@ -3,93 +3,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/blue_fernando"
     android:orientation="vertical"
     tools:context=".servicos.TelaMain">
 
-    <TextView
-        android:id="@+id/textViewPrecisa"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/do_que_voce_precisa_servicos"
-        android:textAlignment="center"
-        android:layout_marginVertical="64dp"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:background="@drawable/modelo_tela_principal">
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <AutoCompleteTextView
-            android:id="@+id/actvPesquisa_servicos"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:background="@drawable/background_shadow"
-            android:ems="10"
-            android:hint="@string/hint_pesquisar_servicos"
-            android:lines="1"
-            android:maxLines="1"
-            android:textSize="20dp"
-            android:windowSoftInputMode="adjustResize" />
-
-    </TableRow>
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="28dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fisica"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Juridica"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </RadioGroup>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="horizontal">
-
-        <RelativeLayout>
-
-
-            <Button
-                android:id="@+id/bSuporte_servicos"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textViewPrecisa"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginHorizontal="32dp"
-                android:onClick="servicos_btnSuporte"
-                android:background="@drawable/borda_redonda"
-                android:text="@string/suporte_btn_servicos" />
+                android:layout_marginVertical="64dp"
+                android:text="@string/do_que_voce_precisa_servicos"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/bConfirmar_servicos"
-                android:layout_width="wrap_content"
+            <TableRow
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginHorizontal="32dp"
-                android:onClick="servicos_btnConfirmar"
-                android:background="@drawable/borda_redonda"
-                android:text="@string/confirmar_btn_servicos" />
+                android:layout_marginTop="32dp"
+                android:gravity="center">
 
-        </RelativeLayout>
-    </TableRow>
+                <AutoCompleteTextView
+                    android:id="@+id/actvPesquisa_servicos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_shadow"
+                    android:ems="10"
+                    android:hint="@string/hint_pesquisar_servicos"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="20dp"
+                    android:windowSoftInputMode="adjustResize" />
+
+            </TableRow>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="28dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fisica"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Juridica"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <RelativeLayout>
+
+
+                    <Button
+                        android:id="@+id/bSuporte_servicos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginHorizontal="32dp"
+                        android:background="@drawable/borda_redonda"
+                        android:onClick="servicos_btnSuporte"
+                        android:text="@string/suporte_btn_servicos" />
+
+                    <Button
+                        android:id="@+id/bConfirmar_servicos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginHorizontal="32dp"
+                        android:background="@drawable/borda_redonda"
+                        android:onClick="servicos_btnConfirmar"
+                        android:text="@string/confirmar_btn_servicos" />
+
+                </RelativeLayout>
+            </TableRow>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

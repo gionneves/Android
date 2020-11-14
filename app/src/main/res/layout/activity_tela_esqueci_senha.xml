@@ -2,48 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/blue_fernando"
+    android:orientation="vertical"
     tools:context=".TelaEsqueciSenha">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:layout_marginTop="8dp"
-        app:srcCompat="@drawable/gg_dez_oitenta" />
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="@string/text_forget_password"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="@drawable/modelo_tela_principal">
 
-    <EditText
-        android:id="@+id/textGetEmalEsqueciSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/background_shadow"
-        android:autofillHints=""
-        android:inputType="textEmailAddress"
-        android:hint="@string/hint_exemplo_email"
-        android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_esqueciSenha"
-        android:layout_width="match_parent"
-        android:background="@drawable/borda_redonda"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/esqueci_a_senha_btn_esqueci" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginVertical="32dp"
+                app:srcCompat="@drawable/gg_dez_oitenta" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="@string/text_forget_password"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textGetEmalEsqueciSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:background="@drawable/background_shadow"
+                android:hint="@string/hint_exemplo_email"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_esqueciSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/borda_redonda"
+                android:text="@string/esqueci_a_senha_btn_esqueci" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
