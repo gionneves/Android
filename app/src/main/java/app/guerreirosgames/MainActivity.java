@@ -1,7 +1,9 @@
 package app.guerreirosgames;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,9 +86,18 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void login_btnUnlockDebug(View view) {
+        Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         btn_debug = findViewById(R.id.btn_debug);
         unlock_debug++;
         if (unlock_debug == 7 || unlock_debug == 17 || unlock_debug == 24) {
+            try {
+                for (int i = 0; i < 4; ++i){
+                    v.vibrate(40);
+                    Thread.sleep(70);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             btn_debug.setVisibility(View.VISIBLE);
         } else {
             btn_debug.setVisibility(View.INVISIBLE);

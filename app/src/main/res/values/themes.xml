@@ -23,4 +23,8 @@
 
     <style name="Theme.AppGuerreirosGames.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="TelaPrincipal.Button" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/yellow</item>
+    </style>
+
 </resources>

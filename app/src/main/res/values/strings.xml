@@ -144,6 +144,10 @@
     <string name="menu_menu_op2_empresa">Para minha empresa</string>
     <string name="celular_manifest">Celular</string>
     <string name="computador_manifest">Computador</string>
-    <string name="montar_computador_manifest">Montar o seu computador</string>
+    <string name="montar_computador_manifest">Monte seu PC</string>
+    <string name="telefone_celular_text">Telefone Celular</string>
+    <string name="help_desk">Help desk\n</string>
+    <string name="tablete" translatable="false">Tablet</string>
+    <string name="monitoramento">Segurança e monitoramento</string>
 
 </resources>

@@ -9,8 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#66000000"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/borda_redonda"
+                    android:backgroundTint="@android:color/holo_green_dark"
                     android:onClick="videoUm_btnProximo"
                     android:text="@string/confirmar" />
 

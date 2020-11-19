@@ -91,10 +91,10 @@
             <Button
                 android:id="@+id/btn_debug"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginTop="8dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@android:color/holo_purple"
                 android:onClick="login_btnGoDebug"
                 android:text="@string/debug"
                 android:visibility="invisible" />

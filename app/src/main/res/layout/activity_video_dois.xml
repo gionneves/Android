@@ -137,9 +137,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/borda_redonda"
+                    android:backgroundTint="@android:color/holo_green_dark"
                     android:onClick="videoDois_btnProximo"
-                    android:text="@string/proximo"
+                    android:text="@string/confirmar"
                     android:textSize="18sp" />
 
                 <Button

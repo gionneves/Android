@@ -99,4 +99,7 @@
     <string name="celular_manifest">Smartphone</string>
     <string name="computador_manifest">Personal computer</string>
     <string name="montar_computador_manifest">Build your computer</string>
+    <string name="help_desk">Help desk</string>
+    <string name="telefone_celular_text">Smartphone</string>
+    <string name="monitoramento">Security and monitoring</string>
 </resources>
