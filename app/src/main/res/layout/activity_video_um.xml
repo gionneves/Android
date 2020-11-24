@@ -111,7 +111,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/borda_redonda"
                     android:onClick="videoUm_btnVoltar"
                     android:text="@string/voltar" />
 

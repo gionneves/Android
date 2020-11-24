@@ -48,7 +48,6 @@
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="12dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/borda_redonda"
                     android:onClick="agendamento_btnCalendario"
                     android:layout_marginRight="24dp"
                     android:text="@string/calendario" />
@@ -73,7 +72,6 @@
                     android:id="@+id/bArQuatroHora"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/borda_redonda"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="54dp"
                     android:onClick="agendamento_btnHorario"
@@ -101,7 +99,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
                     android:layout_alignParentLeft="true"
-                    android:background="@drawable/borda_redonda"
                     android:onClick="agendamento_btnVolta"
                     android:text="@string/voltar" />
 

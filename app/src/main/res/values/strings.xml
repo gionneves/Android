@@ -149,5 +149,19 @@
     <string name="help_desk">Help desk\n</string>
     <string name="tablete" translatable="false">Tablet</string>
     <string name="monitoramento">Segurança e monitoramento</string>
+    <string name="tela_display">Tela display</string>
+    <string name="tela_touch">Tela Touch</string>
+    <string name="sensor_de_proximidade">Sensor de proximidade</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="bot_es_volume_power">Botões Volume/Power</string>
+    <string name="carca_a">Carcaça</string>
+    <string name="auto_falante">Auto falante</string>
+    <string name="auto_falante_auricular">Auto falante auricular</string>
+    <string name="microfone">Microfone</string>
+    <string name="c_mera_frontal">Câmera frontal</string>
+    <string name="c_mera_traseira">Câmera traseira</string>
+    <string name="bateria">Bateria</string>
+    <string name="conector_de_carga">Conector de carga</string>
 
 </resources>

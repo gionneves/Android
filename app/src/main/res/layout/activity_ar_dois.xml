@@ -169,7 +169,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:onClick="arDois_btnVoltar"
-                    android:background="@drawable/borda_redonda"
                     android:text="@string/voltar" />
 
                 <Button
