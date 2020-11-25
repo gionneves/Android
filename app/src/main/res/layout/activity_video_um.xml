@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@color/checkbox_color_tint"
                 android:text="@string/nintendo"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@color/checkbox_color_tint"
                 android:text="@string/sony"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@color/checkbox_color_tint"
                 android:text="@string/microsoft"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:layout_marginLeft="32dp"
-                    android:buttonTint="@color/white"
+                    android:buttonTint="@color/checkbox_color_tint"
                     android:text="@string/outros"
                     android:textColor="@color/black"
                     android:textSize="20sp" />

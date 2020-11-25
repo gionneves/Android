@@ -8,6 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFf0f0f0</color>
     <color name="yellow">#FFe4ba2e</color>
-    <color name="blue_fernando">#FF90a9FF</color>
+    <color name="blue_fernando">#fff0f0f0</color>
+    <color name="green_holder">#7f64c864</color>
+    <color name="green_holder_full">#ff328832</color>
+    <color name="checkbox_color_tint">#ff32aa32</color>
+
 
 </resources>

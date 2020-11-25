@@ -17,158 +17,312 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marca"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
             <AutoCompleteTextView
                 android:id="@+id/celUm_Marca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:hint="@string/de_qual_marcar"
-                android:layout_marginVertical="8dp"
                 android:layout_marginHorizontal="32dp"
-                android:background="@drawable/background_shadow" />
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_shadow"
+                android:hint="@string/de_qual_marcar"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
             <AutoCompleteTextView
                 android:id="@+id/celUm_Modelo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_marginVertical="8dp"
                 android:layout_marginHorizontal="32dp"
-                android:background="@drawable/background_shadow" />
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_shadow"
+                android:textSize="20sp" />
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:gravity="fill"
+                android:text="@string/colocar_peças_defeituosas"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <CheckBox
-                    android:id="@+id/celUm_TelaDisplay"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/tela_display"
-                    android:textSize="20sp" />
+                    android:layout_height="match_parent">
 
-                <CheckBox
-                    android:id="@+id/celUm_TelaTouch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/tela_touch"
-                    android:textSize="20sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/celUm_SensorProx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/sensor_de_proximidade"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_TelaDisplay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/tela_display"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_Bluetooth"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/bluetooth"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_TelaTouch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/tela_touch"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_WiFi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/wi_fi"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_SensorProx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/sensor_de_proximidade"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_Botoes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/bot_es_volume_power"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_Bluetooth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/bluetooth"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_Carcaca"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/carca_a"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_WiFi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/wi_fi"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_AutoFalante"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/auto_falante"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_Botoes_MaMe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/botoes_volume"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_AutoFalanteAuricular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/auto_falante_auricular"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_Botao_Power"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/botao_power"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_Microfone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/microfone"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_Carcaca"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/carca_a"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_CameraFrontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/c_mera_frontal"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_AutoFalante"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/auto_falante"
+                            android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/celUm_CameraTraseira"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/c_mera_traseira"
-                    android:textSize="20sp" />
+                    </LinearLayout>
 
-                <CheckBox
-                    android:id="@+id/celUm_ConectorCarga"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/conector_de_carga"
-                    android:textSize="20sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/celUm_Bateria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:onClick="onCheckboxCliked"
-                    android:text="@string/bateria"
-                    android:textSize="20sp" />
+                        <CheckBox
+                            android:id="@+id/celUm_AutoFalanteAuricular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/auto_falante_auricular"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_Microfone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/microfone"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_CameraFrontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/c_mera_frontal"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_CameraTraseira"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/c_mera_traseira"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_ConectorCarga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/conector_de_carga"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_Bateria"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/bateria"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_TampaTraseira"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/tampa_traseira"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/celUm_Digital"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="onCheckboxCliked"
+                            android:text="@string/digital"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
 
             </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:gravity="bottom">
+
+                <RelativeLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginHorizontal="8dp"
+                        android:onClick="close"
+                        android:text="@string/voltar" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="8dp"
+                        android:backgroundTint="@android:color/holo_green_light"
+                        android:text="@string/confirmar" />
+
+                </RelativeLayout>
+
+            </TableRow>
 
         </LinearLayout>
 

@@ -34,7 +34,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Largura: "
                 android:textColor="@color/black"
-                android:textSize="18dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/largura_arBTUs"
@@ -44,7 +44,7 @@
                 android:background="@drawable/background_shadow"
                 android:hint="Em metros."
                 android:inputType="number"
-                android:textSize="22dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Comprimento: "
                 android:textColor="@color/black"
-                android:textSize="18dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/comprimento_arBTUs"
@@ -63,7 +63,7 @@
                 android:background="@drawable/background_shadow"
                 android:hint="Em metros."
                 android:inputType="number"
-                android:textSize="22dp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pessoas: "
                     android:textColor="@color/black"
-                    android:textSize="18dp" />
+                    android:textSize="20sp" />
 
 
                 <Button
@@ -84,7 +84,7 @@
                     android:layout_height="48dp"
                     android:onClick="remPessoas_arBTUs"
                     android:text="-"
-                    android:textSize="22dp" />
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etPessoas_arBTUs"
@@ -104,7 +104,7 @@
                     android:layout_marginRight="16dp"
                     android:onClick="addPessoas_arBTUs"
                     android:text="+"
-                    android:textSize="22dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:text="Eletronicos: "
                     android:textColor="@color/black"
-                    android:textSize="18dp" />
+                    android:textSize="20sp" />
 
 
                 <Button
@@ -126,7 +126,7 @@
                     android:layout_height="48dp"
                     android:onClick="remEletros_arBTUs"
                     android:text="-"
-                    android:textSize="22dp" />
+                    android:textSize="20sp" />
 
                 <EditText
                     android:id="@+id/etEletronicos_arBTUs"
@@ -146,7 +146,7 @@
                     android:layout_marginRight="16dp"
                     android:onClick="addEletros_arBTUs"
                     android:text="+"
-                    android:textSize="22dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -159,7 +159,7 @@
                 android:layout_marginTop="16dp"
                 android:onClick="Calcular_arBTUs"
                 android:text="Calcular"
-                android:textSize="18dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

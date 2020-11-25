@@ -151,17 +151,22 @@
     <string name="monitoramento">Segurança e monitoramento</string>
     <string name="tela_display">Tela display</string>
     <string name="tela_touch">Tela Touch</string>
-    <string name="sensor_de_proximidade">Sensor de proximidade</string>
-    <string name="bluetooth">Bluetooth</string>
-    <string name="wi_fi">Wi-Fi</string>
+    <string name="sensor_de_proximidade">Sensor de ligação</string>
+    <string name="bluetooth" translatable="false">Bluetooth</string>
+    <string name="wi_fi" translatable="false">Wi-Fi</string>
     <string name="bot_es_volume_power">Botões Volume/Power</string>
     <string name="carca_a">Carcaça</string>
-    <string name="auto_falante">Auto falante</string>
-    <string name="auto_falante_auricular">Auto falante auricular</string>
+    <string name="auto_falante">Alto-falante</string>
+    <string name="auto_falante_auricular">Falante auricular</string>
     <string name="microfone">Microfone</string>
     <string name="c_mera_frontal">Câmera frontal</string>
     <string name="c_mera_traseira">Câmera traseira</string>
     <string name="bateria">Bateria</string>
     <string name="conector_de_carga">Conector de carga</string>
+    <string name="tampa_traseira">Tampa traseira</string>
+    <string name="digital">Digital</string>
+    <string name="botoes_volume">Botões Volume -/+</string>
+    <string name="botao_power">Botão Power</string>
+    <string name="colocar_peças_defeituosas">Por favor selecione o que está com defeito em seu aparelho.</string>
 
 </resources>

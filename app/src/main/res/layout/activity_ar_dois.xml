@@ -137,7 +137,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/adicional"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etAdicional_ArDois"
@@ -148,7 +148,7 @@
                 android:hint="Informações adicionais."
                 android:maxLength="200"
                 android:maxLines="2"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
 
             <TextView

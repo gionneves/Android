@@ -17,8 +17,9 @@ import static android.graphics.Color.argb;
 
 public class CelUm extends AppCompatActivity {
 
-    CheckBox td, tt, sprox, bt, wf, btn, car, autof, autofa, mic, camf, camt, conc, bat;
+    CheckBox td, tt, sprox, bt, wf, btn, btnp, car, autof, autofa, mic, camf, camt, conc, bat, bCover, dig;
     AutoCompleteTextView marca, modelo;
+    String branch;
 
     String[] marcas = {"Samsung" , "Apple" , "Motorola" , "LG" , "Sony" , "Xiaomi" , "Cubot"};
     ArrayAdapter<String> adapterMarcas;
@@ -55,18 +56,51 @@ public class CelUm extends AppCompatActivity {
         setContentView(R.layout.activity_cel_um);
 
         marca = (AutoCompleteTextView) findViewById(R.id.celUm_Marca);
-        modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-
 
         adapterMarcas = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , marcas);
         marca.setThreshold(1);
         marca.setAdapter(adapterMarcas);
 
-        adapterSamsung = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Samsung);
+        modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
+        modelo.setHint("iPhone XR; iPhone 8 Plus; ...");
+        adapterApple = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Apple);
         modelo.setThreshold(1);
-        modelo.setAdapter(adapterSamsung);
+        modelo.setAdapter(adapterApple);
 
     }
+
+    public void branchSelected() {
+        marca = (AutoCompleteTextView) findViewById(R.id.celUm_Marca);
+        branch = marca.getText().toString();
+
+        branch = branch.toLowerCase();
+
+        switch (branch) {
+            case "samsung":
+                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
+                modelo.setHint("Galaxy A01; Galaxy S10; ...");
+                adapterSamsung = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Samsung);
+                modelo.setThreshold(1);
+                modelo.setAdapter(adapterSamsung);
+                break;
+            case "apple":
+                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
+                modelo.setHint("iPhone XR; iPhone 8 Plus; ...");
+                adapterApple = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Apple);
+                modelo.setThreshold(1);
+                modelo.setAdapter(adapterApple);
+                break;
+            case "motorola":
+                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
+                modelo.setHint("iPhone XR; iPhone 8 Plus; ...");
+                adapterMotorola = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Motorola);
+                modelo.setThreshold(1);
+                modelo.setAdapter(adapterMotorola);
+                break;
+            default:
+        }
+    }
+
 
     public void onCheckboxCliked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
@@ -75,10 +109,11 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_TelaDisplay: // tela display
                 td = (CheckBox) findViewById(R.id.celUm_TelaDisplay);
                 if (checked) {
-                    td.setBackgroundColor(argb(255 , 100 , 255 , 100));
-
+                    td.setBackgroundColor(getColor(R.color.green_holder_full));
+                    td.setTextColor(getColor(R.color.white));
                 } else {
-                    td.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    td.setBackgroundColor(getColor(R.color.green_holder));
+                    td.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -86,10 +121,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_TelaTouch: // tela Touch
                 tt = (CheckBox) findViewById(R.id.celUm_TelaTouch);
                 if (checked) {
-                    tt.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    tt.setBackgroundColor(getColor(R.color.green_holder_full));
+                    tt.setTextColor(getColor(R.color.white));
 
                 } else {
-                    tt.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    tt.setBackgroundColor(getColor(R.color.green_holder));
+                    tt.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -97,10 +134,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_SensorProx: // Sensor de proximidade
                 sprox = (CheckBox) findViewById(R.id.celUm_SensorProx);
                 if (checked) {
-                    sprox.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    sprox.setBackgroundColor(getColor(R.color.green_holder_full));
+                    sprox.setTextColor(getColor(R.color.white));
 
                 } else {
-                    sprox.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    sprox.setBackgroundColor(getColor(R.color.green_holder));
+                    sprox.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -108,10 +147,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_Bluetooth: // Bluetooth
                 bt = (CheckBox) findViewById(R.id.celUm_Bluetooth);
                 if (checked) {
-                    bt.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    bt.setBackgroundColor(getColor(R.color.green_holder_full));
+                    bt.setTextColor(getColor(R.color.white));
 
                 } else {
-                    bt.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    bt.setBackgroundColor(getColor(R.color.green_holder));
+                    bt.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -119,21 +160,38 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_WiFi: // Wi-Fi
                 wf = (CheckBox) findViewById(R.id.celUm_WiFi);
                 if (checked) {
-                    wf.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    wf.setBackgroundColor(getColor(R.color.green_holder_full));
+                    wf.setTextColor(getColor(R.color.white));
 
                 } else {
-                    wf.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    wf.setBackgroundColor(getColor(R.color.green_holder));
+                    wf.setTextColor(getColor(R.color.black));
 
                 }
                 break;
 
-            case R.id.celUm_Botoes: // Botões de volume e power
-                btn = (CheckBox) findViewById(R.id.celUm_Botoes);
+            case R.id.celUm_Botoes_MaMe: // Botões de volume
+                btn = (CheckBox) findViewById(R.id.celUm_Botoes_MaMe);
                 if (checked) {
-                    btn.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    btn.setBackgroundColor(getColor(R.color.green_holder_full));
+                    btn.setTextColor(getColor(R.color.white));
 
                 } else {
-                    btn.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    btn.setBackgroundColor(getColor(R.color.green_holder));
+                    btn.setTextColor(getColor(R.color.black));
+
+                }
+                break;
+
+            case R.id.celUm_Botao_Power: // Botão POWER
+                btnp = (CheckBox) findViewById(R.id.celUm_Botao_Power);
+                if (checked) {
+                    btnp.setBackgroundColor(getColor(R.color.green_holder_full));
+                    btnp.setTextColor(getColor(R.color.white));
+
+                } else {
+                    btnp.setBackgroundColor(getColor(R.color.green_holder));
+                    btnp.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -141,10 +199,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_Carcaca: // Carcaça do aparelho
                 car = (CheckBox) findViewById(R.id.celUm_Carcaca);
                 if (checked) {
-                    car.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    car.setBackgroundColor(getColor(R.color.green_holder_full));
+                    car.setTextColor(getColor(R.color.white));
 
                 } else {
-                    car.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    car.setBackgroundColor(getColor(R.color.green_holder));
+                    car.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -152,10 +212,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_AutoFalante: // Auto falante
                 autof = (CheckBox) findViewById(R.id.celUm_AutoFalante);
                 if (checked) {
-                    autof.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    autof.setBackgroundColor(getColor(R.color.green_holder_full));
+                    autof.setTextColor(getColor(R.color.white));
 
                 } else {
-                    autof.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    autof.setBackgroundColor(getColor(R.color.green_holder));
+                    autof.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -163,10 +225,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_AutoFalanteAuricular: // Auto falante auricular
                 autofa = (CheckBox) findViewById(R.id.celUm_AutoFalanteAuricular);
                 if (checked) {
-                    autofa.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    autofa.setBackgroundColor(getColor(R.color.green_holder_full));
+                    autofa.setTextColor(getColor(R.color.white));
 
                 } else {
-                    autofa.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    autofa.setBackgroundColor(getColor(R.color.green_holder));
+                    autofa.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -174,10 +238,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_Microfone: // microfone
                 mic = (CheckBox) findViewById(R.id.celUm_Microfone);
                 if (checked) {
-                    mic.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    mic.setBackgroundColor(getColor(R.color.green_holder_full));
+                    mic.setTextColor(getColor(R.color.white));
 
                 } else {
-                    mic.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    mic.setBackgroundColor(getColor(R.color.green_holder));
+                    mic.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -185,10 +251,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_CameraFrontal: // câmera Frontal
                 camf = (CheckBox) findViewById(R.id.celUm_CameraFrontal);
                 if (checked) {
-                    camf.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    camf.setBackgroundColor(getColor(R.color.green_holder_full));
+                    camf.setTextColor(getColor(R.color.white));
 
                 } else {
-                    camf.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    camf.setBackgroundColor(getColor(R.color.green_holder));
+                    camf.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -196,10 +264,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_CameraTraseira: // câmera traseira
                 camt = (CheckBox) findViewById(R.id.celUm_CameraTraseira);
                 if (checked) {
-                    camt.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    camt.setBackgroundColor(getColor(R.color.green_holder_full));
+                    camt.setTextColor(getColor(R.color.white));
 
                 } else {
-                    camt.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    camt.setBackgroundColor(getColor(R.color.green_holder));
+                    camt.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -207,10 +277,12 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_ConectorCarga: // Conector de carga
                 conc = (CheckBox) findViewById(R.id.celUm_ConectorCarga);
                 if (checked) {
-                    conc.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    conc.setBackgroundColor(getColor(R.color.green_holder_full));
+                    conc.setTextColor(getColor(R.color.white));
 
                 } else {
-                    conc.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    conc.setBackgroundColor(getColor(R.color.green_holder));
+                    conc.setTextColor(getColor(R.color.black));
 
                 }
                 break;
@@ -218,15 +290,51 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_Bateria: // Bateria
                 bat = (CheckBox) findViewById(R.id.celUm_Bateria);
                 if (checked) {
-                    bat.setBackgroundColor(argb(255 , 100 , 255 , 100));
+                    bat.setBackgroundColor(getColor(R.color.green_holder_full));
+                    bat.setTextColor(getColor(R.color.white));
 
                 } else {
-                    bat.setBackgroundColor(argb(0 , 100 , 255 , 100));
+                    bat.setBackgroundColor(getColor(R.color.green_holder));
+                    bat.setTextColor(getColor(R.color.black));
 
                 }
+                break;
+
+            case R.id.celUm_TampaTraseira: // Traseira
+                bCover = (CheckBox) findViewById(R.id.celUm_TampaTraseira);
+                if (checked) {
+                    bCover.setBackgroundColor(getColor(R.color.green_holder_full));
+                    bCover.setTextColor(getColor(R.color.white));
+
+                } else {
+                    bCover.setBackgroundColor(getColor(R.color.green_holder));
+                    bCover.setTextColor(getColor(R.color.black));
+
+                }
+                break;
+
+            case R.id.celUm_Digital: // DIGITAL
+                dig = (CheckBox) findViewById(R.id.celUm_Digital);
+                if (checked) {
+                    dig.setBackgroundColor(getColor(R.color.green_holder_full));
+                    dig.setTextColor(getColor(R.color.white));
+
+                } else {
+                    dig.setBackgroundColor(getColor(R.color.green_holder));
+                    dig.setTextColor(getColor(R.color.black));
+
+                }
+                break;
+
+            default:
+
                 break;
         }
 
 
+    }
+
+    public void close(View view) {
+        finish();
     }
 }

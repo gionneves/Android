@@ -10,8 +10,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#66000000"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:text="@string/ar_condicionado_ar_um"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/arCB_um"
@@ -43,10 +43,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@color/checkbox_color_tint"
                 android:text="@string/higienizacao_ar_um"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/arCB_dois"
@@ -54,10 +54,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@color/checkbox_color_tint"
                 android:text="@string/manutencao_ar_um"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/arCB_tres"
@@ -65,10 +65,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginVertical="16dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@color/checkbox_color_tint"
                 android:text="@string/instalacao_ar_um"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,10 +80,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:layout_marginLeft="32dp"
-                    android:buttonTint="@color/white"
+                    android:buttonTint="@color/checkbox_color_tint"
                     android:text="@string/outros"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                     android:lines="1"
                     android:maxLines="1"
                     android:outlineAmbientShadowColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -115,9 +115,9 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/holo_green_dark"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
                     android:onClick="arUm_btnProximo"
                     android:text="@string/confirmar" />
 

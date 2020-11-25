@@ -102,4 +102,22 @@
     <string name="help_desk">Help desk</string>
     <string name="telefone_celular_text">Smartphone</string>
     <string name="monitoramento">Security and monitoring</string>
+    <string name="bateria">Battery</string>
+    <string name="tampa_traseira">Back cover</string>
+    <string name="digital">Fingerprint</string>
+    <string name="conector_de_carga">Charger connector</string>
+    <string name="c_mera_frontal">Frontal camera</string>
+    <string name="c_mera_traseira">Back camera</string>
+    <string name="microfone">Microphone</string>
+    <string name="carca_a">Frame</string>
+    <string name="auto_falante">Loudspeaker</string>
+    <string name="bot_es_volume_power">Volume/Power button</string>
+    <string name="auto_falante_auricular">Headset loudspeaker</string>
+    <string name="sensor_de_proximidade">Proximity sensor</string>
+    <string name="tela_touch">touch screen</string>
+    <string name="tela_display">Display Screen</string>
+    <string name="botoes_volume">Volume buttons</string>
+    <string name="botao_power">Power button</string>
+    <string name="colocar_peças_defeituosas">Please, select what\'s wrong in your smartphone.</string>
+
 </resources>
