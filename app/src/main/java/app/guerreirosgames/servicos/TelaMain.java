@@ -23,11 +23,14 @@ public class TelaMain extends AppCompatActivity {
      * Essas linhas, principalmente a String, Serve para lista de serviços que irá aparecer dentro
      * da box de pesquisa.*
      */
+
+    String[] TESTE;
+
     AutoCompleteTextView autoCompleteTextView;
     TextView textView;
 
-    String[] servicos = {"Ar-condicionado", "Vídeo-game", "Tablet", "GPS", "Celular", "Computador",
-            "Notebook", "CFTV", "Câmera", "Drone", "Canecas", "Camisetas", "Aquecedor",
+    String[] servicos = {"Ar-condicionado" , "Vídeo-game" , "Tablet" , "GPS" , "Celular" , "Computador" ,
+            "Notebook" , "CFTV" , "Câmera" , "Drone" , "Canecas" , "Camisetas" , "Aquecedor" ,
             "Bolinho-de-chuva"};
     ArrayAdapter<String> adapter;
 
@@ -36,6 +39,12 @@ public class TelaMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_main);
+
+        Intent intent = getIntent();
+        TESTE = intent.getStringArrayExtra("ArrayTeste");
+
+        System.out.println(TESTE);
+
 
         /**
          * O código nas proximas linhas (antes de fechar o "onCreate") servem para que funcione o
@@ -51,8 +60,6 @@ public class TelaMain extends AppCompatActivity {
         autoCompleteTextView.setThreshold(1);
 
         autoCompleteTextView.setAdapter(adapter);
-
-
     }
 
     @Override
