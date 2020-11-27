@@ -11,10 +11,10 @@ android {
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
-        versionName '4.45.3'
+        versionName '4.45.3.1'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionNameSuffix 'Loop Fix'
+        versionNameSuffix '_Reset Fix'
     }
 
     buildTypes {

@@ -20,8 +20,7 @@ public class CelUm extends AppCompatActivity {
             "" , "" , ""};
     public CheckBox td, tt, sprox, bt, wf, btn, btnp, car, autof, autofa, mic, camf, camt, conc, bat, bCover, dig;
     public AutoCompleteTextView marca, modeloSam, modelo;
-    public String branch;
-    public int x, y, o, p, error;
+    public String MaAntigo = "", MaNova = "";
     public String[] marcas = {"Samsung" , "Apple" , "Motorola" , "LG" , "Sony" , "Xiaomi" , "Huawei" , "LeNovo" , "Nokia" , "ASUS"};
     public String[] Lenovo = {"K53B36" ,
             "K33B36 K6" ,
@@ -1157,7 +1156,7 @@ public class CelUm extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            branchSelected();
+                            controleDaPressao();
                         }
                     });
                     Thread.sleep(300);
@@ -1190,11 +1189,26 @@ public class CelUm extends AppCompatActivity {
         System.out.println();
     }
 
-    public void branchSelected() {
+    public void controleDaPressao() {
+        marca = findViewById(R.id.celUm_Marca);
+        //----------------------.*
+        MaNova = marca.getText().toString();
+        if (MaNova.equals(MaAntigo)) {
+
+        } else {
+            branchSelected(MaNova);
+            MaAntigo = MaNova;
+        }
+
+    }
+
+    public void branchSelected(String branch) {
         marca = findViewById(R.id.celUm_Marca);
         modelo = findViewById(R.id.celUm_Modelo);
-        branch = marca.getText().toString();
+        //---------------------------------.*
+        //branch = marca.getText().toString();
         branch = branch.toLowerCase();
+        //-----------------------------------.*
 
         if (branch.equals("samsung")) {
             modelo = findViewById(R.id.celUm_Modelo);
