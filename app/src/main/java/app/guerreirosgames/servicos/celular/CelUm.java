@@ -19,11 +19,10 @@ public class CelUm extends AppCompatActivity {
     private final String[] defeitos = {"" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" ,
             "" , "" , ""};
     public CheckBox td, tt, sprox, bt, wf, btn, btnp, car, autof, autofa, mic, camf, camt, conc, bat, bCover, dig;
-    public AutoCompleteTextView marca, modelo;
+    public AutoCompleteTextView marca, modeloSam, modelo;
     public String branch;
+    public int x, y, o, p, error;
     public String[] marcas = {"Samsung" , "Apple" , "Motorola" , "LG" , "Sony" , "Xiaomi" , "Huawei" , "LeNovo" , "Nokia" , "ASUS"};
-    public ArrayAdapter<String> adapterAsus;
-    public ArrayAdapter<String> adapterNokia;
     public String[] Lenovo = {"K53B36" ,
             "K33B36 K6" ,
             "K10A40 VIBE C2" ,
@@ -830,6 +829,8 @@ public class CelUm extends AppCompatActivity {
             "C1604" ,
             "C1504"};
     public ArrayAdapter<String> adapterSony;
+    public ArrayAdapter<String> adapterAsus;
+    public ArrayAdapter<String> adapterNokia;
     ArrayAdapter<String> adapterMarcas;
     /**
      * MODELOS.*
@@ -1148,24 +1149,32 @@ public class CelUm extends AppCompatActivity {
             "201.2" ,
             "1208" ,
             "0507G"};
-
     Thread t = new Thread(new Runnable() {
         @Override
         public void run() {
-            try {
-                branchSelected();
-            } catch (Exception e) {
-                e.printStackTrace();
+            while (true) {
+                try {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            branchSelected();
+                        }
+                    });
+                    Thread.sleep(300);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
     });
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cel_um);
 
-        marca = (AutoCompleteTextView) findViewById(R.id.celUm_Marca);
+        marca = findViewById(R.id.celUm_Marca);
 
         adapterMarcas = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , marcas);
         marca.setThreshold(1);
@@ -1182,94 +1191,85 @@ public class CelUm extends AppCompatActivity {
     }
 
     public void branchSelected() {
-        marca = (AutoCompleteTextView) findViewById(R.id.celUm_Marca);
+        marca = findViewById(R.id.celUm_Marca);
+        modelo = findViewById(R.id.celUm_Modelo);
         branch = marca.getText().toString();
         branch = branch.toLowerCase();
-        switch (branch) {
-            case "samsung":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("Galaxy A01; Galaxy S10; ...");
-                adapterSamsung = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Samsung);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterSamsung);
-                break;
-            case "apple":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("iPhone XR; iPhone 8 Plus; ...");
-                adapterApple = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Apple);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterApple);
-                break;
-            case "motorola":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("Moto G8; Moto X; ...");
-                adapterMotorola = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Motorola);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterMotorola);
-                break;
-            case "lg":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("K10; K61; Q6; ...");
-                adapterLG = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , LG);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterLG);
-                break;
-            case "sony":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("");
-                adapterSony = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Sony);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterSony);
-                break;
-            case "xiaomi":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("Redmi 7A; Mi 8 Pro; ...");
-                adapterXiaomi = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Xiaomi);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterXiaomi);
-                break;
-            case "huawei":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("P30; P40; P40 pro; ...");
-                adapterHuawei = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Huawei);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterHuawei);
-                break;
-            case "lenovo":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("");
-                adapterLenovo = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Lenovo);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterLenovo);
-                break;
-            case "nokia":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("3311; 3301; Lumia; ...");
-                adapterNokia = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Nokia);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterNokia);
-                break;
-            case "asus":
-                modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
-                modelo.setHint("Zenfone; ");
-                adapterAsus = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Asus);
-                modelo.setThreshold(1);
-                modelo.setAdapter(adapterAsus);
-                break;
-            default:
-                modelo.setHint("");
 
+        if (branch.equals("samsung")) {
+            modelo = findViewById(R.id.celUm_Modelo);
+            modelo.setHint("Galaxy A01; Galaxy S10; ...");
+            adapterSamsung = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Samsung);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterSamsung);
+
+        } else if (branch.equals("apple")) {
+            modelo.setHint("iPhone XR; iPhone 8 Plus; ...");
+            adapterApple = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Apple);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterApple);
+
+        } else if (branch.equals("motorola")) {
+            modelo.setHint("Moto G8; Moto X; ...");
+            adapterMotorola = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Motorola);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterMotorola);
+
+        } else if (branch.equals("lg")) {
+            modelo.setHint("K10; K61; Q6; ...");
+            adapterLG = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , LG);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterLG);
+
+        } else if (branch.equals("sony")) {
+            modelo.setHint("");
+            adapterSony = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Sony);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterSony);
+
+        } else if (branch.equals("xiaomi")) {
+            modelo.setHint("Redmi 7A; Mi 8 Pro; ...");
+            adapterXiaomi = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Xiaomi);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterXiaomi);
+
+        } else if (branch.equals("huawei")) {
+            modelo.setHint("P30; P40; P40 pro; ...");
+            adapterHuawei = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Huawei);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterHuawei);
+
+        } else if (branch.equals("lenovo")) {
+            modelo.setHint("");
+            adapterLenovo = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Lenovo);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterLenovo);
+
+        } else if (branch.equals("nokia")) {
+            modelo.setHint("3311; 3301; Lumia; ...");
+            adapterNokia = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Nokia);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterNokia);
+
+        } else if (branch.equals("asus")) {
+            modelo.setHint("Zenfone; ");
+            adapterAsus = new ArrayAdapter<>(this , android.R.layout.simple_dropdown_item_1line , Asus);
+            modelo.setThreshold(1);
+            modelo.setAdapter(adapterAsus);
+
+        } else {
+            modelo.setText("");
+            modelo.setHint("");
         }
-        branch = "";
-    }
 
+    }
 
     public void onCheckboxCliked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
 
         switch (view.getId()) {
             case R.id.celUm_TelaDisplay: // tela display.*
-                td = (CheckBox) findViewById(R.id.celUm_TelaDisplay);
+                td = findViewById(R.id.celUm_TelaDisplay);
                 if (checked) {
                     td.setBackgroundColor(getColor(R.color.green_holder_full));
                     td.setTextColor(getColor(R.color.white));
@@ -1287,7 +1287,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_TelaTouch: // tela Touch.*
-                tt = (CheckBox) findViewById(R.id.celUm_TelaTouch);
+                tt = findViewById(R.id.celUm_TelaTouch);
                 if (checked) {
                     tt.setBackgroundColor(getColor(R.color.green_holder_full));
                     tt.setTextColor(getColor(R.color.white));
@@ -1306,7 +1306,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_SensorProx: // Sensor de proximidade.*
-                sprox = (CheckBox) findViewById(R.id.celUm_SensorProx);
+                sprox = findViewById(R.id.celUm_SensorProx);
                 if (checked) {
                     sprox.setBackgroundColor(getColor(R.color.green_holder_full));
                     sprox.setTextColor(getColor(R.color.white));
@@ -1325,7 +1325,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Bluetooth: // Bluetooth.*
-                bt = (CheckBox) findViewById(R.id.celUm_Bluetooth);
+                bt = findViewById(R.id.celUm_Bluetooth);
                 if (checked) {
                     bt.setBackgroundColor(getColor(R.color.green_holder_full));
                     bt.setTextColor(getColor(R.color.white));
@@ -1344,7 +1344,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_WiFi: // Wi-Fi.*
-                wf = (CheckBox) findViewById(R.id.celUm_WiFi);
+                wf = findViewById(R.id.celUm_WiFi);
                 if (checked) {
                     wf.setBackgroundColor(getColor(R.color.green_holder_full));
                     wf.setTextColor(getColor(R.color.white));
@@ -1362,7 +1362,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Botoes_MaMe: // Botões de volume.*
-                btn = (CheckBox) findViewById(R.id.celUm_Botoes_MaMe);
+                btn = findViewById(R.id.celUm_Botoes_MaMe);
                 if (checked) {
                     btn.setBackgroundColor(getColor(R.color.green_holder_full));
                     btn.setTextColor(getColor(R.color.white));
@@ -1379,7 +1379,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Botao_Power: // Botão POWER.*
-                btnp = (CheckBox) findViewById(R.id.celUm_Botao_Power);
+                btnp = findViewById(R.id.celUm_Botao_Power);
                 if (checked) {
                     btnp.setBackgroundColor(getColor(R.color.green_holder_full));
                     btnp.setTextColor(getColor(R.color.white));
@@ -1396,7 +1396,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Carcaca: // Carcaça do aparelho.*
-                car = (CheckBox) findViewById(R.id.celUm_Carcaca);
+                car = findViewById(R.id.celUm_Carcaca);
                 if (checked) {
                     car.setBackgroundColor(getColor(R.color.green_holder_full));
                     car.setTextColor(getColor(R.color.white));
@@ -1413,7 +1413,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_AutoFalante: // Auto falante.*
-                autof = (CheckBox) findViewById(R.id.celUm_AutoFalante);
+                autof = findViewById(R.id.celUm_AutoFalante);
                 if (checked) {
                     autof.setBackgroundColor(getColor(R.color.green_holder_full));
                     autof.setTextColor(getColor(R.color.white));
@@ -1430,7 +1430,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_AutoFalanteAuricular: // Auto falante auricular.*
-                autofa = (CheckBox) findViewById(R.id.celUm_AutoFalanteAuricular);
+                autofa = findViewById(R.id.celUm_AutoFalanteAuricular);
                 if (checked) {
                     autofa.setBackgroundColor(getColor(R.color.green_holder_full));
                     autofa.setTextColor(getColor(R.color.white));
@@ -1448,7 +1448,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Microfone: // microfone.*
-                mic = (CheckBox) findViewById(R.id.celUm_Microfone);
+                mic = findViewById(R.id.celUm_Microfone);
                 if (checked) {
                     mic.setBackgroundColor(getColor(R.color.green_holder_full));
                     mic.setTextColor(getColor(R.color.white));
@@ -1465,7 +1465,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_CameraFrontal: // câmera Frontal.*
-                camf = (CheckBox) findViewById(R.id.celUm_CameraFrontal);
+                camf = findViewById(R.id.celUm_CameraFrontal);
                 if (checked) {
                     camf.setBackgroundColor(getColor(R.color.green_holder_full));
                     camf.setTextColor(getColor(R.color.white));
@@ -1482,7 +1482,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_CameraTraseira: // câmera traseira.*
-                camt = (CheckBox) findViewById(R.id.celUm_CameraTraseira);
+                camt = findViewById(R.id.celUm_CameraTraseira);
                 if (checked) {
                     camt.setBackgroundColor(getColor(R.color.green_holder_full));
                     camt.setTextColor(getColor(R.color.white));
@@ -1499,7 +1499,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_ConectorCarga: // Conector de carga.*
-                conc = (CheckBox) findViewById(R.id.celUm_ConectorCarga);
+                conc = findViewById(R.id.celUm_ConectorCarga);
                 if (checked) {
                     conc.setBackgroundColor(getColor(R.color.green_holder_full));
                     conc.setTextColor(getColor(R.color.white));
@@ -1516,7 +1516,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Bateria: // Bateria.*
-                bat = (CheckBox) findViewById(R.id.celUm_Bateria);
+                bat = findViewById(R.id.celUm_Bateria);
                 if (checked) {
                     bat.setBackgroundColor(getColor(R.color.green_holder_full));
                     bat.setTextColor(getColor(R.color.white));
@@ -1533,7 +1533,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_TampaTraseira: // Traseira.*
-                bCover = (CheckBox) findViewById(R.id.celUm_TampaTraseira);
+                bCover = findViewById(R.id.celUm_TampaTraseira);
                 if (checked) {
                     bCover.setBackgroundColor(getColor(R.color.green_holder_full));
                     bCover.setTextColor(getColor(R.color.white));
@@ -1550,7 +1550,7 @@ public class CelUm extends AppCompatActivity {
                 break;
 
             case R.id.celUm_Digital: // DIGITAL.*
-                dig = (CheckBox) findViewById(R.id.celUm_Digital);
+                dig = findViewById(R.id.celUm_Digital);
                 if (checked) {
                     dig.setBackgroundColor(getColor(R.color.green_holder_full));
                     dig.setTextColor(getColor(R.color.white));

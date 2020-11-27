@@ -168,5 +168,6 @@
     <string name="botoes_volume">Botões Volume -/+</string>
     <string name="botao_power">Botão Power</string>
     <string name="colocar_peças_defeituosas">Por favor selecione o que está com defeito em seu aparelho.</string>
+    <string name="couting" translatable="false">%d:%d</string>
 
 </resources>
