@@ -11,6 +11,8 @@
     <color name="blue_fernando">#fff0f0f0</color>
     <color name="green_holder">#7f64c864</color>
     <color name="green_holder_full">#ff328832</color>
+    <color name="blue_holder">#7f6464c8</color>
+    <color name="blue_holder_full">#ff323288</color>
     <color name="checkbox_color_tint">#ff32aa32</color>
 
 

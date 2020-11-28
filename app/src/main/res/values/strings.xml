@@ -49,25 +49,25 @@
     <string name="nintendo" translatable="false">Nintendo</string>
     <string name="sony" translatable="false">Sony</string>
     <string name="microsoft" translatable="false">Microsoft</string>
-    <string name="outros">Outros:\t\t</string>
+    <string name="outros">Outros:</string>
     <string name="voltar">Voltar</string>
     <string name="nos_conte_mais">Nos conte mais...</string>
-    <string name="modelo">Modelo:\t\t</string>
+    <string name="modelo">Modelo:</string>
     <string name="defeitos_comuns">defeitos comuns:</string>
     <string name="n_o_liga">Não liga.</string>
     <string name="liga_porem_n_o_da_tela">Liga, porem não da tela.</string>
     <string name="outrosOp">Outros</string>
-    <string name="adicional">Adicional:\t\t</string>
+    <string name="adicional">Adicional:</string>
     <string name="proximo">Proximo</string>
     <string name="nome">*Nome:</string>
     <string name="hint_nome_completo">Nome completo</string>
     <string name="cpf_cnpj">*CPF/CNPJ:</string>
     <string name="btnT_fisica">Fisica</string>
     <string name="btnT_juridica">Juridica</string>
-    <string name="marca">Marca:\t\t</string>
-    <string name="adicional_orcamento">Adicional:\t\t\n%s</string>
-    <string name="modelo_orcamento">Modelo:\t\t %s</string>
-    <string name="marca_orcamento">Marca:\t\t %s</string>
+    <string name="marca">Marca:</string>
+    <string name="adicional_orcamento">Adicional:\n%s</string>
+    <string name="modelo_orcamento">Modelo:\t%s</string>
+    <string name="marca_orcamento">Marca:\t%s</string>
     <string name="entrar_login">Entrar</string>
     <string name="esqueci_a_senha_login">Esqueci a senha.</string>
     <string name="cadastre_se_login">Cadastre-se</string>
@@ -86,7 +86,7 @@
     <string name="instalacao_ar_um">Instalação</string>
     <string name="hint_outros_ar_um">Mudar o cómodo</string>
     <string name="frio_e_quente">Frio e quente?</string>
-    <string name="btus">BTUs:\t\t</string>
+    <string name="btus">BTUs:</string>
     <string name="calcular_btu">Calcular BTU</string>
     <string name="quando_precisa">Quando precisa?</string>
     <string name="agendar_dia">Agendar dia:</string>
@@ -118,22 +118,22 @@
     <string name="senha">*Senha:</string>
     <string name="hint_senha">Senha</string>
     <string name="confirmar_senha">*Confirmar senha:</string>
-    <string name="btus_orcamento">BTUs:\t\t %s</string>
+    <string name="btus_orcamento">BTUs:\t%s</string>
     <string name="cartao">Cartão</string>
     <string name="total_pagamento" translatable="false">Total:t\\tR$ %f</string>
     <string name="debito">Débito</string>
     <string name="credito">Crédito</string>
     <string name="dinheiro">Dinheiro</string>
-    <string name="troco">Troco?\t\t</string>
+    <string name="troco">Troco?</string>
     <string name="nao">Não</string>
     <string name="sim">Sim</string>
     <string name="dinheiro_cartao_pagamento_text">Vai de dinheiro\nou no cartão?</string>
     <string name="nota_prestador_final_os" translatable="false">%f</string>
     <string name="nome_prestador_final_os" translatable="false">%s, %d\n%s</string>
     <string name="concluido_final_os">Concluído</string>
-    <string name="data_agendada_final_os">Data agendada:\t\t%s</string>
-    <string name="hora_agendada_final_os">Hora agendada:\t\t%s</string>
-    <string name="pagamento_agendado_final_os">Pagar com:\t\t</string>
+    <string name="data_agendada_final_os">Data agendada:%s</string>
+    <string name="hora_agendada_final_os">Hora agendada:%s</string>
+    <string name="pagamento_agendado_final_os">Pagar com:</string>
     <string name="text_nome">Nome completo</string>
     <string name="servico_agendado">Serviço agendado!</string>
     <string name="menu_servicos_op1_minha_conta">Minha conta</string>
@@ -169,5 +169,9 @@
     <string name="botao_power">Botão Power</string>
     <string name="colocar_peças_defeituosas">Por favor selecione o que está com defeito em seu aparelho.</string>
     <string name="couting" translatable="false">%d:%d</string>
+    <string name="show_info">%s\n\n%s\n\n%s</string>
+    <string name="defeitos_orcamento">Defeitos:\\t%s</string>
+    <string name="celDois_hint_adicional_EditText">Descreva brevemente os problemas em seu aparelho</string>
+    <string name="contador" translatable="false">%d</string>
 
 </resources>

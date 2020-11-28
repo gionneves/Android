@@ -119,5 +119,8 @@
     <string name="botoes_volume">Volume buttons</string>
     <string name="botao_power">Power button</string>
     <string name="colocar_peças_defeituosas">Please, select what\'s wrong in your smartphone.</string>
+    <string name="show_info">%s\n%s\n%s</string>
+    <string name="defeitos_orcamento">Defects:\\t%s</string>
+    <string name="celDois_hint_adicional_EditText">Briefly describe problems with your device</string>
 
 </resources>

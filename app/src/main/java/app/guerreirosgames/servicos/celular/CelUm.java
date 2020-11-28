@@ -1,6 +1,7 @@
 package app.guerreirosgames.servicos.celular;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -9,17 +10,16 @@ import android.widget.CheckBox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 import app.guerreirosgames.R;
-import app.guerreirosgames.servicos.TelaMain;
 
 
 public class CelUm extends AppCompatActivity {
 
 
-    private final String[] defeitos = {"" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" , "" ,
-            "" , "" , ""};
-    public CheckBox td, tt, sprox, bt, wf, btn, btnp, car, autof, autofa, mic, camf, camt, conc, bat, bCover, dig;
-    public AutoCompleteTextView marca, modeloSam, modelo;
+    public CheckBox td, tt, sprox, bt, wf, btn, btnp, car, autof, autofa, mic, camf, camt, conc, bat, bCover, dig, out;
+    public AutoCompleteTextView marca, modelo;
     public String MaAntigo = "", MaNova = "";
     public String[] marcas = {"Samsung" , "Apple" , "Motorola" , "LG" , "Sony" , "Xiaomi" , "Huawei" , "LeNovo" , "Nokia" , "ASUS"};
     public String[] Lenovo = {"K53B36" ,
@@ -1166,7 +1166,7 @@ public class CelUm extends AppCompatActivity {
             }
         }
     });
-
+    ArrayList<String> defeitos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1180,13 +1180,6 @@ public class CelUm extends AppCompatActivity {
         marca.setAdapter(adapterMarcas);
 
         t.start();
-    }
-
-    private void listView() {
-        for (int i = 0; i <= 16; ++i) {
-            System.out.print(defeitos[i]);
-        }
-        System.out.println();
     }
 
     public void controleDaPressao() {
@@ -1203,6 +1196,7 @@ public class CelUm extends AppCompatActivity {
     }
 
     public void branchSelected(String branch) {
+
         marca = findViewById(R.id.celUm_Marca);
         modelo = findViewById(R.id.celUm_Modelo);
         //---------------------------------.*
@@ -1281,21 +1275,20 @@ public class CelUm extends AppCompatActivity {
     public void onCheckboxCliked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
 
+
         switch (view.getId()) {
             case R.id.celUm_TelaDisplay: // tela display.*
                 td = findViewById(R.id.celUm_TelaDisplay);
                 if (checked) {
-                    td.setBackgroundColor(getColor(R.color.green_holder_full));
+                    td.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     td.setTextColor(getColor(R.color.white));
 
-                    defeitos[0] = getString(R.string.tela_display) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.tela_display));
                 } else {
-                    td.setBackgroundColor(getColor(R.color.green_holder));
+                    td.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     td.setTextColor(getColor(R.color.black));
 
-                    defeitos[0] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.tela_display));
 
                 }
                 break;
@@ -1303,18 +1296,18 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_TelaTouch: // tela Touch.*
                 tt = findViewById(R.id.celUm_TelaTouch);
                 if (checked) {
-                    tt.setBackgroundColor(getColor(R.color.green_holder_full));
+                    tt.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     tt.setTextColor(getColor(R.color.white));
 
-                    defeitos[1] = getString(R.string.tela_touch) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.tela_touch));
+
 
                 } else {
-                    tt.setBackgroundColor(getColor(R.color.green_holder));
+                    tt.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     tt.setTextColor(getColor(R.color.black));
 
-                    defeitos[1] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.tela_touch));
+
 
                 }
                 break;
@@ -1322,18 +1315,18 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_SensorProx: // Sensor de proximidade.*
                 sprox = findViewById(R.id.celUm_SensorProx);
                 if (checked) {
-                    sprox.setBackgroundColor(getColor(R.color.green_holder_full));
+                    sprox.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     sprox.setTextColor(getColor(R.color.white));
 
-                    defeitos[2] = getString(R.string.sensor_de_proximidade) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.sensor_de_proximidade));
+
 
                 } else {
-                    sprox.setBackgroundColor(getColor(R.color.green_holder));
+                    sprox.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     sprox.setTextColor(getColor(R.color.black));
 
-                    defeitos[2] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.sensor_de_proximidade));
+
 
                 }
                 break;
@@ -1341,18 +1334,18 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_Bluetooth: // Bluetooth.*
                 bt = findViewById(R.id.celUm_Bluetooth);
                 if (checked) {
-                    bt.setBackgroundColor(getColor(R.color.green_holder_full));
+                    bt.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     bt.setTextColor(getColor(R.color.white));
 
-                    defeitos[3] = getString(R.string.bluetooth) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.bluetooth));
+
 
                 } else {
-                    bt.setBackgroundColor(getColor(R.color.green_holder));
+                    bt.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     bt.setTextColor(getColor(R.color.black));
 
-                    defeitos[3] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.bluetooth));
+
 
                 }
                 break;
@@ -1360,226 +1353,242 @@ public class CelUm extends AppCompatActivity {
             case R.id.celUm_WiFi: // Wi-Fi.*
                 wf = findViewById(R.id.celUm_WiFi);
                 if (checked) {
-                    wf.setBackgroundColor(getColor(R.color.green_holder_full));
+                    wf.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     wf.setTextColor(getColor(R.color.white));
 
-                    defeitos[4] = getString(R.string.wi_fi) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.wi_fi));
+
 
                 } else {
-                    wf.setBackgroundColor(getColor(R.color.green_holder));
+                    wf.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     wf.setTextColor(getColor(R.color.black));
 
-                    defeitos[4] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.wi_fi));
+
                 }
                 break;
 
             case R.id.celUm_Botoes_MaMe: // Botões de volume.*
                 btn = findViewById(R.id.celUm_Botoes_MaMe);
                 if (checked) {
-                    btn.setBackgroundColor(getColor(R.color.green_holder_full));
+                    btn.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     btn.setTextColor(getColor(R.color.white));
 
-                    defeitos[5] = getString(R.string.botoes_volume) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.botoes_volume));
+
                 } else {
-                    btn.setBackgroundColor(getColor(R.color.green_holder));
+                    btn.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     btn.setTextColor(getColor(R.color.black));
 
-                    defeitos[5] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.botoes_volume));
+
                 }
                 break;
 
             case R.id.celUm_Botao_Power: // Botão POWER.*
                 btnp = findViewById(R.id.celUm_Botao_Power);
                 if (checked) {
-                    btnp.setBackgroundColor(getColor(R.color.green_holder_full));
+                    btnp.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     btnp.setTextColor(getColor(R.color.white));
 
-                    defeitos[6] = getString(R.string.botao_power) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.botao_power));
+
                 } else {
-                    btnp.setBackgroundColor(getColor(R.color.green_holder));
+                    btnp.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     btnp.setTextColor(getColor(R.color.black));
 
-                    defeitos[6] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.botao_power));
+
                 }
                 break;
 
             case R.id.celUm_Carcaca: // Carcaça do aparelho.*
                 car = findViewById(R.id.celUm_Carcaca);
                 if (checked) {
-                    car.setBackgroundColor(getColor(R.color.green_holder_full));
+                    car.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     car.setTextColor(getColor(R.color.white));
 
-                    defeitos[7] = getString(R.string.carca_a) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.carca_a));
+
                 } else {
-                    car.setBackgroundColor(getColor(R.color.green_holder));
+                    car.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     car.setTextColor(getColor(R.color.black));
 
-                    defeitos[7] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.carca_a));
+
                 }
                 break;
 
             case R.id.celUm_AutoFalante: // Auto falante.*
                 autof = findViewById(R.id.celUm_AutoFalante);
                 if (checked) {
-                    autof.setBackgroundColor(getColor(R.color.green_holder_full));
+                    autof.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     autof.setTextColor(getColor(R.color.white));
 
-                    defeitos[8] = getString(R.string.auto_falante) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.auto_falante));
+
                 } else {
-                    autof.setBackgroundColor(getColor(R.color.green_holder));
+                    autof.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     autof.setTextColor(getColor(R.color.black));
 
-                    defeitos[8] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.auto_falante));
+
                 }
                 break;
 
             case R.id.celUm_AutoFalanteAuricular: // Auto falante auricular.*
                 autofa = findViewById(R.id.celUm_AutoFalanteAuricular);
                 if (checked) {
-                    autofa.setBackgroundColor(getColor(R.color.green_holder_full));
+                    autofa.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     autofa.setTextColor(getColor(R.color.white));
 
-                    defeitos[9] = getString(R.string.auto_falante_auricular) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.auto_falante_auricular));
+
 
                 } else {
-                    autofa.setBackgroundColor(getColor(R.color.green_holder));
+                    autofa.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     autofa.setTextColor(getColor(R.color.black));
 
-                    defeitos[9] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.auto_falante_auricular));
+
                 }
                 break;
 
             case R.id.celUm_Microfone: // microfone.*
                 mic = findViewById(R.id.celUm_Microfone);
                 if (checked) {
-                    mic.setBackgroundColor(getColor(R.color.green_holder_full));
+                    mic.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     mic.setTextColor(getColor(R.color.white));
 
-                    defeitos[10] = getString(R.string.microfone) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.microfone));
+
                 } else {
-                    mic.setBackgroundColor(getColor(R.color.green_holder));
+                    mic.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     mic.setTextColor(getColor(R.color.black));
 
-                    defeitos[10] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.microfone));
+
                 }
                 break;
 
             case R.id.celUm_CameraFrontal: // câmera Frontal.*
                 camf = findViewById(R.id.celUm_CameraFrontal);
                 if (checked) {
-                    camf.setBackgroundColor(getColor(R.color.green_holder_full));
+                    camf.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     camf.setTextColor(getColor(R.color.white));
 
-                    defeitos[11] = getString(R.string.c_mera_frontal) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.c_mera_frontal));
+
                 } else {
-                    camf.setBackgroundColor(getColor(R.color.green_holder));
+                    camf.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     camf.setTextColor(getColor(R.color.black));
 
-                    defeitos[11] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.c_mera_frontal));
+
                 }
                 break;
 
             case R.id.celUm_CameraTraseira: // câmera traseira.*
                 camt = findViewById(R.id.celUm_CameraTraseira);
                 if (checked) {
-                    camt.setBackgroundColor(getColor(R.color.green_holder_full));
+                    camt.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     camt.setTextColor(getColor(R.color.white));
 
-                    defeitos[12] = getString(R.string.c_mera_traseira) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.c_mera_traseira));
+
                 } else {
-                    camt.setBackgroundColor(getColor(R.color.green_holder));
+                    camt.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     camt.setTextColor(getColor(R.color.black));
 
-                    defeitos[12] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.c_mera_traseira));
+
                 }
                 break;
 
             case R.id.celUm_ConectorCarga: // Conector de carga.*
                 conc = findViewById(R.id.celUm_ConectorCarga);
                 if (checked) {
-                    conc.setBackgroundColor(getColor(R.color.green_holder_full));
+                    conc.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     conc.setTextColor(getColor(R.color.white));
 
-                    defeitos[13] = getString(R.string.conector_de_carga) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.conector_de_carga));
+
                 } else {
-                    conc.setBackgroundColor(getColor(R.color.green_holder));
+                    conc.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     conc.setTextColor(getColor(R.color.black));
 
-                    defeitos[13] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.conector_de_carga));
+
                 }
                 break;
 
             case R.id.celUm_Bateria: // Bateria.*
                 bat = findViewById(R.id.celUm_Bateria);
                 if (checked) {
-                    bat.setBackgroundColor(getColor(R.color.green_holder_full));
+                    bat.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     bat.setTextColor(getColor(R.color.white));
 
-                    defeitos[14] = getString(R.string.bateria) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.bateria));
+
                 } else {
-                    bat.setBackgroundColor(getColor(R.color.green_holder));
+                    bat.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     bat.setTextColor(getColor(R.color.black));
 
-                    defeitos[14] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.bateria));
+
                 }
                 break;
 
             case R.id.celUm_TampaTraseira: // Traseira.*
                 bCover = findViewById(R.id.celUm_TampaTraseira);
                 if (checked) {
-                    bCover.setBackgroundColor(getColor(R.color.green_holder_full));
+                    bCover.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     bCover.setTextColor(getColor(R.color.white));
 
-                    defeitos[15] = getString(R.string.tampa_traseira) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.tampa_traseira));
+
                 } else {
-                    bCover.setBackgroundColor(getColor(R.color.green_holder));
+                    bCover.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     bCover.setTextColor(getColor(R.color.black));
 
-                    defeitos[15] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.tampa_traseira));
+
                 }
                 break;
 
             case R.id.celUm_Digital: // DIGITAL.*
                 dig = findViewById(R.id.celUm_Digital);
                 if (checked) {
-                    dig.setBackgroundColor(getColor(R.color.green_holder_full));
+                    dig.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder_full)));
                     dig.setTextColor(getColor(R.color.white));
 
-                    defeitos[16] = getString(R.string.digital) + ", ";
-                    listView();
+                    defeitos.add(getString(R.string.digital));
+
                 } else {
-                    dig.setBackgroundColor(getColor(R.color.green_holder));
+                    dig.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.green_holder)));
                     dig.setTextColor(getColor(R.color.black));
 
-                    defeitos[16] = "";
-                    listView();
+                    defeitos.remove(getString(R.string.digital));
+
                 }
                 break;
 
+            case R.id.celUm_Outros: // Outros.*
+                out = findViewById(R.id.celUm_Outros);
+                if (checked) {
+                    out.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.blue_holder_full)));
+                    out.setTextColor(getColor(R.color.white));
+
+                    defeitos.add(getString(R.string.outrosOp));
+
+                } else {
+                    out.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.blue_holder)));
+                    out.setTextColor(getColor(R.color.black));
+
+                    defeitos.remove(getString(R.string.outrosOp));
+
+                }
+                break;
             default:
 
                 break;
@@ -1592,12 +1601,22 @@ public class CelUm extends AppCompatActivity {
     }
 
     public void next(View view) {
-        Intent intent = new Intent(this , TelaMain.class);
+        Intent intent = new Intent(this , CelDois.class);
+        modelo = (AutoCompleteTextView) findViewById(R.id.celUm_Modelo);
 
-        for (int i = 0; i < 16; ++i) {
-            intent.putExtra(defeitos[i] , "DEFEITO[" + i + "]");
 
-        }
+        //-----------------------------------------------.*
+
+        intent.putExtra("CELUM_MODELO" , modelo.getText().toString());
+        intent.putExtra("CELUM_MARCA" , MaNova);
+
+        intent.putStringArrayListExtra("CELUM_DEFEITOS" , defeitos);
+
+        //------------------------------------------------.*
+
+
+        startActivity(intent);
+
     }
 
 }
