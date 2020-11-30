@@ -196,6 +196,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="aaa"
+                android:onClick="telaPrincipal_irSegredo"
                 android:layout_alignBottom="@id/telaPrincipal_gradeOS"
                 android:layout_marginHorizontal="32dp"
                 android:backgroundTint="@color/yellow" />

@@ -71,7 +71,7 @@ public class CelDois extends AppCompatActivity {
     }
 
     public void proximo(View view) {
-        Intent intent = new Intent(this , CelUm.class);
+        Intent intent = new Intent(this , CelTres.class);
     }
 
 }

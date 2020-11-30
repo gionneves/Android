@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginVertical="8dp"
                 android:backgroundTint="@android:color/holo_purple"
                 android:onClick="login_btnGoDebug"
                 android:text="@string/debug"

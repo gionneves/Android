@@ -44,14 +44,18 @@ public class TelaPrincipal extends AppCompatActivity {
     }
 
     public void telaPrincipal_irComputador(View view) {
-        startActivity(new Intent(this, ComputadorUm.class));
+        startActivity(new Intent(this , ComputadorUm.class));
     }
 
     public void telaPrincipal_irMontarComputador(View view) {
-        startActivity(new Intent(this, MontarComputadorUm.class));
+        startActivity(new Intent(this , MontarComputadorUm.class));
     }
 
     public void telaPrincipal_irTablet(View view) {
-        startActivity(new Intent(this, TabletUm.class));
+        startActivity(new Intent(this , TabletUm.class));
+    }
+
+    public void telaPrincipal_irSegredo(View view) {
+        setContentView(R.layout.tela_secreta);
     }
 }

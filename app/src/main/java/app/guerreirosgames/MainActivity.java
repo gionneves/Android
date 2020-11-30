@@ -1,6 +1,5 @@
 package app.guerreirosgames;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -91,14 +90,14 @@ public class MainActivity extends AppCompatActivity {
         unlock_debug++;
         if (unlock_debug == 7 || unlock_debug == 17 || unlock_debug == 24) {
             try {
-                for (int i = 0; i < 4; ++i){
-                    v.vibrate(40);
-                    Thread.sleep(70);
+                btn_debug.setVisibility(View.VISIBLE);
+                for (int i = 0; i < 4; ++i) {
+                    v.vibrate(100);
+                    Thread.sleep(200);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            btn_debug.setVisibility(View.VISIBLE);
         } else {
             btn_debug.setVisibility(View.INVISIBLE);
         }
