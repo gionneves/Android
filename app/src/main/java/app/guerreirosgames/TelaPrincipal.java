@@ -13,6 +13,7 @@ import app.guerreirosgames.servicos.celular.CelUm;
 import app.guerreirosgames.servicos.celular.tablet.TabletUm;
 import app.guerreirosgames.servicos.computador.ComputadorUm;
 import app.guerreirosgames.servicos.computador.montar.MontarComputadorUm;
+import app.guerreirosgames.servicos.helpdesk.HdUm;
 import app.guerreirosgames.servicos.videogames.VideoUm;
 
 public class TelaPrincipal extends AppCompatActivity {
@@ -57,5 +58,9 @@ public class TelaPrincipal extends AppCompatActivity {
 
     public void telaPrincipal_irSegredo(View view) {
         setContentView(R.layout.tela_secreta);
+    }
+
+    public void telaPrincipal_irHelpdesk(View view) {
+        startActivity(new Intent(this , HdUm.class));
     }
 }

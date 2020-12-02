@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 import app.guerreirosgames.R;
+import app.guerreirosgames.servicos.Agendamento;
 
 public class CelDois extends AppCompatActivity {
 
@@ -71,7 +72,7 @@ public class CelDois extends AppCompatActivity {
     }
 
     public void proximo(View view) {
-        Intent intent = new Intent(this , CelTres.class);
+        Intent intent = new Intent(this , Agendamento.class);
     }
 
 }

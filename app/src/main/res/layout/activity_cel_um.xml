@@ -348,8 +348,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_marginHorizontal="8dp"
-                        android:onClick="next"
                         android:backgroundTint="@android:color/holo_green_light"
+                        android:onClick="next"
                         android:text="@string/confirmar" />
 
                 </RelativeLayout>

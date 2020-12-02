@@ -10,8 +10,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#66000000"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,24 +53,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="28dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fisica"
-                    android:paddingVertical="24dp"
                     android:layout_marginHorizontal="32dp"
+                    android:paddingVertical="24dp"
+                    android:text="Fisica"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Juridica"
                     android:layout_marginHorizontal="32dp"
                     android:paddingVertical="24dp"
+                    android:text="Juridica"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 

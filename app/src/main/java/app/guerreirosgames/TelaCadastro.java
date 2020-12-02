@@ -7,18 +7,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 import java.util.Calendar;
 
 public class TelaCadastro extends AppCompatActivity {
     ToggleButton aSwitch;
     EditText editText, nascimento;
+    private String HOST = "http://192.168.0.32/guerreirosLogin";
     private int dia, mes, ano;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +87,8 @@ public class TelaCadastro extends AppCompatActivity {
 
     public void cadastro_btnCadastrar(View view) {
 
-        Intent intent = new Intent(this, MainActivity.class);
+
+        Intent intent = new Intent(this , MainActivity.class);
         byte cadastroContador = 0;
 
         /**
@@ -284,7 +290,7 @@ public class TelaCadastro extends AppCompatActivity {
 
         if (sConfirmar_email.equals(sEmail)) {
             confirmar_email.setBackgroundResource(R.drawable.background_normal);
-            intent.putExtra("EMAIL_CADASTRO", sEmail);
+            intent.putExtra("EMAIL_CADASTRO" , sEmail);
             cadastroContador++;
         } else {
             confirmar_email.setBackgroundResource(R.drawable.background_error);
@@ -311,7 +317,7 @@ public class TelaCadastro extends AppCompatActivity {
 
         if (sConfrimar_senha.equals(sSenha)) {
             confirmar_senha.setBackgroundResource(R.drawable.background_normal);
-            intent.putExtra("SENHA_CADASTRO", sSenha);
+            intent.putExtra("SENHA_CADASTRO" , sSenha);
 
             cadastroContador++;
         } else {
@@ -319,9 +325,58 @@ public class TelaCadastro extends AppCompatActivity {
 
         }
 
-        if (cadastroContador >= 2) {
-            startActivity(intent);
+
+        String URL = HOST + "/cadastrar.php";
+
+        if (sSenha.equals(sConfrimar_senha) && sEmail.equals(sConfirmar_email) && !sCPF_CNPJ.isEmpty()) {
+
+            Ion.with(TelaCadastro.this)
+                    .load(URL)
+                    .setBodyParameter("nome_app" , sNome)
+                    .setBodyParameter("cpf_app" , sCPF_CNPJ)
+                    .setBodyParameter("rg_app" , sRG)
+                    .setBodyParameter("nascimento_app" , sData_nascimento)
+                    .setBodyParameter("cep_app" , sCEP)
+                    .setBodyParameter("endereco_app" , sEndereco)
+                    .setBodyParameter("bairro_app" , sBairro)
+                    .setBodyParameter("municipio_app" , sMunicipio)
+                    .setBodyParameter("estado_app" , sEstado)
+                    .setBodyParameter("complemento_app" , sComplemento)
+                    .setBodyParameter("foneResidencia_app" , sTelefone_residencial)
+                    .setBodyParameter("foneCelular_app" , sTelefone_celular)
+                    .setBodyParameter("email_app" , sEmail)
+                    .setBodyParameter("senha_app" , sSenha)
+
+
+                    .asJsonObject()
+                    .setCallback(new FutureCallback<JsonObject>() {
+                        @Override
+                        public void onCompleted(Exception e , JsonObject result) {
+
+                            try {
+                                String RETORNO = result.get("CADASTRO").getAsString();
+
+                                if (RETORNO.equals("CPF_ERRO")) {
+                                    Toast.makeText(TelaCadastro.this , "Oops! Esse CPF já é cadastado." , Toast.LENGTH_SHORT).show();
+                                } else if (RETORNO.equals("SUCESSO")) {
+                                    Toast.makeText(TelaCadastro.this , "CADASTRADO COM SUCESSO!" , Toast.LENGTH_SHORT).show();
+                                    finish();
+                                } else {
+                                    Toast.makeText(TelaCadastro.this , "Error!" , Toast.LENGTH_SHORT).show();
+                                }
+
+
+                            } catch (Exception erro) {
+                                Toast.makeText(TelaCadastro.this , "Error: " + erro , Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    });
+
+        } else {
+            Toast.makeText(this , "Há campos em branco!" , Toast.LENGTH_SHORT).show();
         }
+
 
     }
 
@@ -336,12 +391,12 @@ public class TelaCadastro extends AppCompatActivity {
         mes = cale.get(Calendar.MONTH);
         ano = cale.get(Calendar.YEAR);
 
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this , new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+            public void onDateSet(DatePicker view , int year , int month , int dayOfMonth) {
                 nascimento.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
             }
-        }, ano, mes, dia);
+        } , ano , mes , dia);
         datePickerDialog.show();
     }
 }

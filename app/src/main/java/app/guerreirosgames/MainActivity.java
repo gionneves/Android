@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
      * recuperação de senha que será via email onde o cliente podera torcar a senha atravez de um
      * link.*
      */
+
     public void login_esqueciSenha(View view) {
         startActivity(new Intent(this, TelaEsqueciSenha.class));
     }

@@ -56,7 +56,7 @@
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irCelular"
-                            android:src="@drawable/btn_principal_1" />
+                            android:src="@drawable/principal_btn_1" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irArCondicionado"
-                            android:src="@drawable/btn_principal_3" />
+                            android:src="@drawable/principal_btn_3" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -87,7 +87,8 @@
                             android:layout_width="130dp"
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
-                            android:src="@drawable/btn_principal_5" />
+                            android:onClick="telaPrincipal_irHelpdesk"
+                            android:src="@drawable/principal_btn_5" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -103,7 +104,7 @@
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irTablet"
-                            android:src="@drawable/btn_principal_7" />
+                            android:src="@drawable/principal_btn_7" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -127,7 +128,7 @@
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irVideoGames"
-                            android:src="@drawable/btn_principal_2" />
+                            android:src="@drawable/principal_btn_2" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -143,7 +144,7 @@
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irComputador"
-                            android:src="@drawable/btn_principal_4" />
+                            android:src="@drawable/principal_btn_4" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -158,7 +159,7 @@
                             android:layout_width="130dp"
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
-                            android:src="@drawable/btn_principal_6" />
+                            android:src="@drawable/principal_btn_6" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -174,7 +175,7 @@
                             android:layout_height="75dp"
                             android:layout_margin="16dp"
                             android:onClick="telaPrincipal_irMontarComputador"
-                            android:src="@drawable/btn_principal_8" />
+                            android:src="@drawable/principal_btn_8" />
 
                         <TextView
                             android:layout_width="match_parent"

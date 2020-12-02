@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 import app.guerreirosgames.R;
 
-
 public class CelUm extends AppCompatActivity {
 
 
