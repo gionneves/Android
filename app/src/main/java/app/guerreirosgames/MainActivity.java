@@ -6,15 +6,20 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import app.guerreirosgames.servicos.TelaMain;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 public class MainActivity extends AppCompatActivity {
 
     private int unlock_debug = 0;
     private Button btn_debug;
+
+    private String HOST = "http://localhost/guerreiros";
 
     private String userName, userPass;
 
@@ -28,13 +33,14 @@ public class MainActivity extends AppCompatActivity {
         userName = intentCadastro.getStringExtra("EMAIL_CADASTRO");
         userPass = intentCadastro.getStringExtra("SENHA_CADASTRO");
 
+
     }
 
     /**
      * Função de ir para a tela de cadastro já predefinido.*
      */
     public void login_btnTelaCadastro(View view) {
-        startActivity(new Intent(this, TelaCadastro.class));
+        startActivity(new Intent(this , TelaCadastro.class));
     }
 
     /**
@@ -47,26 +53,36 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.loginGetPass);
         String pass = password.getText().toString();
 
+        Intent intent = new Intent(this , TelaPrincipal.class);
 
-        if (log.equals("admin") && pass.equals("admin")) {
-            //setContentView(R.layout.activity_tela_main);
-            startActivity(new Intent(this, TelaMain.class));
-
-            login.setBackgroundResource(R.drawable.background_normal);
-            password.setBackgroundResource(R.drawable.background_normal);
-
-        } else if (log.equals(userName) && pass.equals(userPass)) {
-            startActivity(new Intent(this, TelaMain.class));
-
-            login.setBackgroundResource(R.drawable.background_normal);
-            password.setBackgroundResource(R.drawable.background_normal);
-
+        String URL = HOST + "/logar.php";
+        if (log.isEmpty() || pass.isEmpty()) {
+            Toast.makeText(this , "Há um campo em branco!" , Toast.LENGTH_LONG).show();
         } else {
-            login.setBackgroundResource(R.drawable.background_error);
-            password.setBackgroundResource(R.drawable.background_error);
+
+            Ion.with(MainActivity.this)
+                    .load(URL)
+                    .setBodyParameter("email_app" , log)
+                    .setBodyParameter("senha_app" , pass)
+                    .asJsonObject()
+                    .setCallback(new FutureCallback<JsonObject>() {
+                        @Override
+                        public void onCompleted(Exception e , JsonObject result) {
+                            try {
+                                String RETORNO = result.get("LOGIN").getAsString();
+
+                                if (RETORNO.equals("SUCESSO")) {
+                                    startActivity(intent);
+                                } else if (RETORNO.equals("ERRO")) {
+                                    Toast.makeText(MainActivity.this , "Email ou senha incorretos." , Toast.LENGTH_LONG).show();
+                                }
+
+                            } catch (Exception erro) {
+                                Toast.makeText(MainActivity.this , "Erro: " + erro , Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
         }
-
-
     }
 
     /**
@@ -76,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void login_esqueciSenha(View view) {
-        startActivity(new Intent(this, TelaEsqueciSenha.class));
+        startActivity(new Intent(this , TelaEsqueciSenha.class));
     }
 
 
@@ -106,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login_btnGoDebug(View view) {
         btn_debug = findViewById(R.id.btn_debug);
-        startActivity(new Intent(this, TelaPrincipal.class));
+        startActivity(new Intent(this , TelaPrincipal.class));
         btn_debug.setVisibility(View.INVISIBLE);
     }
 }

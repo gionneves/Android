@@ -99,7 +99,7 @@
     <string name="hint_data_de_nascimento">20/06/2005</string>
     <string name="cep">*CEP:</string>
     <string name="hint_cep" translatable="false">00000-000</string>
-    <string name="endereco">*Endereço:</string>
+    <string name="endereco">*Endereço com número:</string>
     <string name="hint_endereco">Rua Fernando Ivan, 99</string>
     <string name="bairro">*Bairro:</string>
     <string name="hint_bairro" translatable="false">Jd. Dolores</string>

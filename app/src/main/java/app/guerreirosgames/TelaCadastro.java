@@ -22,7 +22,7 @@ import java.util.Calendar;
 public class TelaCadastro extends AppCompatActivity {
     ToggleButton aSwitch;
     EditText editText, nascimento;
-    private String HOST = "http://192.168.0.32/guerreirosLogin";
+    private String HOST = "https://localhost/guerreiros";
     private int dia, mes, ano;
 
     @Override
@@ -50,6 +50,7 @@ public class TelaCadastro extends AppCompatActivity {
             public void onClick(View v) {
                 if (aSwitch.isChecked()) {
                     editText.setHint("123.456.789/0001-09");
+
                 } else {
                     editText.setHint("123.456.789-09");
                 }
@@ -328,7 +329,10 @@ public class TelaCadastro extends AppCompatActivity {
 
         String URL = HOST + "/cadastrar.php";
 
-        if (sSenha.equals(sConfrimar_senha) && sEmail.equals(sConfirmar_email) && !sCPF_CNPJ.isEmpty()) {
+        if (sSenha.equals(sConfrimar_senha) && sEmail.equals(sConfirmar_email) && !sNome.isEmpty() && !sCPF_CNPJ.isEmpty()
+                && !sRG.isEmpty() && !sData_nascimento.isEmpty() && !sCEP.isEmpty() && !sEndereco.isEmpty()
+                && !sBairro.isEmpty() && !sMunicipio.isEmpty() && !sEstado.isEmpty() && !sTelefone_celular.isEmpty()
+                && !sEmail.isEmpty() && !sSenha.isEmpty()) {
 
             Ion.with(TelaCadastro.this)
                     .load(URL)
@@ -338,15 +342,15 @@ public class TelaCadastro extends AppCompatActivity {
                     .setBodyParameter("nascimento_app" , sData_nascimento)
                     .setBodyParameter("cep_app" , sCEP)
                     .setBodyParameter("endereco_app" , sEndereco)
+                    .setBodyParameter("numero_app" , "0")
                     .setBodyParameter("bairro_app" , sBairro)
                     .setBodyParameter("municipio_app" , sMunicipio)
                     .setBodyParameter("estado_app" , sEstado)
                     .setBodyParameter("complemento_app" , sComplemento)
-                    .setBodyParameter("foneResidencia_app" , sTelefone_residencial)
-                    .setBodyParameter("foneCelular_app" , sTelefone_celular)
+                    .setBodyParameter("teleResidencia_app" , sTelefone_residencial)
+                    .setBodyParameter("teleCelular_app" , sTelefone_celular)
                     .setBodyParameter("email_app" , sEmail)
                     .setBodyParameter("senha_app" , sSenha)
-
 
                     .asJsonObject()
                     .setCallback(new FutureCallback<JsonObject>() {
@@ -357,7 +361,7 @@ public class TelaCadastro extends AppCompatActivity {
                                 String RETORNO = result.get("CADASTRO").getAsString();
 
                                 if (RETORNO.equals("CPF_ERRO")) {
-                                    Toast.makeText(TelaCadastro.this , "Oops! Esse CPF já é cadastado." , Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(TelaCadastro.this , "Oops! Esse CPF já é cadastado ou há campos em branco" , Toast.LENGTH_SHORT).show();
                                 } else if (RETORNO.equals("SUCESSO")) {
                                     Toast.makeText(TelaCadastro.this , "CADASTRADO COM SUCESSO!" , Toast.LENGTH_SHORT).show();
                                     finish();
@@ -367,14 +371,14 @@ public class TelaCadastro extends AppCompatActivity {
 
 
                             } catch (Exception erro) {
-                                Toast.makeText(TelaCadastro.this , "Error: " + erro , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TelaCadastro.this , "Erro: " + erro , Toast.LENGTH_SHORT).show();
                             }
 
                         }
                     });
 
         } else {
-            Toast.makeText(this , "Há campos em branco!" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(this , "ERRO!" , Toast.LENGTH_SHORT).show();
         }
 
 

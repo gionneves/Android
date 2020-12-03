@@ -67,6 +67,7 @@
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/background_shadow"
                     android:inputType="number"
+                    android:maxLength="15"
                     android:maxLines="1"
                     android:textSize="20sp" />
 
@@ -78,7 +79,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/rg"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -378,7 +379,7 @@
                 android:background="@drawable/background_shadow"
                 android:hint="@string/hint_senha"
                 android:inputType="textPassword"
-                android:maxLength="12"
+                android:maxLength="8"
                 android:padding="5dp"
                 android:textSize="20dp" />
 
