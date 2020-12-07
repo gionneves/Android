@@ -70,6 +70,7 @@ public class Final_OS extends AppCompatActivity {
     public void finalOS_btnConcluido(View view) {
         Intent intent = new Intent(this, TelaMain.class);
         startActivity(intent);
+        finish();
     }
 
 }

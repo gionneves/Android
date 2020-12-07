@@ -38,7 +38,21 @@
                 android:onClick="helpdesk_irEmpresa"
                 android:text="@string/para_empresa" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
 
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:onClick="helpdesk_voltar"
+                    android:background="@drawable/borda_redonda"
+                    android:text="@string/voltar"
+                    android:layout_marginHorizontal="16dp" />
+
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -14,9 +14,324 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marca"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tabletUm_Marca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_shadow"
+                android:hint="@string/de_qual_marcar"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tabletUm_Modelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_shadow"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/tabletUm_TV_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:gravity="fill"
+                android:text="@string/colocar_peças_defeituosas"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_TelaDisplay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/tela_display"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_TelaTouch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/tela_touch"
+                            android:textSize="16sp" />
+
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Bluetooth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/bluetooth"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_WiFi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/wi_fi"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Botoes_MaMe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/botoes_volume"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Botao_Power"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/botao_power"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Carcaca"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/carca_a"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_AutoFalante"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/auto_falante"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_AutoFalanteAuricular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/auto_falante_auricular"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Microfone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/microfone"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_CameraFrontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/c_mera_frontal"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_CameraTraseira"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/c_mera_traseira"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_ConectorCarga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/conector_de_carga"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Bateria"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/bateria"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_TampaTraseira"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/green_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/tampa_traseira"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/tabletUm_Outros"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/borda_redonda"
+                            android:backgroundTint="@color/blue_holder"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:onClick="tablet_onCheckboxCliked"
+                            android:text="@string/outrosOp"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:gravity="bottom">
+
+                <RelativeLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/borda_redonda"
+                        android:onClick="tablet_voltar"
+                        android:text="@string/voltar" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/borda_redonda"
+                        android:onClick="tablet_proximo"
+                        android:text="@string/confirmar"
+                        android:theme="@style/corVerde" />
+
+                </RelativeLayout>
+
+            </TableRow>
 
         </LinearLayout>
 

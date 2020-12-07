@@ -86,7 +86,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/tela_display"
                             android:textSize="16sp" />
 
@@ -99,7 +99,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/tela_touch"
                             android:textSize="16sp" />
 
@@ -112,7 +112,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/sensor_de_proximidade"
                             android:textSize="16sp" />
 
@@ -125,7 +125,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/bluetooth"
                             android:textSize="16sp" />
 
@@ -138,7 +138,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/wi_fi"
                             android:textSize="16sp" />
 
@@ -151,7 +151,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/botoes_volume"
                             android:textSize="16sp" />
 
@@ -164,7 +164,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/botao_power"
                             android:textSize="16sp" />
 
@@ -177,7 +177,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/carca_a"
                             android:textSize="16sp" />
 
@@ -190,7 +190,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/auto_falante"
                             android:textSize="16sp" />
 
@@ -213,7 +213,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/auto_falante_auricular"
                             android:textSize="16sp" />
 
@@ -226,7 +226,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/microfone"
                             android:textSize="16sp" />
 
@@ -239,7 +239,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/c_mera_frontal"
                             android:textSize="16sp" />
 
@@ -252,7 +252,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/c_mera_traseira"
                             android:textSize="16sp" />
 
@@ -265,7 +265,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/conector_de_carga"
                             android:textSize="16sp" />
 
@@ -278,7 +278,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/bateria"
                             android:textSize="16sp" />
 
@@ -291,7 +291,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/tampa_traseira"
                             android:textSize="16sp" />
 
@@ -304,7 +304,7 @@
                             android:backgroundTint="@color/green_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/digital"
                             android:textSize="16sp" />
 
@@ -317,7 +317,7 @@
                             android:backgroundTint="@color/blue_holder"
                             android:button="@null"
                             android:gravity="center"
-                            android:onClick="onCheckboxCliked"
+                            android:onClick="celUm_onCheckboxCliked"
                             android:text="@string/outrosOp"
                             android:textSize="16sp" />
 

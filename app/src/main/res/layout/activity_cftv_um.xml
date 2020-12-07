@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".servicos.cftv.CftvUm">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/modelo_tela_principal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cftv_CB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="cftv_um_onCheckboxCliked"
+                android:text="@string/cftv_instalacao_kit"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/cftv_CB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="cftv_um_onCheckboxCliked"
+                android:text="@string/acessoRemoto_cftv"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/cftv_CB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="cftv_um_onCheckboxCliked"
+                android:text="@string/cam_install"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/cftv_CB4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="cftv_um_onCheckboxCliked"
+                android:text="@string/central_install"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/cftv_CB5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="cftv_um_onCheckboxCliked"
+                android:text="@string/sensor_install"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/cftv_CB6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="cftv_um_onCheckboxCliked"
+                android:text="@string/cerca_install"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
+                    android:onClick="cftv_voltar"
+                    android:text="@string/voltar"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
+                    android:onClick="cftv_irAgendamento"
+                    android:text="@string/proximo"
+                    android:textSize="20sp"
+                    android:theme="@style/corVerde" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

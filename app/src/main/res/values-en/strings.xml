@@ -66,7 +66,7 @@
     <string name="bairro">*Neighbourhood:</string>
     <string name="municipio">*County:</string>
     <string name="estado">*State:</string>
-    <string name="complemento">*Complement:</string>
+    <string name="complemento">Complement:</string>
     <string name="hint_complemento">Home/Ap. 02; 11º floor</string>
     <string name="telefone_residencial">*Residential phone:</string>
     <string name="telefone_celular">*Cell phone phone:</string>
@@ -122,5 +122,11 @@
     <string name="show_info">%s\n%s\n%s</string>
     <string name="defeitos_orcamento">Defects:\\t%s</string>
     <string name="celDois_hint_adicional_EditText">Briefly describe problems with your device</string>
+    <string name="cftv_instalacao_kit">CFTV kit installation</string>
+    <string name="smart_config">smartTV configuration</string>
+    <string name="tvbox_config">TVbox configuration</string>
+    <string name="tvbox_update">TVbox update</string>
+    <string name="instalacao_soft">software installation</string>
+    <string name="caveamento">Cable manegement</string>
 
 </resources>

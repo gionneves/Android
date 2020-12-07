@@ -167,7 +167,7 @@ public class CelUm extends AppCompatActivity {
 
     }
 
-    public void onCheckboxCliked(View view) {
+    public void celUm_onCheckboxCliked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
 
 

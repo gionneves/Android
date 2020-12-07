@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppGuerreirosGames">
-        <activity android:name=".servicos.helpdesk.HdUm"></activity>
-        <activity android:name=".servicos.celular.tablet.CelTres" />
+        <activity android:name=".servicos.celular.tablet.TabletDois"></activity>
+        <activity android:name=".servicos.cftv.CftvUm" />
+        <activity android:name=".servicos.helpdesk.HdUm" />
         <activity android:name=".debug" />
         <activity android:name=".servicos.celular.CelDois" />
         <activity android:name=".servicos.celular.tablet.TabletUm" />

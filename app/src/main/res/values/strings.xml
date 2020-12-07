@@ -107,7 +107,7 @@
     <string name="hint_municipio" translatable="false">Osasco</string>
     <string name="estado">*Estado:</string>
     <string name="hint_estado" translatable="false">SP</string>
-    <string name="complemento">*Complemento:</string>
+    <string name="complemento">Complemento:</string>
     <string name="hint_complemento">Casa/Ap. 02; 11º andar</string>
     <string name="telefone_residencial">Telefone Residencial:</string>
     <string name="hint_telefone_residencial" translatable="false">(00) 1234-5678</string>
@@ -170,7 +170,7 @@
     <string name="colocar_peças_defeituosas">Por favor selecione o que está com defeito em seu aparelho.</string>
     <string name="couting" translatable="false">%d:%d</string>
     <string name="show_info">%s\n\n%s\n\n%s</string>
-    <string name="defeitos_orcamento">Defeitos:\\t%s</string>
+    <string name="defeitos_orcamento">Defeitos:\t%s</string>
     <string name="celDois_hint_adicional_EditText">Descreva brevemente os problemas em seu aparelho</string>
     <string name="contador" translatable="false">%d</string>
     <string name="para_empresa">EMPRESA</string>
@@ -188,5 +188,11 @@
     <string name="tvbox_update">Atualização de TVbox</string>
     <string name="tvbox_config">Configuração de TVbox</string>
     <string name="smart_config">Configuração smartTV</string>
+    <string name="cftv_instalacao_kit">Instalação de kit CFTV</string>
+    <string name="acessoRemoto_cftv">Configuração de acesso remoto</string>
+    <string name="cam_install">Instalação de câmeras</string>
+    <string name="central_install">Instalação central de alarme</string>
+    <string name="sensor_install">Instalação de sensores</string>
+    <string name="cerca_install">Instalação de cerca eletrica</string>
 
 </resources>

@@ -73,6 +73,7 @@ public class CelDois extends AppCompatActivity {
 
     public void proximo(View view) {
         Intent intent = new Intent(this , Agendamento.class);
+        startActivity(intent);
+        finish();
     }
-
 }

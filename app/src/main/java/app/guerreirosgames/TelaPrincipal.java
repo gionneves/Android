@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import app.guerreirosgames.servicos.arcondicionado.ArUm;
 import app.guerreirosgames.servicos.celular.CelUm;
 import app.guerreirosgames.servicos.celular.tablet.TabletUm;
+import app.guerreirosgames.servicos.cftv.CftvUm;
 import app.guerreirosgames.servicos.computador.ComputadorUm;
 import app.guerreirosgames.servicos.computador.montar.MontarComputadorUm;
 import app.guerreirosgames.servicos.helpdesk.HdUm;
@@ -62,5 +63,9 @@ public class TelaPrincipal extends AppCompatActivity {
 
     public void telaPrincipal_irHelpdesk(View view) {
         startActivity(new Intent(this , HdUm.class));
+    }
+
+    public void telaPrincipal_irSegurança(View view) {
+        startActivity(new Intent(this , CftvUm.class));
     }
 }

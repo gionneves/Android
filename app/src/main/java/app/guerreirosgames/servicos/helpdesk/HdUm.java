@@ -1,5 +1,6 @@
 package app.guerreirosgames.servicos.helpdesk;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.CheckBox;
 import androidx.appcompat.app.AppCompatActivity;
 
 import app.guerreirosgames.R;
+import app.guerreirosgames.servicos.Agendamento;
 
 public class HdUm extends AppCompatActivity {
 
@@ -173,6 +175,21 @@ public class HdUm extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+
+    //-------------------------------------------------------------------------.*
+
+    public void helpdesk_voltar_layout(View view) {
+        setContentView(R.layout.activity_hd_um);
+    }
+
+    public void helpdesk_voltar(View view) {
+        finish();
+    }
+
+    public void helpdesk_irAgendamento(View view) {
+        startActivity(new Intent(this , Agendamento.class));
     }
 
 }

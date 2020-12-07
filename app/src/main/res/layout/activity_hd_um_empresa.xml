@@ -68,8 +68,6 @@
                 android:background="@drawable/borda_redonda"
                 android:backgroundTint="@color/green_holder"
                 android:button="@null"
-                android:clickable="false"
-                android:enabled="false"
                 android:gravity="center"
                 android:onClick="helpdesk_visia_onCheckboxCliked"
                 android:text="@string/acessorio_config"
@@ -117,6 +115,34 @@
                 android:text="@string/smart_config"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
+                    android:onClick="helpdesk_voltar_layout"
+                    android:text="@string/voltar"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
+                    android:onClick="helpdesk_irAgendamento"
+                    android:text="@string/proximo"
+                    android:textSize="20sp"
+                    android:theme="@style/corVerde" />
+
+            </RelativeLayout>
 
         </LinearLayout>
 
