@@ -134,8 +134,9 @@
                     android:id="@+id/pagB_cancelar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="pagFinish"
                     android:text="@string/cancelar" />
 
@@ -143,10 +144,11 @@
                     android:id="@+id/pagB_confirmar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="16dp"
-                    android:backgroundTint="@android:color/holo_green_dark"
-                    android:text="@string/confirmar" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/borda_redonda"
+                    android:text="@string/confirmar"
+                    android:theme="@style/corVerde" />
 
             </RelativeLayout>
 

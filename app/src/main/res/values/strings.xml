@@ -173,5 +173,20 @@
     <string name="defeitos_orcamento">Defeitos:\\t%s</string>
     <string name="celDois_hint_adicional_EditText">Descreva brevemente os problemas em seu aparelho</string>
     <string name="contador" translatable="false">%d</string>
+    <string name="para_empresa">EMPRESA</string>
+    <string name="para_casa">Atendimento em casa</string>
+    <string name="moden_config">Configuração de modem</string>
+    <string name="roteador_config">Configuração de roteador</string>
+    <string name="repetidor_config">Configuração de repetidor</string>
+    <string name="analise_repo">Análise e reposicionamento</string>
+    <string name="caveamento">Cabeamento</string>
+    <string name="interface_config">Configuração interface smart home</string>
+    <string name="formatacao">Formatação</string>
+    <string name="instalacao_soft">Instalação de software</string>
+    <string name="dfh_n1">Diagnostico de funcionamento de hardware. Nivel 1</string>
+    <string name="acessorio_config">Configuração de acessório</string>
+    <string name="tvbox_update">Atualização de TVbox</string>
+    <string name="tvbox_config">Configuração de TVbox</string>
+    <string name="smart_config">Configuração smartTV</string>
 
 </resources>

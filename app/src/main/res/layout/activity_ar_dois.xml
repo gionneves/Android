@@ -11,8 +11,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#66000000"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,10 +112,10 @@
                     android:id="@+id/actvBTUs_ArDois"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
                     android:layout_marginHorizontal="16dp"
                     android:background="@drawable/background_shadow"
                     android:hint="9000        "
+                    android:inputType="number"
                     android:textSize="20sp" />
 
                 <TextView
@@ -168,17 +168,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="arDois_btnVoltar"
                     android:text="@string/voltar" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/holo_green_dark"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="arDois_btnConfirmar"
-                    android:text="@string/confirmar" />
+                    android:text="@string/confirmar"
+                    android:theme="@style/corVerde" />
 
             </RelativeLayout>
 

@@ -137,16 +137,18 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
-                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="videoDois_btnProximo"
                     android:text="@string/confirmar"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:theme="@style/corVerde" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="videoDois_btnVolta"
                     android:text="@string/voltar"
                     android:textSize="18sp" />

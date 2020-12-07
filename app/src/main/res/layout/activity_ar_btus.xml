@@ -9,8 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#66000000"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,6 +82,7 @@
                 <Button
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="remPessoas_arBTUs"
                     android:text="-"
                     android:textSize="20sp" />
@@ -102,6 +103,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginRight="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="addPessoas_arBTUs"
                     android:text="+"
                     android:textSize="20sp" />
@@ -124,6 +126,7 @@
                 <Button
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="remEletros_arBTUs"
                     android:text="-"
                     android:textSize="20sp" />
@@ -144,6 +147,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginRight="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="addEletros_arBTUs"
                     android:text="+"
                     android:textSize="20sp" />
@@ -155,12 +159,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="64dp"
-                android:backgroundTint="@android:color/holo_green_dark"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/borda_redonda"
                 android:onClick="Calcular_arBTUs"
                 android:text="Calcular"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:theme="@style/corVerde" />
 
         </LinearLayout>
 

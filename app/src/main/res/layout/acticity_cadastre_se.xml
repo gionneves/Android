@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -55,7 +55,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Pessoa"
                     android:textOff="@string/btnT_fisica"
                     android:textOn="@string/btnT_juridica"
                     android:textStyle="bold" />
@@ -92,7 +91,7 @@
                 android:inputType="number"
                 android:maxLength="9"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -100,7 +99,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/data_de_nascimento"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -134,7 +133,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/cep"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -147,7 +146,7 @@
                 android:inputType="numberSigned"
                 android:maxLength="8"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -155,7 +154,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/endereco"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -167,7 +166,7 @@
                 android:hint="@string/hint_endereco"
                 android:inputType="textPostalAddress"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -175,7 +174,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/bairro"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -187,7 +186,7 @@
                 android:hint="@string/hint_bairro"
                 android:inputType="text"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -200,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/municipio"
                     android:textAlignment="textStart"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <EditText
@@ -212,14 +211,14 @@
                     android:hint="@string/hint_municipio"
                     android:inputType="text"
                     android:padding="5dp"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/estado"
                     android:textAlignment="textStart"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <EditText
@@ -234,7 +233,7 @@
                     android:maxLength="2"
                     android:padding="5dp"
                     android:textAllCaps="true"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <TextView
@@ -243,7 +242,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/complemento"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -255,7 +254,7 @@
                 android:hint="@string/hint_complemento"
                 android:inputType="text"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -263,7 +262,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/telefone_residencial"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -276,7 +275,7 @@
                 android:inputType="phone"
                 android:maxLength="10"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -284,7 +283,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/telefone_celular"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -297,7 +296,7 @@
                 android:inputType="phone"
                 android:maxLength="11"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -305,7 +304,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/email"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -317,7 +316,7 @@
                 android:hint="@string/hint_exemplo_email"
                 android:inputType="textEmailAddress"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -325,7 +324,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/confirmar_email"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -338,7 +337,7 @@
                 android:inputType="textEmailAddress"
                 android:padding="5dp"
                 android:textIsSelectable="false"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -346,7 +345,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/senha"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -360,7 +359,7 @@
                 android:maxLength="12"
                 android:padding="5dp"
                 android:textIsSelectable="false"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -368,7 +367,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/confirmar_senha"
                 android:textAlignment="textStart"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
@@ -381,7 +380,7 @@
                 android:inputType="textPassword"
                 android:maxLength="8"
                 android:padding="5dp"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

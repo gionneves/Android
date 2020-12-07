@@ -92,6 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_marginHorizontal="32dp"
+                        android:background="@drawable/borda_redonda"
                         android:onClick="servicos_btnSuporte"
                         android:text="@string/suporte_btn_servicos" />
 
@@ -101,6 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginHorizontal="32dp"
+                        android:background="@drawable/borda_redonda"
                         android:onClick="servicos_btnConfirmar"
                         android:text="@string/confirmar_btn_servicos" />
 

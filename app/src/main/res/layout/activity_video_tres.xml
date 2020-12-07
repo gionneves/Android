@@ -9,8 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#66000000"
-        android:background="@drawable/modelo_tela_principal">
+        android:background="@drawable/modelo_tela_principal"
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,19 +93,21 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
-                    android:text="@string/cancelar"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="videoTres_btnCancelar"
+                    android:text="@string/cancelar"
                     android:textSize="18sp" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:backgroundTint="@android:color/holo_green_dark"
                     android:layout_marginHorizontal="16dp"
-                    android:text="@string/confirmar"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="videoTres_btnProximo"
-                    android:textSize="18sp" />
+                    android:text="@string/confirmar"
+                    android:textSize="18sp"
+                    android:theme="@style/corVerde" />
 
             </RelativeLayout>
 

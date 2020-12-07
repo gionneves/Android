@@ -109,6 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="arUm_btnVoltar"
                     android:text="@string/voltar" />
 
@@ -117,9 +118,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginHorizontal="16dp"
-                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:background="@drawable/borda_redonda"
                     android:onClick="arUm_btnProximo"
-                    android:text="@string/confirmar" />
+                    android:text="@string/confirmar"
+                    android:theme="@style/corVerde" />
 
             </RelativeLayout>
 

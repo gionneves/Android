@@ -19,21 +19,12 @@ public class MainActivity extends AppCompatActivity {
     private int unlock_debug = 0;
     private Button btn_debug;
 
-    private String HOST = "http://localhost/guerreiros";
-
-    private String userName, userPass;
+    private String HOST = "http://192.168.0.251/guerreiros";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Intent intentCadastro = getIntent();
-
-        userName = intentCadastro.getStringExtra("EMAIL_CADASTRO");
-        userPass = intentCadastro.getStringExtra("SENHA_CADASTRO");
-
-
     }
 
     /**
@@ -75,10 +66,12 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 } else if (RETORNO.equals("ERRO")) {
                                     Toast.makeText(MainActivity.this , "Email ou senha incorretos." , Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(MainActivity.this , "OUTRO ERRO OCORREU!" , Toast.LENGTH_SHORT).show();
                                 }
 
                             } catch (Exception erro) {
-                                Toast.makeText(MainActivity.this , "Erro: " + erro , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this , "Erro: " + erro , Toast.LENGTH_LONG).show();
                             }
                         }
                     });

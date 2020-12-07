@@ -110,6 +110,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/borda_redonda"
                         android:onClick="close"
                         android:text="@string/voltar" />
 
@@ -118,9 +119,10 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_marginHorizontal="16dp"
-                        android:backgroundTint="@android:color/holo_green_light"
+                        android:background="@drawable/borda_redonda"
                         android:onClick="proximo"
-                        android:text="@string/proximo" />
+                        android:text="@string/proximo"
+                        android:theme="@style/corVerde" />
 
                 </RelativeLayout>
 

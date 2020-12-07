@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foreground="@drawable/modelo_tela_principal"
-    android:background="@color/yellow"
+    android:background="@color/white"
     tools:context=".servicos.helpdesk.HdUm">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@drawable/modelo_tela_principal"
+        android:padding="8dp">
 
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/helpdesk_casa_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/borda_redonda"
+                android:onClick="helpdesk_irCasa"
+                android:text="@string/para_casa" />
 
-</ScrollView>
+            <Button
+                android:id="@+id/helpdesk_empresa_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/borda_redonda"
+                android:onClick="helpdesk_irEmpresa"
+                android:text="@string/para_empresa" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

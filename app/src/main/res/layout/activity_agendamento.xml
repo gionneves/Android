@@ -47,6 +47,7 @@
                     android:id="@+id/bAgendamentoCalendario"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="12dp"
+                    android:background="@drawable/borda_redonda"
                     android:layout_height="wrap_content"
                     android:onClick="agendamento_btnCalendario"
                     android:layout_marginRight="24dp"
@@ -72,6 +73,7 @@
                     android:id="@+id/bArQuatroHora"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/borda_redonda"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="54dp"
                     android:onClick="agendamento_btnHorario"
@@ -98,6 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
+                    android:background="@drawable/borda_redonda"
                     android:layout_alignParentLeft="true"
                     android:onClick="agendamento_btnVolta"
                     android:text="@string/voltar" />
@@ -107,7 +110,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
                     android:onClick="agendamento_btnAgendamento"
-                    android:backgroundTint="@color/yellow"
+                    android:background="@drawable/borda_redonda"
+                    android:theme="@style/corAmarela"
                     android:layout_alignParentRight="true"
                     android:text="@string/agendar" />
             </RelativeLayout>

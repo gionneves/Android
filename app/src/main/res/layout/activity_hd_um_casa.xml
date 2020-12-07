@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".servicos.helpdesk.HdUm">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/modelo_tela_principal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/helpdesk_casa_CB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_onCheckboxCliked"
+                android:text="@string/moden_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_casa_CB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_onCheckboxCliked"
+                android:text="@string/roteador_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_casa_CB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_onCheckboxCliked"
+                android:text="@string/repetidor_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_casa_CB4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@android:color/darker_gray"
+                android:button="@null"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/analise_repo"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_casa_CB5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_onCheckboxCliked"
+                android:text="@string/caveamento"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_casa_CB6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_onCheckboxCliked"
+                android:text="@string/interface_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

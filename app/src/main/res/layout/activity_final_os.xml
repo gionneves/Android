@@ -9,9 +9,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:backgroundTint="#66000000"
+        android:layout_height="wrap_content"
         android:background="@drawable/modelo_tela_principal"
-        android:layout_height="wrap_content">
+        android:backgroundTint="#66000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -142,12 +142,13 @@
                     android:id="@+id/concluido_finalOS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@android:color/holo_green_dark"
                     android:layout_gravity="bottom"
-                    android:onClick="finalOS_btnConcluido"
                     android:layout_marginHorizontal="52dp"
+                    android:background="@drawable/borda_redonda"
                     android:gravity="center"
-                    android:text="@string/concluido_final_os" />
+                    android:onClick="finalOS_btnConcluido"
+                    android:text="@string/concluido_final_os"
+                    android:theme="@style/corVerde" />
 
             </TableRow>
 

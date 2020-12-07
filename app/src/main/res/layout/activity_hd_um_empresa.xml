@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".servicos.helpdesk.HdUm">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/modelo_tela_principal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/formatacao"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/instalacao_soft"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/dfh_n1"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/acessorio_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/tvbox_update"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/tvbox_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/helpdesk_empresa_CB7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/borda_redonda"
+                android:backgroundTint="@color/green_holder"
+                android:button="@null"
+                android:gravity="center"
+                android:onClick="helpdesk_visia_onCheckboxCliked"
+                android:text="@string/smart_config"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
